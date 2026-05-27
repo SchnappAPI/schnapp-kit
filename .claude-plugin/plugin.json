@@ -9,10 +9,7 @@
     "url": "https://github.com/schnappapi"
   },
   "homepage": "https://github.com/schnappapi/schnapp-kit",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/schnappapi/schnapp-kit.git"
-  },
+  "repository": "https://github.com/schnappapi/schnapp-kit",
   "license": "MIT",
   "discoveryRoots": ["core", "vendored", "language-packs", "overlays"],
   "configFile": "kit.config.yml"

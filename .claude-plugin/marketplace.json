@@ -1,0 +1,29 @@
+{
+  "name": "schnapp-kit",
+  "owner": {
+    "name": "SchnappAPI",
+    "email": "apischnapp@gmail.com"
+  },
+  "metadata": {
+    "description": "Personal Claude Code distribution: ECC fork + vendored community plugins + schnapp-bet overlays"
+  },
+  "plugins": [
+    {
+      "name": "schnapp-kit",
+      "source": "./",
+      "description": "Layered Claude Code distribution: core ECC, mattpocock skills, and schnapp-bet overlays",
+      "version": "0.1.0",
+      "author": {
+        "name": "SchnappAPI",
+        "email": "apischnapp@gmail.com"
+      },
+      "homepage": "https://github.com/schnappapi/schnapp-kit",
+      "repository": "https://github.com/schnappapi/schnapp-kit",
+      "license": "MIT",
+      "keywords": ["claude-code", "skills", "agents", "hooks", "rules"],
+      "category": "workflow",
+      "tags": ["skills", "agents", "workflow", "productivity"],
+      "strict": false
+    }
+  ]
+}

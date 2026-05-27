@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 # add-upstream.sh — vendor a third-party plugin as a git subtree
-# Usage: scripts/add-upstream.sh <name> <github-url> <pin>
+# Usage: scripts/add-upstream.sh <name> <github-url> <pin> [subdir]
+#
+# subdir: optional subdirectory within the repo containing the plugin
+#         e.g. "plugins/security-guidance" for mono-repos like anthropics/claude-code
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-NAME="${1:?Usage: add-upstream.sh <name> <github-url> <pin>}"
-URL="${2:?Usage: add-upstream.sh <name> <github-url> <pin>}"
-PIN="${3:?Usage: add-upstream.sh <name> <github-url> <pin>}"
+NAME="${1:?Usage: add-upstream.sh <name> <github-url> <pin> [subdir]}"
+URL="${2:?Usage: add-upstream.sh <name> <github-url> <pin> [subdir]}"
+PIN="${3:?Usage: add-upstream.sh <name> <github-url> <pin> [subdir]}"
+SUBDIR="${4:-}"
 
 TARGET="vendored/${NAME}"
 
@@ -15,7 +19,7 @@ if [[ -d "${REPO_ROOT}/${TARGET}" ]]; then
   exit 1
 fi
 
-echo "Adding upstream '${NAME}' from ${URL} @ ${PIN}..."
+echo "Adding upstream '${NAME}' from ${URL}${SUBDIR:+/${SUBDIR}} @ ${PIN}..."
 
 # Resolve pin to sha
 TMP=$(mktemp -d)
@@ -26,9 +30,14 @@ SHORT=$(git -C "${TMP}/${NAME}" rev-parse --short HEAD)
 
 echo "Resolved ${PIN} → ${SHA}"
 
-# Copy tree (subtree-style without submodule)
+# Copy tree — from subdir if specified, otherwise repo root
+SOURCE="${TMP}/${NAME}/"
+if [[ -n "${SUBDIR}" ]]; then
+  SOURCE="${TMP}/${NAME}/${SUBDIR}/"
+fi
+
 mkdir -p "${REPO_ROOT}/${TARGET}"
-rsync -a --exclude='.git' "${TMP}/${NAME}/" "${REPO_ROOT}/${TARGET}/"
+rsync -a --exclude='.git' "${SOURCE}" "${REPO_ROOT}/${TARGET}/"
 rm -rf "${TMP}"
 
 # Update vendored/.upstreams.yml
@@ -38,9 +47,13 @@ import re, datetime
 path = "${REPO_ROOT}/vendored/.upstreams.yml"
 content = open(path).read()
 
-entry = """
+subdir_line = ""
+if "${SUBDIR}":
+    subdir_line = "\n    subdir: ${SUBDIR}"
+
+entry = f"""
   - name: ${NAME}
-    source: ${URL}
+    source: ${URL}{subdir_line}
     pin: ${PIN}
     pinned_commit: ${SHA}
     added: $(date -u +%Y-%m-%dT%H:%M:%SZ)

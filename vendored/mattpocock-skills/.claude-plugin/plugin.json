@@ -1,5 +1,15 @@
 {
   "name": "mattpocock-skills",
+  "version": "1.0.0",
+  "description": "Matt Pocock's engineering and productivity skills for Claude Code",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://mattpocock.com"
+  },
+  "homepage": "https://github.com/mattpocock/skills",
+  "repository": "https://github.com/mattpocock/skills",
+  "license": "MIT",
+  "keywords": ["skills", "engineering", "tdd", "productivity"],
   "skills": [
     "./skills/engineering/diagnose",
     "./skills/engineering/grill-with-docs",

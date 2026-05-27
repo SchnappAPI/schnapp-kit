@@ -1,0 +1,29 @@
+{
+  "name": "mattpocock-skills",
+  "owner": {
+    "name": "Matt Pocock",
+    "url": "https://mattpocock.com"
+  },
+  "metadata": {
+    "description": "Matt Pocock's engineering and productivity skills for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "mattpocock-skills",
+      "source": "./",
+      "description": "Engineering and productivity skills: TDD, triage, diagnose, prototype, caveman mode, and more",
+      "version": "1.0.0",
+      "author": {
+        "name": "Matt Pocock",
+        "url": "https://mattpocock.com"
+      },
+      "homepage": "https://github.com/mattpocock/skills",
+      "repository": "https://github.com/mattpocock/skills",
+      "license": "MIT",
+      "keywords": ["skills", "engineering", "tdd", "productivity"],
+      "category": "workflow",
+      "tags": ["skills", "tdd", "engineering", "productivity"],
+      "strict": false
+    }
+  ]
+}
