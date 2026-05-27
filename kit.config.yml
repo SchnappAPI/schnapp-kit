@@ -1,0 +1,63 @@
+# kit.config.yml — the steering wheel for schnapp-kit.
+# See docs/ARCHITECTURE.md for the layer model.
+
+core:
+  source: github:affaan-m/ECC
+  pinned_commit: TBD_FILL_AT_FORK_TIME
+  enabled_languages: [python, typescript, sql, bash, yaml]
+  pruned_languages:
+    [
+      java,
+      ruby,
+      go,
+      rust,
+      php,
+      csharp,
+      kotlin,
+      swift,
+      scala,
+      elixir,
+      erlang,
+      clojure,
+      haskell,
+      ocaml,
+      fsharp,
+      dart,
+      lua,
+      r,
+      perl,
+    ]
+  keep_examples: true
+
+vendored:
+  mattpocock-skills:
+    source: github:mattpocock/skills
+    pin: main@TBD_FILL_AT_VENDOR_TIME
+    enabled_artifacts:
+      - skills/engineering/diagnose/**
+      - skills/engineering/grill-with-docs/**
+      - skills/engineering/improve-codebase-architecture/**
+      - skills/engineering/prototype/**
+      - skills/engineering/setup-matt-pocock-skills/**
+      - skills/engineering/tdd/**
+      - skills/engineering/to-issues/**
+      - skills/engineering/to-prd/**
+      - skills/engineering/triage/**
+      - skills/engineering/zoom-out/**
+      - skills/productivity/caveman/**
+      - skills/productivity/grill-me/**
+      - skills/productivity/handoff/**
+      - skills/productivity/write-a-skill/**
+      - skills/misc/git-guardrails-claude-code/**
+      - skills/misc/scaffold-exercises/**
+      - skills/misc/setup-pre-commit/**
+      - skills/personal/edit-article/**
+    disabled_artifacts:
+      - skills/deprecated/**
+      - skills/in-progress/**
+      - skills/misc/migrate-to-shoehorn/**
+      - skills/personal/obsidian-vault/**
+
+language_packs_enabled: [python, typescript, sql, infra]
+
+overlays_priority: highest

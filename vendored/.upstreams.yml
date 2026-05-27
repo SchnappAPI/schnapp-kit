@@ -1,0 +1,3 @@
+# Registry of vendored upstreams. Source of truth for sync-upstream.sh.
+# Each entry pairs with a directory under vendored/<name>/.
+upstreams: []

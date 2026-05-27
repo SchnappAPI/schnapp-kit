@@ -1,0 +1,17 @@
+# Render artifacts
+.merged-tree/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local config overrides (per-machine)
+kit.local.yml
+
+# Test outputs
+tests/.tmp/
