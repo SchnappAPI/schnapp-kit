@@ -22,6 +22,10 @@ A personal Claude Code distribution. The kit is layered: `core/` (ECC fork) → 
 
 Scopes for this repo: `[core]`, `[vendored]`, `[overlays]`, `[lang]`, `[scripts]`, `[docs]`, `[tests]`, `[meta]`, `[all]`.
 
+## Branch workflow
+
+All changes go on feature branches (`feat/<short-description>`). Direct commits to `main` are blocked by a PreToolUse hook. After committing, a PR is auto-created. After work is complete with a clean working tree, the Stop hook auto-merges the PR and deletes the branch.
+
 ## Skills the kit ships for evolving itself
 
 - `/discover-kit-additions <repo-url> [--focus <path>]` — scan a repo for artifacts schnapp-kit doesn't have yet.
