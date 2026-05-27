@@ -1,0 +1,61 @@
+#!/bin/bash
+# commit-msg hook — enforce commit subject format.
+# Activated via .githooks/ + git config core.hooksPath .githooks
+#
+# Required subject format:
+#   <type>: [scope1][scope2] short description — ADR-YYYYMMDD-N (optional)
+#
+# Where:
+#   <type>  ∈ feat | fix | refactor | docs | chore | perf | test | style | revert
+#   [scope] ∈ any bracketed tag (at least one required)
+#
+# Scopes are unconstrained by default. To restrict to a project-specific list,
+# create .kit/commit-scopes.txt with one scope per line (without brackets).
+# The hook will warn on unknown scopes but not block.
+
+MSG_FILE="$1"
+SUBJECT=$(head -n1 "$MSG_FILE")
+
+# Pass-through for merge commits.
+if [ -f "$(git rev-parse --git-dir)/MERGE_HEAD" ]; then
+  exit 0
+fi
+
+# Pass-through for git-generated revert commits.
+if [[ "$SUBJECT" =~ ^Revert\  ]]; then
+  exit 0
+fi
+
+# Pass-through for autosquash markers.
+if [[ "$SUBJECT" =~ ^(fixup!|squash!|amend!)\  ]]; then
+  exit 0
+fi
+
+# Validate: type token, ": ", at least one [scope] bracket, then a description.
+PATTERN='^(feat|fix|refactor|docs|chore|perf|test|style|revert): (\[[a-z0-9_-]+\])+ .+'
+if [[ ! "$SUBJECT" =~ $PATTERN ]]; then
+  cat >&2 <<EOF
+[commit-msg] Subject does not match the required format.
+
+Got:
+  $SUBJECT
+
+Expected:
+  <type>: [scope1][scope2] short description — ADR-YYYYMMDD-N (optional)
+
+Where:
+  <type>   ∈ feat, fix, refactor, docs, chore, perf, test, style, revert
+  [scope]  ∈ any bracketed lowercase tag (at least one required)
+
+Examples:
+  feat: [infra] add post-commit auto-push hook
+  refactor: [meta][docs] git log is the changelog — ADR-20260517-4
+  fix: [api] correct token expiry comparison
+  docs: [database] expand migration conventions
+
+Edit the message and try again.
+EOF
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,9 @@
+core
+vendored
+overlays
+lang
+scripts
+docs
+tests
+meta
+all
