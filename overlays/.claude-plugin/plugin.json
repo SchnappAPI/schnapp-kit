@@ -1,6 +1,6 @@
 {
   "name": "schnapp-overlays",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "schnapp-bet promotions and kit-native artifacts: ADR writer, workflow, session cache, discover/audit skills, secrets-hygiene agent, and project-specific hooks and rules",
   "author": {
     "name": "SchnappAPI",
