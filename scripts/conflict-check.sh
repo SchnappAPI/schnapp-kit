@@ -4,58 +4,56 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-declare -A NAME_TO_PATHS
+python3 - "${REPO_ROOT}" <<'PYEOF'
+import sys, os, collections
 
-add_artifacts() {
-  local layer="$1"
-  local dir="${REPO_ROOT}/${layer}"
-  [[ -d "${dir}" ]] || return 0
+repo = sys.argv[1]
+layers = []
 
-  while IFS= read -r -d '' f; do
-    local basename
-    basename=$(basename "${f}")
-    local rel="${f#${REPO_ROOT}/}"
+def add_layer(path):
+    if os.path.isdir(path):
+        layers.append(path)
 
-    if [[ -n "${NAME_TO_PATHS[${basename}]+_}" ]]; then
-      NAME_TO_PATHS["${basename}"]="${NAME_TO_PATHS[${basename}]}|${rel}"
-    else
-      NAME_TO_PATHS["${basename}"]="${rel}"
-    fi
-  done < <(find "${dir}" -type f \( -name "*.md" -o -name "*.sh" -o -name "*.json" -o -name "*.yml" \) -print0)
-}
+add_layer(os.path.join(repo, "core"))
+vendored = os.path.join(repo, "vendored")
+if os.path.isdir(vendored):
+    for name in sorted(os.listdir(vendored)):
+        d = os.path.join(vendored, name)
+        if os.path.isdir(d) and not name.startswith('.'):
+            add_layer(d)
+lang_packs = os.path.join(repo, "language-packs")
+if os.path.isdir(lang_packs):
+    for name in sorted(os.listdir(lang_packs)):
+        d = os.path.join(lang_packs, name)
+        if os.path.isdir(d):
+            add_layer(d)
+add_layer(os.path.join(repo, "overlays"))
 
-add_artifacts "core"
-for d in "${REPO_ROOT}"/vendored/*/; do
-  [[ -d "${d}" ]] || continue
-  layer="vendored/$(basename "${d}")"
-  add_artifacts "${layer}"
-done
-for d in "${REPO_ROOT}"/language-packs/*/; do
-  [[ -d "${d}" ]] || continue
-  layer="language-packs/$(basename "${d}")"
-  add_artifacts "${layer}"
-done
-add_artifacts "overlays"
+name_to_paths = collections.defaultdict(list)
+for layer_root in layers:
+    for dirpath, dirnames, filenames in os.walk(layer_root):
+        for fname in filenames:
+            if fname.startswith('.'):
+                continue
+            if not any(fname.endswith(ext) for ext in ('.md', '.sh', '.json', '.yml', '.yaml')):
+                continue
+            full = os.path.join(dirpath, fname)
+            rel = os.path.relpath(full, repo)
+            name_to_paths[fname].append(rel)
 
-CONFLICTS=0
-echo "=== Conflict check ==="
-for name in "${!NAME_TO_PATHS[@]}"; do
-  paths="${NAME_TO_PATHS[${name}]}"
-  count=$(echo "${paths}" | tr '|' '\n' | wc -l | tr -d ' ')
-  if [[ "${count}" -gt 1 ]]; then
-    echo ""
-    echo "SHADOW: ${name}"
-    echo "${paths}" | tr '|' '\n' | while read -r p; do
-      echo "  ${p}"
-    done
-    CONFLICTS=$((CONFLICTS + 1))
-  fi
-done
+conflicts = 0
+print("=== Conflict check ===")
+for name, paths in sorted(name_to_paths.items()):
+    if len(paths) > 1:
+        print(f"\nSHADOW: {name}")
+        for p in paths:
+            print(f"  {p}")
+        conflicts += 1
 
-echo ""
-if [[ "${CONFLICTS}" -eq 0 ]]; then
-  echo "No conflicts found."
-else
-  echo "${CONFLICTS} artifact name(s) appear in multiple layers."
-  echo "Shadows in overlays/ are intentional — ensure each has an entry in overlays/SHADOWS.md."
-fi
+print()
+if conflicts == 0:
+    print("No conflicts found.")
+else:
+    print(f"{conflicts} artifact name(s) appear in multiple layers.")
+    print("Shadows in overlays/ are intentional — ensure each has an entry in overlays/SHADOWS.md.")
+PYEOF

@@ -32,7 +32,7 @@ core:
 vendored:
   mattpocock-skills:
     source: github:mattpocock/skills
-    pin: main@TBD_FILL_AT_VENDOR_TIME
+    pin: main@b8be62ffacb0118fa3eaa29a0923c87c8c11985c
     enabled_artifacts:
       - skills/engineering/diagnose/**
       - skills/engineering/grill-with-docs/**

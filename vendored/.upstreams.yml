@@ -1,3 +1,9 @@
 # Registry of vendored upstreams. Source of truth for sync-upstream.sh.
 # Each entry pairs with a directory under vendored/<name>/.
-upstreams: []
+upstreams:
+  - name: mattpocock-skills
+    source: https://github.com/mattpocock/skills
+    pin: main
+    pinned_commit: b8be62ffacb0118fa3eaa29a0923c87c8c11985c
+    added: 2026-05-27T02:37:09Z
+
