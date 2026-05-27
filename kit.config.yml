@@ -3,7 +3,7 @@
 
 core:
   source: github:affaan-m/ECC
-  pinned_commit: TBD_FILL_AT_FORK_TIME
+  pinned_commit: 928076cc08cbb31e8549cea2883b4f51811de1c8
   enabled_languages: [python, typescript, sql, bash, yaml]
   pruned_languages:
     [
