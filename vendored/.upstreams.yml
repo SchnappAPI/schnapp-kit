@@ -7,3 +7,49 @@ upstreams:
     pinned_commit: b8be62ffacb0118fa3eaa29a0923c87c8c11985c
     added: 2026-05-27T02:37:09Z
 
+  # Plugins vendored from plugins/<name>/ subdir of anthropics/claude-code
+  - name: security-guidance
+    source: https://github.com/anthropics/claude-code
+    subdir: plugins/security-guidance
+    pin: main
+    pinned_commit: b7339920b69f4a395c28727a1e2305dc5b122cb2
+    added: 2026-05-26T00:00:00Z
+
+  - name: ralph-wiggum
+    source: https://github.com/anthropics/claude-code
+    subdir: plugins/ralph-wiggum
+    pin: main
+    pinned_commit: b7339920b69f4a395c28727a1e2305dc5b122cb2
+    added: 2026-05-26T00:00:00Z
+
+  - name: agent-sdk-dev
+    source: https://github.com/anthropics/claude-code
+    subdir: plugins/agent-sdk-dev
+    pin: main
+    pinned_commit: b7339920b69f4a395c28727a1e2305dc5b122cb2
+    added: 2026-05-26T00:00:00Z
+
+  - name: plugin-dev
+    source: https://github.com/anthropics/claude-code
+    subdir: plugins/plugin-dev
+    pin: main
+    pinned_commit: b7339920b69f4a395c28727a1e2305dc5b122cb2
+    added: 2026-05-26T00:00:00Z
+    notes: plugin.json manually created (upstream lacks manifest)
+
+  - name: explanatory-output-style
+    source: https://github.com/anthropics/claude-code
+    subdir: plugins/explanatory-output-style
+    pin: main
+    pinned_commit: b7339920b69f4a395c28727a1e2305dc5b122cb2
+    added: 2026-05-26T00:00:00Z
+    notes: disabled by default; mutually exclusive with learning-output-style
+
+  - name: learning-output-style
+    source: https://github.com/anthropics/claude-code
+    subdir: plugins/learning-output-style
+    pin: main
+    pinned_commit: b7339920b69f4a395c28727a1e2305dc5b122cb2
+    added: 2026-05-26T00:00:00Z
+    notes: disabled by default; mutually exclusive with explanatory-output-style
+

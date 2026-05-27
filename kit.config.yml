@@ -30,6 +30,60 @@ core:
   keep_examples: true
 
 vendored:
+  security-guidance:
+    source: github:anthropics/claude-code
+    subdir: plugins/security-guidance
+    pin: main@b7339920b69f4a395c28727a1e2305dc5b122cb2
+    enabled_artifacts:
+      - hooks/**
+      - hooks-handlers/**
+      - README.md
+
+  ralph-wiggum:
+    source: github:anthropics/claude-code
+    subdir: plugins/ralph-wiggum
+    pin: main@b7339920b69f4a395c28727a1e2305dc5b122cb2
+    enabled_artifacts:
+      - commands/**
+      - hooks/**
+      - scripts/**
+
+  agent-sdk-dev:
+    source: github:anthropics/claude-code
+    subdir: plugins/agent-sdk-dev
+    pin: main@b7339920b69f4a395c28727a1e2305dc5b122cb2
+    enabled_artifacts:
+      - agents/**
+      - commands/**
+
+  plugin-dev:
+    source: github:anthropics/claude-code
+    subdir: plugins/plugin-dev
+    pin: main@b7339920b69f4a395c28727a1e2305dc5b122cb2
+    enabled_artifacts:
+      - skills/**
+      - agents/**
+      - commands/**
+
+  # Output-style modes — mutually exclusive; enable at most one at a time
+  explanatory-output-style:
+    source: github:anthropics/claude-code
+    subdir: plugins/explanatory-output-style
+    pin: main@b7339920b69f4a395c28727a1e2305dc5b122cb2
+    enabled: false
+    enabled_artifacts:
+      - hooks/**
+      - hooks-handlers/**
+
+  learning-output-style:
+    source: github:anthropics/claude-code
+    subdir: plugins/learning-output-style
+    pin: main@b7339920b69f4a395c28727a1e2305dc5b122cb2
+    enabled: false
+    enabled_artifacts:
+      - hooks/**
+      - hooks-handlers/**
+
   mattpocock-skills:
     source: github:mattpocock/skills
     pin: main@b8be62ffacb0118fa3eaa29a0923c87c8c11985c
