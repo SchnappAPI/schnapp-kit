@@ -1,0 +1,29 @@
+{
+  "name": "schnapp-overlays",
+  "owner": {
+    "name": "SchnappAPI",
+    "email": "apischnapp@gmail.com"
+  },
+  "metadata": {
+    "description": "schnapp-bet overlays: kit-native skills, agents, commands, rules, and hooks"
+  },
+  "plugins": [
+    {
+      "name": "schnapp-overlays",
+      "source": "./",
+      "description": "schnapp-bet promotions: adr-writer, workflow, session-cache, discover-kit-additions, audit-against-kit, secrets-hygiene agent",
+      "version": "0.1.0",
+      "author": {
+        "name": "SchnappAPI",
+        "email": "apischnapp@gmail.com"
+      },
+      "homepage": "https://github.com/schnappapi/schnapp-kit",
+      "repository": "https://github.com/schnappapi/schnapp-kit",
+      "license": "MIT",
+      "keywords": ["skills", "agents", "hooks", "rules", "workflow"],
+      "category": "workflow",
+      "tags": ["skills", "agents", "hooks", "rules"],
+      "strict": false
+    }
+  ]
+}

@@ -19,7 +19,7 @@ sync_one() {
 
   [[ -d "${dir}" ]] || { echo "ERROR: vendored/${name} not found." >&2; exit 1; }
 
-  # Read source URL from .upstreams.yml
+  # Read source URL and optional subdir from .upstreams.yml
   URL=$(python3 -c "
 import re
 content = open('${REPO_ROOT}/vendored/.upstreams.yml').read()
@@ -32,15 +32,30 @@ if m: print(m.group(1))
     exit 1
   fi
 
-  echo "Syncing ${name} from ${URL}..."
+  # subdir: for plugins that live inside a mono-repo (e.g. anthropics/claude-code plugins/)
+  SUBDIR=$(python3 -c "
+import re
+content = open('${REPO_ROOT}/vendored/.upstreams.yml').read()
+m = re.search(r'name: ${name}\n(.*?)(?=\n  - name:|\Z)', content, re.DOTALL)
+if m:
+    s = re.search(r'subdir: (\S+)', m.group(1))
+    if s: print(s.group(1))
+" 2>/dev/null || echo "")
+
+  echo "Syncing ${name} from ${URL}${SUBDIR:+/${SUBDIR}}..."
   TMP=$(mktemp -d)
   git clone --depth=1 "${URL}" "${TMP}/${name}"
   SHA=$(git -C "${TMP}/${name}" rev-parse HEAD)
   SHORT=$(git -C "${TMP}/${name}" rev-parse --short HEAD)
 
+  SOURCE="${TMP}/${name}/"
+  if [[ -n "${SUBDIR}" ]]; then
+    SOURCE="${TMP}/${name}/${SUBDIR}/"
+  fi
+
   rm -rf "${dir}"
   mkdir -p "${dir}"
-  rsync -a --exclude='.git' "${TMP}/${name}/" "${dir}/"
+  rsync -a --exclude='.git' "${SOURCE}" "${dir}/"
   rm -rf "${TMP}"
 
   echo "  ${name} updated to ${SHORT} (${SHA})"
