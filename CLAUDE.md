@@ -22,6 +22,19 @@ A personal Claude Code distribution. The kit is layered: `core/` (ECC fork) → 
 
 Scopes for this repo: `[core]`, `[vendored]`, `[overlays]`, `[lang]`, `[scripts]`, `[docs]`, `[tests]`, `[meta]`, `[all]`.
 
+## Branch workflow
+
+All changes go on feature branches (`feat/<short-description>`). Direct commits to `main` are blocked by a PreToolUse hook. After committing, a PR is auto-created. After work is complete with a clean working tree, the Stop hook auto-merges the PR and deletes the branch.
+
+## Task scope discipline
+
+Before editing any file, confirm it falls within the current task's scope:
+1. Files already modified in the current branch (`git diff main...HEAD --name-only`)
+2. New files being created as part of the current task
+3. Files explicitly named in the user's request
+
+**Always re-read a file immediately before editing it** — never edit from memory of a prior read. If you need to edit a file outside the above scope, state why before proceeding. Do not make opportunistic edits to unrelated files.
+
 ## Skills the kit ships for evolving itself
 
 - `/discover-kit-additions <repo-url> [--focus <path>]` — scan a repo for artifacts schnapp-kit doesn't have yet.
