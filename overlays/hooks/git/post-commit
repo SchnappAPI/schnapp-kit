@@ -1,0 +1,19 @@
+#!/bin/bash
+# post-commit hook — auto-push every commit to origin.
+# Activated per-clone via `git config --local core.hooksPath .githooks`.
+#
+# Non-blocking: a failed push does not roll back the commit, but the error
+# is surfaced. The Claude Code Stop hook is a safety net for missed pushes.
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+
+if [ "$BRANCH" = "HEAD" ] || [ -z "$BRANCH" ]; then
+  echo "[post-commit] detached HEAD; not pushing" >&2
+  exit 0
+fi
+
+if ! git push --quiet origin "$BRANCH" 2>&1; then
+  echo "[post-commit] push to origin/$BRANCH failed. Run 'git push' to retry." >&2
+fi
+
+exit 0
