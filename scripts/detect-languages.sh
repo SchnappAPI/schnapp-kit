@@ -6,47 +6,51 @@ set -euo pipefail
 REPO="${1:?Usage: detect-languages.sh <repo-path>}"
 [[ -d "${REPO}" ]] || { echo "ERROR: ${REPO} is not a directory." >&2; exit 1; }
 
-declare -A DETECTED
+python3 - "${REPO}" <<'PYEOF'
+import sys, os
 
-detect() {
-  local lang="$1"; shift
-  local found=0
-  for pattern in "$@"; do
-    if find "${REPO}" -name "${pattern}" -not -path '*/.git/*' -maxdepth 6 | grep -q .; then
-      found=1; break
-    fi
-  done
-  [[ "${found}" -eq 1 ]] && DETECTED["${lang}"]=1
+repo = sys.argv[1]
+
+KNOWN_PACKS = ["python", "typescript", "sql", "infra"]
+
+LANG_PATTERNS = {
+    "python":     [".py", "pyproject.toml", "setup.py", "requirements.txt"],
+    "typescript": [".ts", ".tsx", "tsconfig.json", "package.json"],
+    "sql":        [".sql"],
+    "infra":      [".yml", ".yaml", "Dockerfile"],
+    "rust":       [".rs", "Cargo.toml"],
+    "go":         [".go", "go.mod"],
+    "ruby":       [".rb", "Gemfile"],
+    "java":       [".java", "pom.xml"],
 }
 
-detect "python"     "*.py" "pyproject.toml" "setup.py" "requirements*.txt"
-detect "typescript" "*.ts" "*.tsx" "tsconfig.json" "package.json"
-detect "sql"        "*.sql" "*.mdf" "*.bak"
-detect "infra"      "*.yml" "Dockerfile" "*.yaml" ".github"
-detect "rust"       "*.rs" "Cargo.toml"
-detect "go"         "*.go" "go.mod"
-detect "ruby"       "*.rb" "Gemfile"
-detect "java"       "*.java" "pom.xml" "build.gradle"
+detected = set()
 
-KNOWN_PACKS=(python typescript sql infra)
+for dirpath, dirnames, filenames in os.walk(repo):
+    # Skip hidden dirs and .git
+    dirnames[:] = [d for d in dirnames if not d.startswith('.')]
+    for fname in filenames:
+        for lang, patterns in LANG_PATTERNS.items():
+            for pat in patterns:
+                if pat.startswith('.') and fname.endswith(pat):
+                    detected.add(lang)
+                elif fname == pat:
+                    detected.add(lang)
 
-echo "=== Language detection for: ${REPO} ==="
-echo ""
-echo "Detected languages:"
-for lang in "${!DETECTED[@]}"; do
-  echo "  ${lang}"
-done
-echo ""
-echo "Recommended language_packs_enabled:"
-ENABLED=()
-for lang in "${KNOWN_PACKS[@]}"; do
-  [[ -n "${DETECTED[${lang}]+_}" ]] && ENABLED+=("${lang}")
-done
-echo "  [$(IFS=', '; echo "${ENABLED[*]}")]"
-echo ""
-echo "Languages detected but WITHOUT a kit language pack:"
-for lang in "${!DETECTED[@]}"; do
-  found=0
-  for k in "${KNOWN_PACKS[@]}"; do [[ "${k}" == "${lang}" ]] && found=1; done
-  [[ "${found}" -eq 0 ]] && echo "  ${lang} — consider adding a language pack via docs/ADDING-A-LANGUAGE.md"
-done
+print(f"=== Language detection for: {repo} ===\n")
+print("Detected languages:")
+for lang in sorted(detected):
+    print(f"  {lang}")
+
+print("\nRecommended language_packs_enabled:")
+enabled = [l for l in KNOWN_PACKS if l in detected]
+print(f"  [{', '.join(enabled)}]")
+
+print("\nLanguages detected but WITHOUT a kit language pack:")
+no_pack = sorted(l for l in detected if l not in KNOWN_PACKS)
+if no_pack:
+    for lang in no_pack:
+        print(f"  {lang} — consider adding a language pack via docs/ADDING-A-LANGUAGE.md")
+else:
+    print("  (none)")
+PYEOF
