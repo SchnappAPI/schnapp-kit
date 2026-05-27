@@ -21,10 +21,6 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/no-commit-to-main.sh\""
-          },
-          {
-            "type": "command",
             "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/destructive-guard.sh\""
           }
         ]
@@ -72,7 +68,7 @@
             "type": "command",
             "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/auto-merge-on-stop.sh\"",
             "asyncRewake": true,
-            "rewakeMessage": "Background branch cleanup completed — report the result below to the user, then continue:",
+            "rewakeMessage": "Background branch cleanup completed \u2014 report the result below to the user, then continue:",
             "rewakeSummary": "Auto-merged feature branch to main"
           },
           {
