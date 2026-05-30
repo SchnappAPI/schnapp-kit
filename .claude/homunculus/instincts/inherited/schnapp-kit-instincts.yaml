@@ -1,0 +1,319 @@
+# Instincts generated from https://github.com/SchnappAPI/schnapp-kit
+# Generated: 2026-05-30T04:11:12.877Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: schnapp-kit-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: docs, refactor
+
+## Evidence
+
+- 2 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: [docs][meta] add cleanup plan, status, and decision ledger, refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Length
+
+## Action
+
+Write moderate-length commit messages (~70 characters)
+
+## Evidence
+
+- Average commit message length: 70 chars
+- Based on 2 commits
+
+---
+id: schnapp-kit-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: schnapp-kit-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: schnapp-kit-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: schnapp-kit-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: schnapp-kit-instinct-filename-kebab
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Filename Kebab
+
+## Action
+
+Use kebab-case for the filename
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: schnapp-kit-instinct-function-camel
+trigger: "When naming a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Function Camel
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: schnapp-kit-instinct-class-pascal
+trigger: "When naming a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Class Pascal
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: schnapp-kit-instinct-const-screaming-snake
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Const Screaming Snake
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: schnapp-kit-instinct-import-relative
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Import Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: schnapp-kit-instinct-export-named
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Export Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: schnapp-kit-instinct-git-conventional-commit
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Git Conventional Commit
+
+## Action
+
+Use conventional commit format with a prefix (e.g., 'docs:', 'refactor:')
+
+## Evidence
+
+- docs: [docs][meta] add cleanup plan, status, and decision ledger
+- refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-instinct-git-prefixes
+trigger: "When categorizing a commit"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Git Prefixes
+
+## Action
+
+Use 'docs' for documentation changes and 'refactor' for code restructuring
+
+## Evidence
+
+- docs: [docs][meta] add cleanup plan, status, and decision ledger
+- refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 70 characters on average
+
+## Evidence
+
+- Pattern in averageLength
+
+---
+id: schnapp-kit-instinct-test-separate-location
+trigger: "When adding or organizing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Test Separate Location
+
+## Action
+
+Place tests in a separate location from source code
+
+## Evidence
+
+- Pattern in testLocation: 'separate'
+
