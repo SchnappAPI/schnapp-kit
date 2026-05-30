@@ -440,19 +440,19 @@ core/.claude/commands/add-language-rules.md	held-cmd	core-claude-held	Workflow c
 core/.claude/commands/database-migration.md	held-cmd	core-claude-held	Workflow command scaffold for database-migration in everything-claude-code.		36	cut		ECC-specific scaffold/rule; node not enabled lang
 core/.claude/commands/feature-development.md	held-cmd	core-claude-held	Workflow command scaffold for feature-development in everything-claude-code.		38	cut		ECC-specific scaffold/rule; node not enabled lang
 core/.claude/rules/node.md	held-cmd	core-claude-held	Node.js Rules for everything-claude-code		56	cut		ECC-specific scaffold/rule; node not enabled lang
-core/tests/	tree	held-machinery	ECC test suite	build-only	149	keep	-	review: keep adapted validators?; user approved batch3 (keep)
-core/scripts/	tree	held-machinery	ECC build/CI/codemap scripts	build-only	167	keep	-	review: any reusable hook scripts?; user approved batch3 (keep)
-core/examples/	tree	held-machinery	ECC example projects (evaluator, gan)	none	46	keep	-	likely cut; user approved batch3 (keep)
+core/tests/	tree	held-machinery	ECC test suite	build-only	149	cut	-	review: keep adapted validators?; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
+core/scripts/	tree	held-machinery	ECC build/CI/codemap scripts	build-only	167	cut	-	review: any reusable hook scripts?; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
+core/examples/	tree	held-machinery	ECC example projects (evaluator, gan)	none	46	cut	-	likely cut; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
 core/assets/	tree	held-machinery	images/resources	none	36	cut	-	likely cut; user approved batch3 (cut)
 core/ecc2/	tree	held-machinery	ECC v2 source	none	19	cut	-	likely cut; user approved batch3 (cut)
 core/src/	tree	held-machinery	ECC source (llm)	none	19	cut	-	likely cut; user approved batch3 (cut)
 core/legacy-command-shims/	tree	held-machinery	legacy command compat	none	13	cut	-	likely cut; user approved batch3 (cut)
-core/schemas/	tree	held-machinery	JSON validation schemas (hooks/plugin)	maybe-reusable	10	keep	-	review: keep hooks/plugin schema?; user approved batch3 (keep)
+core/schemas/	tree	held-machinery	JSON validation schemas (hooks/plugin)	maybe-reusable	10	cut	-	review: keep hooks/plugin schema?; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
 core/integrations/	tree	held-machinery	aura integration	none	7	cut	-	likely cut; user approved batch3 (cut)
-core/manifests/	tree	held-machinery	install-components/modules/profiles	build-only	3	keep	-	cut (fork install machinery); user approved batch3 (keep)
-core/hooks/	tree	held-machinery	core hooks + memory-persistence	maybe-reusable	4	keep	-	review vs overlays/hooks; user approved batch3 (keep)
-core/mcp-configs/	tree	held-machinery	mcp-servers.json	maybe-reusable	1	keep	-	review w/ core/.mcp.json; user approved batch3 (keep)
-core/config/	tree	held-machinery	project-stack-mappings.json	none	1	keep	-	likely cut; user approved batch3 (keep)
-core/plugins/	tree	held-machinery	plugin defs	none	1	keep	-	likely cut; user approved batch3 (keep)
+core/manifests/	tree	held-machinery	install-components/modules/profiles	build-only	3	cut	-	cut (fork install machinery); user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
+core/hooks/	tree	held-machinery	core hooks + memory-persistence	maybe-reusable	4	cut	-	review vs overlays/hooks; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
+core/mcp-configs/	tree	held-machinery	mcp-servers.json	maybe-reusable	1	cut	-	review w/ core/.mcp.json; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
+core/config/	tree	held-machinery	project-stack-mappings.json	none	1	cut	-	likely cut; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
+core/plugins/	tree	held-machinery	plugin defs	none	1	cut	-	likely cut; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks
 core/research/	tree	held-machinery	research materials	none	1	cut	-	likely cut; user approved batch3 (cut)
-core/.mcp.json	config	held-machinery	MCP server config (root)	maybe-reusable	28	keep	-	review w/ core/mcp-configs; user approved batch3 (keep)
+core/.mcp.json	config	held-machinery	MCP server config (root)	maybe-reusable	28	cut	-	review w/ core/mcp-configs; user approved batch3 (keep); flatten override (PLAN.md): ECC scaffolding; runtime hooks live in overlays/hooks

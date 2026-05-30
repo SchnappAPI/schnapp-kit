@@ -1,11 +1,10 @@
 # schnapp-kit cleanup — final keep/cut manifest
 
-**Phase 3 decision pass complete.** Every artifact in the kit now has a recorded
-keep/cut decision. Source of truth: `docs/cleanup/inventory.tsv`. Rationale per
-batch: `proposed-cuts.md` (skills), `-2.md` (agents/commands/rules/vendored),
-`-3.md` (core machinery).
+**Phase 3 decision pass complete; direction = Flatten & own (PLAN.md).** Every
+artifact decided. Source of truth: `docs/cleanup/inventory.tsv`. Rationale:
+`proposed-cuts.md` / `-2.md` / `-3.md`.
 
-> Status: decisions DONE. Applying the cuts is the next step (not yet started).
+> Status: decisions DONE. Apply (Phase 4 flatten) + verify (Phase 5) remain.
 
 | Bucket | Keep | Cut | Total |
 |---|---:|---:|---:|
@@ -18,26 +17,21 @@ batch: `proposed-cuts.md` (skills), `-2.md` (agents/commands/rules/vendored),
 | Overlays | 9 | 2 | 11 |
 | Language packs | 4 | 0 | 4 |
 | core/.claude (held) | 0 | 4 | 4 |
-| Core machinery | 10 | 6 | 16 |
-| **Total** | **282** | **175** | **457** |
+| Core machinery | 0 | 16 | 16 |
+| **Total** | **272** | **185** | **457** |
 
-## What gets cut (171 rows)
+## What gets cut (185 rows)
 
-- **Pruned-language stacks** — Java/Spring/Quarkus, Kotlin/Android, PHP/Laravel, Swift/iOS, C++, .NET, Angular (skills + reviewers + build cmds + rule dirs).
+- **Pruned-language stacks** — Java/Spring/Quarkus, Kotlin/Android, PHP/Laravel, Swift/iOS, C++, .NET, Angular.
 - **Niche verticals** — healthcare, trading/web3, marketing/sales/social, supply-chain, networking/homelab, scientific/biomed, media/video.
-- **ECC-product internals** — `ecc-guide`, `configure-ecc`, `*-ops` family, GAN harness, `auto-update`, `cost-tracking`, plus core subtrees (`assets` 22MB, `ecc2`, `src`, `research`, `integrations`, `legacy-command-shims`).
-- **Superseded / deprecated** — `continuous-learning` v1, mattpocock `deprecated/` + `in-progress/`.
+- **ECC-product internals** — `ecc-guide`, `configure-ecc`, `*-ops` family, GAN harness, `auto-update`, `cost-tracking`.
+- **Core machinery (flatten)** — all 16 held trees: `assets`(22MB), `ecc2`, `src`, `tests`, `scripts`, `examples`, `schemas`, `manifests`, `plugins`, `hooks`, `config`, `mcp-configs`, `research`, `integrations`, `legacy-command-shims`, `.mcp.json`. Plus `kit.config.yml` + sync scripts at flatten. Runtime hooks survive in `overlays/hooks/`.
+- **Superseded** — `continuous-learning` v1; mattpocock `deprecated/`+`in-progress/`.
 
-## Coupled decisions on record
+## Apply plan (Flatten & own)
 
-- Instinct-learning **kept** (`continuous-learning-v2` + 9 `learn/evolve/instinct-*` commands).
-- GAN harness **cut** as a unit (skill + 3 agents + 2 commands).
-- `opensource-pipeline` **kept** as a unit (skill + 3 agents).
-
-## Next: applying (separate pass)
-
-1. Fresh branch off this one.
-2. Realize cuts via `kit.config.yml` toggles + `prune-languages.sh`; delete cut `core/` subtrees.
-3. Gate every step with `scripts/conflict-check.sh`.
-4. Prune now-orphaned tests/scripts (e.g. `observability-readiness.js` after `ecc2`).
-5. ADR documenting the cull.
+1. `git rm` the 185 cut paths still present (skip Phase-1-removed).
+2. Flatten keepers to single-layer (`skills/ agents/ commands/ rules/ contexts/`); fold language-packs; relocate `LICENSE`+`ATTRIBUTION.md` to root.
+3. Drop fork/sync machinery (`kit.config.yml`, sync `scripts/`, `vendored/.upstreams.yml`); give up upstream re-sync.
+4. Rewrite references; dangling-ref grep; hook smoke test.
+5. ADR documenting the cull + flatten.

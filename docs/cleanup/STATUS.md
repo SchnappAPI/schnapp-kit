@@ -54,10 +54,20 @@ fork-coupled overlay skills audit-against-kit + discover-kit-additions → cut o
 rewrite; (3) 18 travel-together bundle skills (keep = whole dir); (4) linked
 pairs (secrets agent↔rule, adr cmd↔skill).
 
-**Next action: Phase 3 — file-by-file grilling** of the 431 undecided
-inventory rows, by bucket. Start with core/skills (225), batched by domain.
-Record keep/cut in inventory.tsv. Then Phase 4 flatten, Phase 5 verify.
-Tracked: 1,265.
+**Phase 3 (file-by-file grilling) COMPLETE.** All 457 inventory rows decided:
+**272 keep / 185 cut** (0 undecided). Per-batch rationale in
+`proposed-cuts.md` (skills), `-2.md` (agents/commands/rules/vendored),
+`-3.md` (core machinery). Consolidated in `MANIFEST.md`. User-approved each
+batch; `caveman` kept by override. **Flatten direction re-confirmed by user**
+→ all 16 held-machinery trees CUT (ECC scaffolding; runtime hooks live in
+`overlays/hooks/`, so nothing load-bearing is lost).
+
+**Next action: APPLY.** (a) Phase-3 survivor cuts — `git rm` the 185 cut paths
+that still exist (skip any already removed in Phase 1). (b) Phase 4 flatten —
+move keepers to flat layout, fold lang-packs, drop sync machinery
+(`kit.config.yml`, `scripts/` sync, `.upstreams.yml`), relocate
+`core/LICENSE`+`ATTRIBUTION.md` to root. (c) Phase 5 verify — dangling-ref
+grep + hook smoke test.
 
 **PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
 bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5–#8
@@ -65,10 +75,10 @@ closed); bot stays installed.
 
 ## Phase checklist
 - [x] Phase 0 — Setup (branch `claude/dreamy-ptolemy-vITDt`, ledger, STATUS, PLAN copy)
-- [ ] Phase 1 — Bulk cuts (groups A–F, ~2,061 files)
-- [ ] Phase 2 — Inventory survivors (scripted frontmatter sweep → ledger rows)
-- [ ] Phase 3 — File-by-file grilling (survivors only)
-- [ ] Phase 4 — Flatten & reorganize (move keepers, fold lang-packs, rewrite refs)
+- [x] Phase 1 — Bulk cuts (2,089 files across 8 sections; committed+pushed)
+- [x] Phase 2 — Inventory survivors (inventory.tsv, 457 rows + dep sweep)
+- [x] Phase 3 — File-by-file grilling (all 457 decided: 272 keep / 185 cut)
+- [ ] Phase 4 — Apply + flatten (rm 185 cuts; move keepers; drop sync machinery; rewrite refs)
 - [ ] Phase 5 — Verify (trim tests, dangling-ref grep, hook smoke test, PR)
 
 ## Bulk-cut groups (Phase 1)
