@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # validate-frontmatter.sh — overlays agents and skills have required YAML frontmatter fields
-# Note: core/ and vendored/ are upstream content — we validate our own overlays only.
+# Note: all artifacts are owned; validate skills/ + agents/.
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -26,15 +26,15 @@ check_frontmatter() {
   done
 }
 
-echo "=== Validating overlays/agents frontmatter ==="
+echo "=== Validating agents frontmatter ==="
 while IFS= read -r -d '' f; do
   check_frontmatter "$f" name description
-done < <(find "${REPO_ROOT}/overlays/agents" -name "*.md" -print0 2>/dev/null)
+done < <(find "${REPO_ROOT}/agents" -name "*.md" -print0 2>/dev/null)
 
-echo "=== Validating overlays/skills frontmatter ==="
+echo "=== Validating skills frontmatter ==="
 while IFS= read -r -d '' f; do
   check_frontmatter "$f" name description
-done < <(find "${REPO_ROOT}/overlays/skills" -name "SKILL.md" -print0 2>/dev/null)
+done < <(find "${REPO_ROOT}/skills" -name "SKILL.md" -print0 2>/dev/null)
 
 echo "=== Validating language-packs skills frontmatter (spot check) ==="
 while IFS= read -r -d '' f; do

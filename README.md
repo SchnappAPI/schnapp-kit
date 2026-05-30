@@ -1,16 +1,21 @@
 # schnapp-kit
 
-A personal, layered Claude Code distribution. Fork of [affaan-m/ECC](https://github.com/affaan-m/ECC), with community plugins vendored on top and schnapp-bet's universal artifacts overlaid.
+A personal Claude Code distribution — a curated, flat plugin of skills, agents,
+commands, rules, and workflow hooks. Originally assembled from
+[affaan-m/ECC](https://github.com/affaan-m/ECC) plus community plugins; now
+flattened and owned, with no upstream re-sync.
 
 **Install**: `/plugin install github:schnappapi/schnapp-kit`
 
-**Layers** (low → high priority):
+**What's inside**:
 
-1. `core/` — ECC fork, pruned to enabled languages, examples kept.
-2. `vendored/` — third-party plugins, version-pinned (currently: mattpocock/skills).
-3. `language-packs/` — opt-in per-language additions (python, typescript, sql, infra).
-4. `overlays/` — schnapp-bet promotions and kit-native skills.
+- `skills/` — agent skills (Python/TypeScript/SQL/infra dev, AI-agent engineering, testing, security, kit meta-tooling)
+- `agents/` — subagent definitions (reviewers, architects, resolvers)
+- `commands/` — slash commands (planning, PRs, multi-model workflows, instinct learning)
+- `rules/` — coding conventions (common + python/typescript/web)
+- `contexts/` — reusable context blocks
+- `hooks/` — branch-workflow, scope/destructive guards, and security-review hooks
 
-**Status**: v1 is a starting point. Use `/discover-kit-additions` and `/audit-against-kit` to grow it.
-
-See `docs/ARCHITECTURE.md` for the layer model and `docs/ADOPTING.md` for install instructions per surface (Claude Code plugin, Claude.ai user-global, Cowork).
+**Curation**: built down from ~3,000 files to a focused set scoped to a
+Python + TypeScript + SQL + infra stack. See `docs/cleanup/MANIFEST.md` for the
+full keep/cut record and `docs/decisions/` for the architecture ADRs.

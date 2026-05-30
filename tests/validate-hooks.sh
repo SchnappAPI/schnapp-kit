@@ -18,13 +18,11 @@ check_hook() {
 }
 
 echo "=== Validating hook scripts ==="
+# Only .sh entrypoints must be executable+shebang'd. Imported .py modules
+# (e.g. security-guidance helpers) and hooks.json data are not entrypoints.
 while IFS= read -r -d '' f; do
   check_hook "$f"
-done < <(find "${REPO_ROOT}/overlays/hooks" -type f -print0 2>/dev/null)
-
-while IFS= read -r -d '' f; do
-  check_hook "$f"
-done < <(find "${REPO_ROOT}/language-packs" -path "*/hooks/*" -type f -print0 2>/dev/null)
+done < <(find "${REPO_ROOT}/hooks" -type f -name '*.sh' -print0 2>/dev/null)
 
 while IFS= read -r -d '' f; do
   check_hook "$f"

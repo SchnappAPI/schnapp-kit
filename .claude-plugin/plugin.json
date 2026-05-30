@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/schemas/claude-plugin/v1.json",
   "name": "schnapp-kit",
   "version": "0.1.0",
-  "description": "Personal Claude Code distribution: ECC fork + vendored community plugins + schnapp-bet promotions. Layered, opt-in, scalable.",
+  "description": "Personal Claude Code distribution \u2014 curated skills, agents, commands, rules, and workflow hooks. Flat, single-layer, owned (no upstream re-sync).",
   "author": {
     "name": "SchnappAPI",
     "email": "apischnapp@gmail.com",
@@ -10,7 +10,5 @@
   },
   "homepage": "https://github.com/schnappapi/schnapp-kit",
   "repository": "https://github.com/schnappapi/schnapp-kit",
-  "license": "MIT",
-  "discoveryRoots": ["core", "vendored", "language-packs", "overlays"],
-  "configFile": "kit.config.yml"
+  "license": "MIT"
 }
