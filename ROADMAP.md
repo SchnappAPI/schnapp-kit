@@ -32,6 +32,5 @@ binding task. Keep it short; prune done items into the Done list.
 
 ## Manual follow-ups (need the owner)
 
-- Remove the dead `python3 scripts/*` allow-rule in `.claude/settings.json`
-  (the permission-edit guardrail blocks Claude from doing it).
 - Update the GitHub **repo description** — still reads "ECC core … layered … v1".
+  No GitHub MCP tool can edit it; use `gh repo edit` or the web UI.

@@ -5,9 +5,33 @@ defined once and travel with the repo.
 
 ## What ships
 
-| Server | Type | Auth |
-|--------|------|------|
-| `github` | `http` → `https://api.githubcopilot.com/mcp/` | `Authorization: Bearer ${GITHUB_TOKEN}` |
+| Server | Type | Auth | Toolsets |
+|--------|------|------|----------|
+| `github` | `http` → `https://api.githubcopilot.com/mcp/` | `Authorization: Bearer ${GITHUB_TOKEN}` | `all` (via `X-MCP-Toolsets`) |
+
+## Toolsets
+
+The GitHub MCP server groups its ~160 tools into ~18 **toolsets**. With no
+header you get only the defaults (`context, repos, issues, pull_requests,
+users`). The kit requests **`all`** via the `X-MCP-Toolsets` header so the
+`actions` (CI logs + re-run failed jobs), `code_security`, `dependabot`,
+`secret_protection`, `notifications`, and other toolsets are available:
+
+```json
+"headers": {
+  "Authorization": "Bearer ${GITHUB_TOKEN}",
+  "X-MCP-Toolsets": "all"
+}
+```
+
+To narrow the surface, replace `all` with a comma-separated list, e.g.
+`"context,repos,issues,pull_requests,actions"`. Other supported headers:
+`X-MCP-Readonly: "true"` (read-only — note the kit creates/merges PRs, so
+read-write is the default here) and `X-MCP-Insiders: "true"`.
+
+> **Not available via MCP:** editing a repository's description / topics /
+> homepage. No GitHub MCP toolset exposes repository-settings editing — use
+> `gh repo edit` or the web UI for that.
 
 ## Approval (why it won't connect on its own)
 
