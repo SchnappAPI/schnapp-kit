@@ -1,6 +1,6 @@
 ---
 name: adr
-description: Create today's ADR with the next counter. Pairs with overlays/skills/adr-writer/. Default path is docs/decisions/ — override by setting adr_path in your project's .claude/skills/adr-writer/SKILL.md.
+description: Create today's ADR with the next counter. Pairs with skills/adr-writer/. Default path is docs/decisions/ — override by setting adr_path in your project's .claude/skills/adr-writer/SKILL.md.
 disable-model-invocation: true
 ---
 

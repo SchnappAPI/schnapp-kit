@@ -1,14 +1,23 @@
-# Attribution — core/ layer
+# Attribution
 
-The `core/` directory is a fork of [affaan-m/ECC](https://github.com/affaan-m/ECC).
+schnapp-kit was assembled from several open-source sources, then **flattened and
+owned** — curated down to a focused set and merged into a single flat plugin.
+There is no upstream re-sync; the sources below are credited as origin.
 
-- **Source**: https://github.com/affaan-m/ECC
-- **Pinned commit**: 928076cc08cbb31e8549cea2883b4f51811de1c8
-- **Forked**: 2026-05-27T02:35:47Z
-- **License**: see upstream LICENSE file
+## Sources
 
-## What changed after forking
+- **[affaan-m/ECC](https://github.com/affaan-m/ECC)** — the bulk of the skills,
+  agents, commands, and rules. Forked at commit
+  `928076cc08cbb31e8549cea2883b4f51811de1c8` (2026-05-27), then pruned to a
+  Python/TypeScript/SQL/infra stack and curated (see `docs/cleanup/MANIFEST.md`).
+- **[mattpocock/skills](https://github.com/mattpocock/skills)** — engineering and
+  productivity skills (`diagnose`, `tdd`, `prototype`, `handoff`, etc.). License
+  preserved at `docs/guides/LICENSE-mattpocock-skills.txt`.
+- **[anthropics/claude-code](https://github.com/anthropics/claude-code) plugins** —
+  `agent-sdk-dev`, `plugin-dev`, `ralph-wiggum`, and `security-guidance`
+  (agents, commands, skills, and hooks).
 
-Language packs for unused languages were pruned (see `scripts/prune-languages.sh` and `kit.config.yml.core.pruned_languages`). No other modifications to the upstream tree — all examples, output styles, statuslines, workflow templates, MCP server templates, and cross-cutting agents/skills/commands are kept intact.
+## License
 
-To re-sync: `scripts/sync-upstream.sh core`
+This distribution is MIT-licensed (see `LICENSE`). Third-party material remains
+under its respective upstream license.

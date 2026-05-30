@@ -48,11 +48,11 @@ Examples: `secrets.md`, `docs.md`, `database.md`, `web.md`.
 
 ## Contexts (`contexts/*.md`)
 
-Named context profiles activated via `/mode <name>`. Set Claude's posture for a work session (e.g. `dev`, `review`, `research`). ECC ships several; check `core/contexts/` before adding new ones.
+Named context profiles activated via `/mode <name>`. Set Claude's posture for a work session (e.g. `dev`, `review`, `research`). Check `contexts/` before adding new ones.
 
 ## Output styles (`output-styles/*.md`)
 
-Templates that control how Claude formats its responses. ECC ships a full library; override in `overlays/overrides/` if needed.
+Templates that control how Claude formats its responses.
 
 ## Statuslines (`statuslines/*.md` or config)
 

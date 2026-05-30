@@ -10,4 +10,4 @@ description: Universal secrets hygiene policy. Auto-load on any project using sc
 - **No plaintext credentials in source control** — ever. Strings that look like API keys, tokens, passwords, or connection strings with embedded credentials are violations even in test fixtures.
 - **Hostnames and IPs** are not secrets, but they are environment-specific. Production host values belong in env config, not hardcoded in source.
 
-See `overlays/agents/secrets-hygiene-reviewer.md` for the automated diff-level enforcement agent.
+See `agents/secrets-hygiene-reviewer.md` for the automated diff-level enforcement agent.
