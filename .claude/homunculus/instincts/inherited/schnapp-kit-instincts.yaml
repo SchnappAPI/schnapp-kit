@@ -1,0 +1,463 @@
+# Instincts generated from https://github.com/SchnappAPI/schnapp-kit
+# Generated: 2026-05-30T04:16:44.968Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: schnapp-kit-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: refactor, docs
+
+## Evidence
+
+- 3 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: [docs][meta] add cleanup plan, status, and decision ledger, refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Length
+
+## Action
+
+Write moderate-length commit messages (~68 characters)
+
+## Evidence
+
+- Average commit message length: 68 chars
+- Based on 3 commits
+
+---
+id: schnapp-kit-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: schnapp-kit-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: schnapp-kit-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: schnapp-kit-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: schnapp-kit-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~30x per month
+- Files: src/**/*
+
+---
+id: schnapp-kit-workflow-documentation-cleanup-and-ledger-update
+trigger: "when doing documentation cleanup and ledger update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Documentation Cleanup And Ledger Update
+
+## Action
+
+Follow the documentation-cleanup-and-ledger-update workflow:
+1. Identify documentation files to remove (e.g., adapter guides, localized docs).
+2. Delete the identified files from their respective directories.
+3. Update or create entries in docs/cleanup/ledger.tsv to record what was removed and why.
+4. Update docs/cleanup/STATUS.md to reflect current cleanup status.
+5. Optionally, update docs/cleanup/PLAN.md with future cleanup intentions.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: core/docs/*, docs/cleanup/ledger.tsv, docs/cleanup/STATUS.md
+
+---
+id: schnapp-kit-instinct-file-naming-camelCase
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct File Naming CamelCase
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: schnapp-kit-instinct-function-naming-camelCase
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Function Naming CamelCase
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: schnapp-kit-instinct-class-naming-pascalCase
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Class Naming PascalCase
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: schnapp-kit-instinct-constant-naming-screamingSnakeCase
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Constant Naming ScreamingSnakeCase
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: schnapp-kit-instinct-imports-relative
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Imports Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: schnapp-kit-instinct-exports-named
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Exports Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: schnapp-kit-instinct-git-commit-conventional
+trigger: "When making a git commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Git Commit Conventional
+
+## Action
+
+Format the commit message using the conventional commits style with a prefix (e.g., 'refactor:', 'docs:')
+
+## Evidence
+
+- Seen in commit 'docs: [docs][meta] add cleanup plan, status, and decision ledger'
+- Seen in commit 'refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides'
+
+---
+id: schnapp-kit-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 68 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: schnapp-kit-instinct-refactor-test-pass-before
+trigger: "Before starting a refactor workflow"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Refactor Test Pass Before
+
+## Action
+
+Ensure all tests pass before making refactor changes
+
+## Evidence
+
+- Pattern in workflows[0].commitSequence: 'Ensure tests pass before refactor'
+
+---
+id: schnapp-kit-instinct-refactor-test-pass-after
+trigger: "After refactoring code"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Refactor Test Pass After
+
+## Action
+
+Verify all tests still pass after refactor
+
+## Evidence
+
+- Pattern in workflows[0].commitSequence: 'Verify tests still pass'
+
+---
+id: schnapp-kit-instinct-docs-cleanup-identify
+trigger: "When starting a documentation cleanup"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Docs Cleanup Identify
+
+## Action
+
+Identify documentation files to remove (e.g., adapter guides, localized docs)
+
+## Evidence
+
+- Pattern in documentation-cleanup-and-ledger-update.steps: 'Identify documentation files to remove...'
+
+---
+id: schnapp-kit-instinct-docs-cleanup-delete
+trigger: "After identifying obsolete documentation files"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Docs Cleanup Delete
+
+## Action
+
+Delete the identified files from their respective directories
+
+## Evidence
+
+- Pattern in documentation-cleanup-and-ledger-update.steps: 'Delete the identified files...'
+
+---
+id: schnapp-kit-instinct-docs-cleanup-ledger
+trigger: "After deleting documentation files"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Docs Cleanup Ledger
+
+## Action
+
+Update or create entries in docs/cleanup/ledger.tsv to record what was removed and why
+
+## Evidence
+
+- Pattern in documentation-cleanup-and-ledger-update.steps: 'Update or create entries in docs/cleanup/ledger.tsv...'
+
+---
+id: schnapp-kit-instinct-docs-cleanup-status
+trigger: "After updating the cleanup ledger"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Docs Cleanup Status
+
+## Action
+
+Update docs/cleanup/STATUS.md to reflect current cleanup status
+
+## Evidence
+
+- Pattern in documentation-cleanup-and-ledger-update.steps: 'Update docs/cleanup/STATUS.md...'
+
+---
+id: schnapp-kit-instinct-docs-cleanup-plan
+trigger: "When planning future documentation cleanups"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Docs Cleanup Plan
+
+## Action
+
+Optionally, update docs/cleanup/PLAN.md with future cleanup intentions
+
+## Evidence
+
+- Pattern in documentation-cleanup-and-ledger-update.steps: 'Optionally, update docs/cleanup/PLAN.md...'
+
