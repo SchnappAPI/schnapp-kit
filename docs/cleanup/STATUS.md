@@ -18,15 +18,18 @@ layout; delete the fork/sync machinery. Give up upstream ECC re-sync (intended).
 sign-off + commit (delete-per-section cadence).
 
 **Sections done:** 1 (6 adapter guides), 2 (1,165 localized docs), 3 (319
-editor mirrors / group A), 4 (79 ECC-internal core/docs cut; 8 generic
-guides/templates KEPT — see ledger sec4-keep, relocate to docs/ in flatten).
-**Next action:** Section 5. Remaining: ECC repo internals (core/.github 21 CI,
-core/.claude 13 config), pruned-language artifacts (group C ~68), disabled
-vendored output-style plugins (group F, 8), then ECC scaffolding (ecc2/src/
-tests/scripts/examples/assets) goes to file-by-file in Phase 2/3. Tracked: 1,410.
+editor mirrors / group A), 4 (79 ECC-internal core/docs cut; 8 guides KEPT),
+5 (30 ECC repo internals cut — all core/.github + ECC-specific core/.claude;
+4 HELD for Phase 3: core/.claude/commands/{add-language-rules,database-migration,
+feature-development}.md + rules/node.md — review vs core/commands & core/rules).
+**Next action:** Section 6 — pruned-language artifacts (group C, ~68 across
+core/skills, core/agents, core/rules). Then Section 7 (group F disabled vendored
+plugins, 8) and Section 8 (ECC root scaffolding). Big buckets (core/skills 401,
+agents 61, commands 76, ecc2/src/tests/scripts/examples/assets) → Phase 2/3.
+Tracked: 1,380.
 
 **PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
-bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5/#6/#7
+bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5–#8
 closed); bot stays installed.
 
 ## Phase checklist

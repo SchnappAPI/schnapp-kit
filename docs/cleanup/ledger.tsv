@@ -87,3 +87,17 @@ core/docs/architecture/**	doc-tree	sec4-cut	ECC 2.0 design contracts (cross-harn
 core/docs/fixes/**	doc-group	sec4-cut	version-pinned ECC hook-bug workarounds + PS patchers	none	7	cut	-	sec4; ECC-specific fixes
 core/docs/business+drafts	doc-group	sec4-cut	sponsorship playbook, social copy, release announcement	none	3	cut	-	sec4; ECC marketing
 core/docs/security/supply-chain-incident-response.md	doc	sec4-cut	supply-chain IR playbook	none	189	cut	-	sec4; ECC operator runbook, incident-pinned
+core/.github/**	repo-config	sec5-cut	ECC's own CI workflows, CODEOWNERS, FUNDING, dependabot, PR/issue templates, copilot prompts	none(inert under core)	21	cut	-	sec5; ECC repo machinery
+core/.claude/ecc-tools.json	config	sec5-cut	ECC install/tools manifest	none	1	cut	-	sec5; ECC-specific
+core/.claude/enterprise/controls.md	config	sec5-cut	ECC enterprise controls	none	1	cut	-	sec5; ECC-specific
+core/.claude/homunculus/instincts/inherited/everything-claude-code-instincts.yaml	config	sec5-cut	ECC inherited instincts	none	1	cut	-	sec5; ECC-specific
+core/.claude/identity.json	config	sec5-cut	ECC identity baseline	none	1	cut	-	sec5; ECC-specific
+core/.claude/package-manager.json	config	sec5-cut	ECC package-manager config	none	1	cut	-	sec5; ECC-specific
+core/.claude/research/everything-claude-code-research-playbook.md	doc	sec5-cut	ECC research playbook	none	1	cut	-	sec5; ECC-specific
+core/.claude/rules/everything-claude-code-guardrails.md	rule	sec5-cut	ECC guardrails rule	none	1	cut	-	sec5; ECC-specific
+core/.claude/skills/everything-claude-code/SKILL.md	skill	sec5-cut	ECC self-describing skill	none	1	cut	-	sec5; ECC-specific
+core/.claude/team/everything-claude-code-team-config.json	config	sec5-cut	ECC team config	none	1	cut	-	sec5; ECC-specific
+core/.claude/commands/add-language-rules.md	command	sec5-hold	add-language-rules slash command	tied to lang-pack/rules flow	1	undecided	-	sec5; review in Phase 3 with core/commands
+core/.claude/commands/database-migration.md	command	sec5-hold	database-migration slash command	maybe dup of core/commands	1	undecided	-	sec5; review in Phase 3 with core/commands
+core/.claude/commands/feature-development.md	command	sec5-hold	feature-development slash command	maybe dup of core/commands	1	undecided	-	sec5; review in Phase 3 with core/commands
+core/.claude/rules/node.md	rule	sec5-hold	generic Node.js rules	maybe dup of core/rules	1	undecided	-	sec5; review in Phase 3 with core/rules
