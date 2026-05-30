@@ -1,5 +1,5 @@
 {
-  "description": "schnapp-kit hooks (merged): branch-workflow + scope/destructive guards (overlays), ralph-loop stop hook, security-guidance review hooks",
+  "description": "schnapp-kit hooks: branch-workflow + scope/destructive guards, compaction-continuity + session cleanup, ralph-loop stop hook, security-guidance review hooks",
   "hooks": {
     "SessionStart": [
       {
@@ -11,6 +11,10 @@
           {
             "type": "command",
             "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/stale-state-cleanup.sh\""
+          },
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/session-resume-breadcrumb.sh\""
           }
         ]
       },
@@ -146,6 +150,26 @@
           {
             "type": "command",
             "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/sg-python.sh\" \"${CLAUDE_PLUGIN_ROOT}/hooks/security_reminder_hook.py\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/pre-compact-snapshot.sh\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/claude/session-end-cleanup.sh\""
           }
         ]
       }
