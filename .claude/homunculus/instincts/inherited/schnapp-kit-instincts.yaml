@@ -1,0 +1,480 @@
+# Instincts generated from https://github.com/SchnappAPI/schnapp-kit
+# Generated: 2026-05-30T04:30:51.598Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: schnapp-kit-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: refactor, docs
+
+## Evidence
+
+- 5 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: [docs][meta] add cleanup plan, status, and decision ledger, refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Length
+
+## Action
+
+Write moderate-length commit messages (~66 characters)
+
+## Evidence
+
+- Average commit message length: 66 chars
+- Based on 5 commits
+
+---
+id: schnapp-kit-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: schnapp-kit-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: schnapp-kit-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: schnapp-kit-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: schnapp-kit-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~18x per month
+- Files: migrations/*, **/schema.*
+
+---
+id: schnapp-kit-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~30x per month
+- Files: src/**/*
+
+---
+id: schnapp-kit-workflow-documentation-section-removal
+trigger: "when doing documentation section removal"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Documentation Section Removal
+
+## Action
+
+Follow the documentation-section-removal workflow:
+1. Identify all files in the targeted documentation section (e.g., core/docs/ANTIGRAVITY-GUIDE.md, core/docs/ja-JP/*, core/docs/releases/*).
+2. Delete all files matching the section's pattern.
+3. Update cleanup tracking files (e.g., docs/cleanup/ledger.tsv, docs/cleanup/STATUS.md) to record the removal.
+4. Optionally, add or update review aids or index files to reflect the change.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: core/docs/*, core/docs/<lang>/*, core/docs/releases/*
+
+---
+id: schnapp-kit-workflow-editor-config-mirror-removal
+trigger: "when doing editor config mirror removal"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Editor Config Mirror Removal
+
+## Action
+
+Follow the editor-config-mirror-removal workflow:
+1. Identify all files and folders under editor-specific config directories (e.g., core/.cursor/*, core/.kiro/*, core/.opencode/*, etc.).
+2. Delete all files in these directories.
+3. Update cleanup tracking files (e.g., docs/cleanup/ledger.tsv, docs/cleanup/STATUS.md) to log the removal.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: core/.cursor/*, core/.kiro/*, core/.opencode/*
+
+---
+id: schnapp-kit-workflow-cleanup-tracking-update
+trigger: "when doing cleanup tracking update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Cleanup Tracking Update
+
+## Action
+
+Follow the cleanup-tracking-update workflow:
+1. Edit docs/cleanup/PLAN.md to describe the cleanup plan.
+2. Edit docs/cleanup/STATUS.md to reflect current progress.
+3. Edit docs/cleanup/ledger.tsv to record specific decisions and file removals.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/cleanup/PLAN.md, docs/cleanup/STATUS.md, docs/cleanup/ledger.tsv
+
+---
+id: schnapp-kit-naming-files-kebab-case
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Files Kebab Case
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: kebab-case
+
+---
+id: schnapp-kit-naming-functions-camelCase
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Functions CamelCase
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: schnapp-kit-naming-classes-PascalCase
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Classes PascalCase
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: schnapp-kit-naming-constants-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Constants SCREAMING_SNAKE_CASE
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: schnapp-kit-imports-relative
+trigger: "When importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Imports Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: schnapp-kit-exports-named
+trigger: "When exporting modules or functions"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Exports Named
+
+## Action
+
+Use named exports instead of default exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: schnapp-kit-testing-separate-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Testing Separate Location
+
+## Action
+
+Place test files in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: schnapp-kit-git-conventional-commits
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Git Conventional Commits
+
+## Action
+
+Use conventional commit prefixes such as 'refactor:' or 'docs:'
+
+## Evidence
+
+- Pattern in commits.type: conventional
+- Examples: 'docs: [docs][meta] add cleanup plan, status, and decision ledger'
+
+---
+id: schnapp-kit-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Git Commit Length
+
+## Action
+
+Keep commit messages concise, around 66 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 66
+
+---
+id: schnapp-kit-workflow-documentation-section-removal
+trigger: "When a documentation section is deprecated or targeted for removal"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Documentation Section Removal
+
+## Action
+
+Identify all files in the section, delete them, and update cleanup tracking files
+
+## Evidence
+
+- Workflow: documentation-section-removal
+- Example commits and files: core/docs/*, docs/cleanup/ledger.tsv
+
+---
+id: schnapp-kit-workflow-editor-config-mirror-removal
+trigger: "When support for alternative editors is dropped or consolidated"
+confidence: 0.93
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Editor Config Mirror Removal
+
+## Action
+
+Delete all files under editor-specific config directories and update cleanup tracking files
+
+## Evidence
+
+- Workflow: editor-config-mirror-removal
+- Example files: core/.cursor/*, docs/cleanup/ledger.tsv
+
+---
+id: schnapp-kit-workflow-cleanup-tracking-update
+trigger: "Whenever files are removed or major documentation/structural changes are made as part of a cleanup"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Cleanup Tracking Update
+
+## Action
+
+Edit PLAN.md, STATUS.md, and ledger.tsv in docs/cleanup to document the plan, progress, and decisions
+
+## Evidence
+
+- Workflow: cleanup-tracking-update
+- Example files: docs/cleanup/PLAN.md, docs/cleanup/STATUS.md, docs/cleanup/ledger.tsv
+
