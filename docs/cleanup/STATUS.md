@@ -14,10 +14,17 @@ layout; delete the fork/sync machinery. Give up upstream ECC re-sync (intended).
   but **keep a simplified web/Cowork install path** (group D2 — do not delete
   blindly).
 
-**Current phase:** Phase 1 — Bulk cuts. Awaiting user sign-off on groups A–F.
+**Current phase:** Phase 1 — Bulk cuts, walking 8 sections with per-section
+sign-off + commit (delete-per-section cadence).
 
-**Next action:** Get sign-off → `git rm -r` approved groups → set ledger
-`decision=cut` for those rows → commit `refactor: [core] bulk-cut group X`.
+**Sections done:** 1 (6 adapter guides), 2 (1,165 localized docs).
+**Next action:** Section 3. Remaining sections cover: ECC english
+release/internal-planning docs (~87 in core/docs), fix/hook-workaround docs,
+editor mirrors (group A), ECC repo internals (.github/.claude), pruned-language
+artifacts (group C), disabled vendored plugins (group F). Tracked files: 1,808.
+
+**PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens
+bundle PRs on push — close each (PR #5 closed); bot stays installed.
 
 ## Phase checklist
 - [x] Phase 0 — Setup (branch `claude/dreamy-ptolemy-vITDt`, ledger, STATUS, PLAN copy)
