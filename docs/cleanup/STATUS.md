@@ -42,12 +42,22 @@ hooks 4, mcp-configs 1, config 1, plugins 1, research 1) — review file-by-file
 **Phase 1 (bulk cuts) COMPLETE.** Removed 2,089 files across 8 sections;
 2,977 -> 1,266 tracked (mistake-free, all committed+pushed).
 
-**Next action: Phase 2 — inventory the survivors.** Scripted frontmatter sweep
-(name + description + size + deps) over remaining core/skills (~225), core/agents
-(~46), core/commands (~64), kept core/rules, the 4 held core/.claude files, the
-held core/ trees + config, vendored/* (5 plugins), overlays/ (26),
-language-packs/ (4) -> append ledger rows. Then Phase 3 = file-by-file grilling
-of undecided rows; Phase 4 = flatten/reorganize; Phase 5 = verify. Tracked: 1,266.
+**Phase 2 (inventory sweep) COMPLETE.** Built `docs/cleanup/inventory.tsv` (457
+rows: every surviving artifact with name/purpose/size/deps) + scripted dep sweep
++ `docs/cleanup/INVENTORY-DIGEST.md` (Phase 3 orientation). Inventory decisions:
+10 cut (disabled vendored mattpocock skills), 16 held-phase3 (machinery trees),
+431 undecided (the grilling queue). Sweep tool: /tmp/inv.py (regenerable).
+
+**Key flags for Phase 3 (see INVENTORY-DIGEST.md):** (1) framework skills for
+pruned langs — springboot/quarkus (Java), laravel (PHP) — likely cut; (2)
+fork-coupled overlay skills audit-against-kit + discover-kit-additions → cut or
+rewrite; (3) 18 travel-together bundle skills (keep = whole dir); (4) linked
+pairs (secrets agent↔rule, adr cmd↔skill).
+
+**Next action: Phase 3 — file-by-file grilling** of the 431 undecided
+inventory rows, by bucket. Start with core/skills (225), batched by domain.
+Record keep/cut in inventory.tsv. Then Phase 4 flatten, Phase 5 verify.
+Tracked: 1,265.
 
 **PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
 bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5–#8
