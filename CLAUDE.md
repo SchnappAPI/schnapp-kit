@@ -4,6 +4,26 @@ A personal Claude Code distribution, shipped as a single flat plugin. Everything
 here is **owned** — there is no upstream fork to re-sync, no layers, no config to
 toggle. What you see in the tree is what ships.
 
+## Activation — installed vs. just open in the repo
+
+This repo *defines* the plugin; it does not auto-activate by being open. In a
+session whose working dir is this repo, only `CLAUDE.md` and
+`.claude/settings.json` load. The skills, agents, commands, and **hooks are inert
+until the kit is installed/enabled as a plugin**
+(`/plugin install github:schnappapi/schnapp-kit`). So the branch-workflow and
+guard behaviors described below apply **only when the plugin is installed** —
+don't assume `main` is protected or that PRs auto-create in a bare repo session.
+
+The repo-local git hooks (`.githooks/commit-msg`, `post-commit`) are also off by
+default; activate them once per clone:
+
+```
+git config core.hooksPath .githooks
+```
+
+See `docs/CATALOG.md` for the full inventory of what ships, and `ROADMAP.md` for
+current focus.
+
 ## Layout
 
 ```
@@ -44,7 +64,7 @@ Scopes for this repo: `[skills]`, `[agents]`, `[commands]`, `[rules]`, `[context
 
 ## Branch workflow
 
-All changes go on feature branches (`feat/<short-description>`). Direct commits to `main` are blocked by a PreToolUse hook. After committing, a PR is auto-created. After work is complete with a clean working tree, the Stop hook auto-merges the PR and deletes the branch.
+All changes go on feature branches (`feat/<short-description>`). **When the kit is installed as a plugin**, direct commits to `main` are blocked by a PreToolUse hook, a PR is auto-created after the commit, and the Stop hook auto-merges the PR and deletes the branch once the tree is clean. In a bare repo session these guards are **not** active — follow the workflow manually (branch, push with `-u`, open the PR).
 
 ## Task scope discipline
 

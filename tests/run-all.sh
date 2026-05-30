@@ -21,6 +21,7 @@ run validate-frontmatter.sh
 run validate-hooks.sh
 run validate-rules.sh
 run validate-manifests.sh
+run validate-catalog.sh
 run smoke-plugin.sh
 
 echo ""

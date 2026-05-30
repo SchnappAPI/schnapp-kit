@@ -17,6 +17,15 @@ flattened and owned, with no upstream re-sync.
 - `hooks/` — branch-workflow, scope/destructive guards, compaction continuity, session cleanup, and security-review hooks
 - `.mcp.json` — opt-in MCP servers (GitHub). Project-scoped, so it stays *pending approval* until you approve it — see [`docs/MCP.md`](docs/MCP.md)
 
+**Catalog**: [`docs/CATALOG.md`](docs/CATALOG.md) is the generated inventory of
+every skill, agent, command, hook, and rule. **Note**: the skills/agents/commands/
+hooks are active only when the kit is *installed as a plugin* — opening a session
+in this repo alone does not load them (see [`CLAUDE.md`](CLAUDE.md) → Activation).
+
+**Developing this repo**: enable the repo-local git hooks once per clone with
+`git config core.hooksPath .githooks`, and run `bash tests/run-all.sh` (also run
+in CI) before pushing. Regenerate the catalog with `python3 tests/gen-catalog.py`.
+
 **Curation**: built down from ~3,000 files to a focused set scoped to a
 Python + TypeScript + SQL + infra stack. See `docs/cleanup/MANIFEST.md` for the
 full keep/cut record and `docs/decisions/` for the architecture ADRs.
