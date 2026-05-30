@@ -1,0 +1,460 @@
+# Instincts generated from https://github.com/SchnappAPI/schnapp-kit
+# Generated: 2026-05-30T04:47:49.048Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: schnapp-kit-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: refactor, docs
+
+## Evidence
+
+- 9 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: [docs][meta] add cleanup plan, status, and decision ledger, refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Commit Length
+
+## Action
+
+Write moderate-length commit messages (~63 characters)
+
+## Evidence
+
+- Average commit message length: 63 chars
+- Based on 9 commits
+
+---
+id: schnapp-kit-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: schnapp-kit-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: schnapp-kit-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: schnapp-kit-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: schnapp-kit-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: migrations/*, **/schema.*
+
+---
+id: schnapp-kit-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~30x per month
+- Files: src/**/*
+
+---
+id: schnapp-kit-workflow-large-scale-artifact-pruning
+trigger: "when doing large scale artifact pruning"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Large Scale Artifact Pruning
+
+## Action
+
+Follow the large-scale-artifact-pruning workflow:
+1. Identify all files related to the deprecated feature/language/integration (using directory and filename patterns).
+2. Remove these files in a single commit, grouped by logical section (e.g., docs, configs, skills, plugins, root files).
+3. Update cleanup tracking files (e.g., docs/cleanup/STATUS.md, docs/cleanup/ledger.tsv) to record the removal.
+4. Repeat for each logical section as needed.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: core/docs/**, core/.agents/**, core/.cursor/**
+
+---
+id: schnapp-kit-workflow-cleanup-ledger-and-status-update
+trigger: "when doing cleanup ledger and status update"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Workflow Cleanup Ledger And Status Update
+
+## Action
+
+Follow the cleanup-ledger-and-status-update workflow:
+1. Perform the main change (e.g., remove files, refactor structure).
+2. Edit docs/cleanup/STATUS.md to reflect the new state of the project.
+3. Edit docs/cleanup/ledger.tsv to record decisions, removed files, and rationale.
+4. Commit the changes together.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: docs/cleanup/STATUS.md, docs/cleanup/ledger.tsv
+
+---
+id: schnapp-kit-instinct-file-naming
+trigger: "When creating or renaming files in the repository"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct File Naming
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Consistent kebab-case in core/docs/*
+
+---
+id: schnapp-kit-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: schnapp-kit-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: schnapp-kit-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: schnapp-kit-instinct-import-style
+trigger: "When importing modules in JavaScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: schnapp-kit-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: schnapp-kit-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Git Commit Format
+
+## Action
+
+Use Conventional Commits format with 'refactor' or 'docs' prefix as appropriate, followed by scope in brackets and a concise description
+
+## Evidence
+
+- docs: [docs][meta] add cleanup plan, status, and decision ledger
+- refactor: [core][docs] cut section 1 — non-Claude-Code adapter/setup guides
+
+---
+id: schnapp-kit-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Test Location
+
+## Action
+
+Place tests in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: schnapp-kit-instinct-test-before-refactor
+trigger: "Before performing a major refactor"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Test Before Refactor
+
+## Action
+
+Ensure all tests pass before starting the refactor
+
+## Evidence
+
+- refactoring workflow commitSequence
+- Pattern in refactoring workflow
+
+---
+id: schnapp-kit-instinct-test-after-refactor
+trigger: "After completing a refactor"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Test After Refactor
+
+## Action
+
+Verify that all tests still pass
+
+## Evidence
+
+- refactoring workflow commitSequence
+- Pattern in refactoring workflow
+
+---
+id: schnapp-kit-instinct-large-scale-artifact-pruning
+trigger: "When a feature, language, or integration is deprecated or removed from support"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Large Scale Artifact Pruning
+
+## Action
+
+Identify and remove all related files in a single commit, grouped by logical section, and update cleanup tracking files
+
+## Evidence
+
+- large-scale-artifact-pruning workflow
+- Files: core/docs/**, core/.agents/**, vendored/**, etc.
+- docs/cleanup/STATUS.md, docs/cleanup/ledger.tsv
+
+---
+id: schnapp-kit-instinct-cleanup-ledger-update
+trigger: "After a bulk file removal, refactor, or documentation change affecting project structure or artifact inventory"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: SchnappAPI/schnapp-kit
+---
+
+# Schnapp Kit Instinct Cleanup Ledger Update
+
+## Action
+
+Edit docs/cleanup/STATUS.md and docs/cleanup/ledger.tsv to reflect the new state and record decisions, then commit together
+
+## Evidence
+
+- cleanup-ledger-and-status-update workflow
+- Files: docs/cleanup/STATUS.md, docs/cleanup/ledger.tsv
+
