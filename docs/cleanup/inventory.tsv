@@ -373,9 +373,9 @@ core/rules/web/patterns.md	rule	core-rules	Web Patterns		79	undecided
 core/rules/web/performance.md	rule	core-rules	Web Performance Rules		64	undecided		
 core/rules/web/security.md	rule	core-rules	Web Security Rules		57	undecided		
 core/rules/web/testing.md	rule	core-rules	Web Testing Rules		55	undecided		
-core/contexts/dev.md	context	core-contexts	Development Context		20	undecided		
-core/contexts/research.md	context	core-contexts	Research Context		26	undecided		
-core/contexts/review.md	context	core-contexts	Code Review Context		22	undecided		
+core/contexts/dev.md	context	core-contexts	Development Context		20	keep		
+core/contexts/research.md	context	core-contexts	Research Context		26	keep		
+core/contexts/review.md	context	core-contexts	Code Review Context		22	keep		
 vendored/agent-sdk-dev/agents/agent-sdk-verifier-py.md	vendored-skill	vendored	Use this agent to verify that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommenda		140	undecided		
 vendored/agent-sdk-dev/agents/agent-sdk-verifier-ts.md	vendored-skill	vendored	Use this agent to verify that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recomm		145	undecided		
 vendored/agent-sdk-dev/commands/new-sdk-app.md	vendored-skill	vendored	Create and setup a new Claude Agent SDK application		176	undecided		
@@ -428,18 +428,18 @@ overlays/commands/status.md	overlay	overlays	Show current health of this project
 overlays/rules/docs.md	overlay	overlays	docs.md		12	undecided		
 overlays/rules/secrets.md	overlay	overlays	Universal secrets hygiene policy. Auto-load on any project using schnapp-kit.	<- secrets-hygiene-reviewer, workflow-env-validator.sh	13	undecided		
 overlays/skills/adr-writer/SKILL.md	overlay	overlays	Author an Architecture Decision Record. Use when the current change is "milestone" tier (non-obvious decision, new convention, architectural		91	undecided		
-overlays/skills/audit-against-kit/SKILL.md	overlay	overlays	Scan one of the user's project repos and produce a delta report vs schnapp-kit. Use when the user says "audit <repo> against the kit", "what	fork-model: sync-upstream, promote-from-project	112	undecided		cut-or-rewrite in Phase 3 (fork machinery gone)
-overlays/skills/discover-kit-additions/SKILL.md	overlay	overlays	Scan an arbitrary GitHub repo (or local path) and surface artifacts schnapp-kit doesn't yet have. Use when the user says "review this repo f	fork-model: kit.config, vendored/, core/, promote-from-project	100	undecided		cut-or-rewrite in Phase 3 (fork machinery gone)
+overlays/skills/audit-against-kit/SKILL.md	overlay	overlays	Scan one of the user's project repos and produce a delta report vs schnapp-kit. Use when the user says "audit <repo> against the kit", "what	fork-model: sync-upstream, promote-from-project	112	keep		cut-or-rewrite in Phase 3 (fork machinery gone); REWRITE in Phase 4 to drop fork-model deps
+overlays/skills/discover-kit-additions/SKILL.md	overlay	overlays	Scan an arbitrary GitHub repo (or local path) and surface artifacts schnapp-kit doesn't yet have. Use when the user says "review this repo f	fork-model: kit.config, vendored/, core/, promote-from-project	100	keep		cut-or-rewrite in Phase 3 (fork machinery gone); REWRITE in Phase 4 to drop fork-model deps
 overlays/skills/live-session-cache/SKILL.md	overlay	overlays	Capture each session turn to a chat/* branch so context survives compaction or accidental session loss. Default mode is `always` in Claude C		67	undecided		
 overlays/skills/workflow/SKILL.md	overlay	overlays	Workflow orchestration, planning, verification, and task management. Use when starting a non-trivial task, when asked how to approach a prob		45	undecided		
-language-packs/infra/rules/workflows.md	langpack	language-packs	Infrastructure / GitHub Actions conventions		29	undecided		
-language-packs/python/hooks/ruff-lint.sh	langpack	language-packs	PostToolUse(Edit|Write): lint Python edits with ruff via uvx		19	undecided		
-language-packs/sql/rules/database.md	langpack	language-packs	SQL / Database conventions — SQL Server 2022 (T-SQL)		17	undecided		
-language-packs/typescript/rules/web.md	langpack	language-packs	TypeScript / Next.js 15 conventions		18	undecided		
-core/.claude/commands/add-language-rules.md	held-cmd	core-claude-held	Workflow command scaffold for add-language-rules in everything-claude-code.		39	undecided		
-core/.claude/commands/database-migration.md	held-cmd	core-claude-held	Workflow command scaffold for database-migration in everything-claude-code.		36	undecided		
-core/.claude/commands/feature-development.md	held-cmd	core-claude-held	Workflow command scaffold for feature-development in everything-claude-code.		38	undecided		
-core/.claude/rules/node.md	held-cmd	core-claude-held	Node.js Rules for everything-claude-code		56	undecided		
+language-packs/infra/rules/workflows.md	langpack	language-packs	Infrastructure / GitHub Actions conventions		29	keep		
+language-packs/python/hooks/ruff-lint.sh	langpack	language-packs	PostToolUse(Edit|Write): lint Python edits with ruff via uvx		19	keep		
+language-packs/sql/rules/database.md	langpack	language-packs	SQL / Database conventions — SQL Server 2022 (T-SQL)		17	keep		
+language-packs/typescript/rules/web.md	langpack	language-packs	TypeScript / Next.js 15 conventions		18	keep		
+core/.claude/commands/add-language-rules.md	held-cmd	core-claude-held	Workflow command scaffold for add-language-rules in everything-claude-code.		39	cut		ECC-specific scaffold/rule; node not enabled lang
+core/.claude/commands/database-migration.md	held-cmd	core-claude-held	Workflow command scaffold for database-migration in everything-claude-code.		36	cut		ECC-specific scaffold/rule; node not enabled lang
+core/.claude/commands/feature-development.md	held-cmd	core-claude-held	Workflow command scaffold for feature-development in everything-claude-code.		38	cut		ECC-specific scaffold/rule; node not enabled lang
+core/.claude/rules/node.md	held-cmd	core-claude-held	Node.js Rules for everything-claude-code		56	cut		ECC-specific scaffold/rule; node not enabled lang
 core/tests/	tree	held-machinery	ECC test suite	build-only	149	held-phase3	-	review: keep adapted validators?
 core/scripts/	tree	held-machinery	ECC build/CI/codemap scripts	build-only	167	held-phase3	-	review: any reusable hook scripts?
 core/examples/	tree	held-machinery	ECC example projects (evaluator, gan)	none	46	held-phase3	-	likely cut
