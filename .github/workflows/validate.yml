@@ -1,0 +1,25 @@
+name: validate
+
+# Run the kit's own validator suite (structure, frontmatter, hook wiring, and
+# the plugin-load smoke test) on every PR and on pushes to main.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show tool versions
+        run: |
+          bash --version | head -1
+          python3 --version
+          jq --version
+          git --version
+      - name: Run validators
+        run: bash tests/run-all.sh

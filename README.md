@@ -14,7 +14,8 @@ flattened and owned, with no upstream re-sync.
 - `commands/` — slash commands (planning, PRs, multi-model workflows, instinct learning)
 - `rules/` — coding conventions (common + python/typescript/web)
 - `contexts/` — reusable context blocks
-- `hooks/` — branch-workflow, scope/destructive guards, and security-review hooks
+- `hooks/` — branch-workflow, scope/destructive guards, compaction continuity, session cleanup, and security-review hooks
+- `.mcp.json` — opt-in MCP servers (GitHub). Project-scoped, so it stays *pending approval* until you approve it — see [`docs/MCP.md`](docs/MCP.md)
 
 **Curation**: built down from ~3,000 files to a focused set scoped to a
 Python + TypeScript + SQL + infra stack. See `docs/cleanup/MANIFEST.md` for the

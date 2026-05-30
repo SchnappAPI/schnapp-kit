@@ -5,13 +5,13 @@
     "email": "apischnapp@gmail.com"
   },
   "metadata": {
-    "description": "Personal Claude Code distribution: ECC fork + vendored community plugins + schnapp-bet overlays"
+    "description": "Personal Claude Code distribution — a curated, flat, single-layer plugin of skills, agents, commands, rules, and workflow hooks."
   },
   "plugins": [
     {
       "name": "schnapp-kit",
       "source": "./",
-      "description": "Layered Claude Code distribution: core ECC, mattpocock skills, and schnapp-bet overlays",
+      "description": "Curated, flat Claude Code plugin: Python/TypeScript/SQL/infra skills, agents, commands, rules, and workflow hooks. Owned, no upstream re-sync.",
       "version": "0.1.0",
       "author": {
         "name": "SchnappAPI",
