@@ -32,5 +32,4 @@ binding task. Keep it short; prune done items into the Done list.
 
 ## Manual follow-ups (need the owner)
 
-- Update the GitHub **repo description** — still reads "ECC core … layered … v1".
-  No GitHub MCP tool can edit it; use `gh repo edit` or the web UI.
+- None — all caught up.
