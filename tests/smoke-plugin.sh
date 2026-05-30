@@ -183,6 +183,39 @@ trap 'rm -rf "$TMP"' EXIT
 ) || FAIL=1
 
 # ---------------------------------------------------------------------------
+sec "G. Compaction-continuity hooks round-trip"
+# PreCompact writes a breadcrumb -> SessionStart reader re-surfaces it -> consumed.
+# Run hermetically with a temp HOME + temp repo so nothing touches real state.
+GTMP="$(mktemp -d)"; GHOME="$(mktemp -d)"
+trap 'rm -rf "$TMP" "$GTMP" "$GHOME"' EXIT
+(
+  cd "$GTMP"
+  git init -q -b main; git config user.email t@t.t; git config user.name t
+  git config commit.gpgsign false; git config core.hooksPath /dev/null
+  git commit -q --allow-empty -m init
+  export HOME="$GHOME" CLAUDE_PROJECT_DIR="$GTMP"
+  SD="$GHOME/.claude/schnapp-kit"
+
+  echo '{"trigger":"manual","transcript_path":""}' | bash "$REPO_ROOT/hooks/claude/pre-compact-snapshot.sh" >/dev/null 2>&1
+  [[ $(find "$SD" -maxdepth 1 -name 'compaction-*.json' 2>/dev/null | wc -l) -ge 1 ]] \
+    && echo "  ok   — PreCompact wrote a state breadcrumb" \
+    || { echo "  FAIL — PreCompact wrote no breadcrumb" >&2; exit 1; }
+
+  out=$(echo '{}' | bash "$REPO_ROOT/hooks/claude/session-resume-breadcrumb.sh" 2>/dev/null)
+  echo "$out" | python3 -c "import sys,json;d=json.load(sys.stdin);assert d['hookSpecificOutput']['hookEventName']=='SessionStart' and d['hookSpecificOutput']['additionalContext']" 2>/dev/null \
+    && echo "  ok   — SessionStart reader re-surfaces it as additionalContext" \
+    || { echo "  FAIL — SessionStart reader emitted no valid additionalContext" >&2; exit 1; }
+
+  [[ $(find "$SD" -maxdepth 1 -name 'compaction-*.json' 2>/dev/null | wc -l) -eq 0 ]] \
+    && echo "  ok   — breadcrumb consumed one-shot (deleted after surfacing)" \
+    || { echo "  FAIL — breadcrumb not deleted after surfacing" >&2; exit 1; }
+
+  echo '{"reason":"clear"}' | bash "$REPO_ROOT/hooks/claude/session-end-cleanup.sh" >/dev/null 2>&1
+  rc=$?; [[ $rc -eq 0 ]] && echo "  ok   — SessionEnd cleanup runs clean (exit 0)" \
+                         || { echo "  FAIL — SessionEnd cleanup exit $rc" >&2; exit 1; }
+) || FAIL=1
+
+# ---------------------------------------------------------------------------
 echo
 if [[ "$FAIL" -eq 0 ]]; then
   echo "=== smoke-plugin: PASS ==="
