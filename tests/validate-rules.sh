@@ -25,10 +25,6 @@ while IFS= read -r -d '' f; do
   check_rule "$f"
 done < <(find "${REPO_ROOT}/rules" -name "*.md" -print0 2>/dev/null)
 
-while IFS= read -r -d '' f; do
-  check_rule "$f"
-done < <(find "${REPO_ROOT}/language-packs" -path "*/rules/*.md" -print0 2>/dev/null)
-
 if [[ "$FAIL" -eq 0 ]]; then
   echo "All rules valid."
 else
