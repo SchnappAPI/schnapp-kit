@@ -18,15 +18,16 @@ layout; delete the fork/sync machinery. Give up upstream ECC re-sync (intended).
 sign-off + commit (delete-per-section cadence).
 
 **Sections done:** 1 (6 adapter guides), 2 (1,165 localized docs), 3 (319
-editor mirrors / group A).
-**Next action:** Section 4. Remaining sections cover: ECC english
-release/internal-planning docs (~87 in core/docs), fix/hook-workaround docs,
-ECC repo internals (.github/.claude), pruned-language artifacts (group C),
-disabled vendored plugins (group F). Tracked files: 1,489.
+editor mirrors / group A), 4 (79 ECC-internal core/docs cut; 8 generic
+guides/templates KEPT — see ledger sec4-keep, relocate to docs/ in flatten).
+**Next action:** Section 5. Remaining: ECC repo internals (core/.github 21 CI,
+core/.claude 13 config), pruned-language artifacts (group C ~68), disabled
+vendored output-style plugins (group F, 8), then ECC scaffolding (ecc2/src/
+tests/scripts/examples/assets) goes to file-by-file in Phase 2/3. Tracked: 1,410.
 
-**PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens
-bundle PRs on push — close each without merging (PR #5, #6 closed); bot stays
-installed.
+**PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
+bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5/#6/#7
+closed); bot stays installed.
 
 ## Phase checklist
 - [x] Phase 0 — Setup (branch `claude/dreamy-ptolemy-vITDt`, ledger, STATUS, PLAN copy)

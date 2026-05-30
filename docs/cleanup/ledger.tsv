@@ -73,3 +73,17 @@ core/.trae	editor-mirror	A-sec3-mirrors	Trae editor mirror	none	4	cut	-	sec3; ot
 core/.zed	editor-mirror	A-sec3-mirrors	Zed editor mirror	none	1	cut	-	sec3; other-editor mirror
 core/.gemini	editor-mirror	A-sec3-mirrors	Gemini mirror	none	1	cut	-	sec3; other-editor mirror
 core/.qwen	editor-mirror	A-sec3-mirrors	Qwen mirror	none	1	cut	-	sec3; other-editor mirror
+core/docs/SKILL-DEVELOPMENT-GUIDE.md	doc	sec4-keep	how-to for authoring skills	refs some ECC paths	919	keep	docs/SKILL-DEVELOPMENT-GUIDE.md	sec4; generic, fix refs in flatten
+core/docs/SKILL-PLACEMENT-POLICY.md	doc	sec4-keep	where curated/learned/imported skills belong	refs ECC manifests+ci script	104	keep	docs/SKILL-PLACEMENT-POLICY.md	sec4; fix/scrub ECC machinery refs in flatten
+core/docs/skill-adaptation-policy.md	doc	sec4-keep	policy: adapt outside contributions	ECC governance framing	73	keep	docs/skill-adaptation-policy.md	sec4; de-ECC framing in flatten
+core/docs/token-optimization.md	doc	sec4-keep	settings/habits to cut token use	refs rules/common/performance + strategic-compact	156	keep	docs/token-optimization.md	sec4; verify refs in flatten
+core/docs/PLAN-PRD-PATTERN.md	doc	sec4-keep	markdown-staged planning flow	refs /plan-prd /plan tdd /pr	154	keep	docs/PLAN-PRD-PATTERN.md	sec4; verify cmd refs in flatten
+core/docs/continuous-learning-v2-spec.md	doc	sec4-keep	pointer to continuous-learning-v2 skill	refs skills/continuous-learning-v2	14	keep	docs/continuous-learning-v2-spec.md	sec4; revisit if that skill is cut later
+core/docs/examples/product-capability-template.md	doc	sec4-keep	reusable capability-contract template	none	84	keep	docs/examples/product-capability-template.md	sec4; project-agnostic
+core/docs/examples/project-guidelines-template.md	doc	sec4-keep	per-project guidelines skill template	none	347	keep	docs/examples/project-guidelines-template.md	sec4; reusable scaffold
+core/docs/releases/**	doc-tree	sec4-cut	ECC release notes + marketing/launch/publication drafts	none	42	cut	-	sec4; ECC-internal release mgmt
+core/docs/(top-level ECC-2.0/PR-triage/roadmap/registry docs)	doc-group	sec4-cut	ECC roadmaps, PR triage, command map/registry, troubleshooting, legacy inventory	none	18	cut	-	sec4; ECC-internal
+core/docs/architecture/**	doc-tree	sec4-cut	ECC 2.0 design contracts (cross-harness, RAG, observability, adapter compliance)	none	8	cut	-	sec4; about deleted harness machinery
+core/docs/fixes/**	doc-group	sec4-cut	version-pinned ECC hook-bug workarounds + PS patchers	none	7	cut	-	sec4; ECC-specific fixes
+core/docs/business+drafts	doc-group	sec4-cut	sponsorship playbook, social copy, release announcement	none	3	cut	-	sec4; ECC marketing
+core/docs/security/supply-chain-incident-response.md	doc	sec4-cut	supply-chain IR playbook	none	189	cut	-	sec4; ECC operator runbook, incident-pinned
