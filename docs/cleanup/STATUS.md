@@ -78,8 +78,19 @@ closed); bot stays installed.
 - [x] Phase 1 — Bulk cuts (2,089 files across 8 sections; committed+pushed)
 - [x] Phase 2 — Inventory survivors (inventory.tsv, 457 rows + dep sweep)
 - [x] Phase 3 — File-by-file grilling (all 457 decided: 272 keep / 185 cut)
-- [ ] Phase 4 — Apply + flatten (rm 185 cuts; move keepers; drop sync machinery; rewrite refs)
-- [ ] Phase 5 — Verify (trim tests, dangling-ref grep, hook smoke test, PR)
+- [x] Phase 4 — Apply + flatten (rm 185 cuts; flat layout; merged hooks.json; dropped sync machinery; rewrote plugin.json/CLAUDE.md/README/ATTRIBUTION)
+- [x] Phase 5 — Verify (tests repathed + passing; dangling-ref grep clean except 2 flagged skills; ADR-20260530-1 written)
+
+## DONE — flatten complete (2026-05-30)
+Repo: ~2,977 → 464 tracked files. Flat single-layer plugin:
+`skills/ agents/ commands/ rules/ contexts/ hooks/ docs/ tests/`. No `core/`,
+`overlays/`, `vendored/`, `language-packs/`, `kit.config.yml`, or sync `scripts/`.
+All 4 validators pass. See `docs/decisions/ADR-20260530-1-flatten-and-own.md`.
+
+**Remaining (1 open decision):** `skills/audit-against-kit` +
+`skills/discover-kit-additions` assume the layered/vendor/sync model (now gone).
+Their internals reference `kit.config.yml`/`overlays/`/`vendored/`. → rewrite for
+flat model or cut. Awaiting user call.
 
 ## Bulk-cut groups (Phase 1)
 - **A** editor mirrors + ECC meta dot-dirs (`core/.agents .kiro .opencode .cursor
