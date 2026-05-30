@@ -62,3 +62,14 @@ core/docs/de-DE	doc-tree	B-sec2-localized	German ECC doc translations	none	2	cut
 core/docs/vi-VN	doc-tree	B-sec2-localized	Vietnamese ECC doc translations	none	1	cut	-	sec2; localized
 core/docs/th	doc-tree	B-sec2-localized	Thai ECC doc translations	none	1	cut	-	sec2; localized
 core/docs/ru	doc-tree	B-sec2-localized	Russian ECC doc translations	none	1	cut	-	sec2; localized
+core/.cursor	editor-mirror	A-sec3-mirrors	Cursor editor config mirror	none(CLI/web only)	67	cut	-	sec3; other-editor mirror
+core/.kiro	editor-mirror	A-sec3-mirrors	Kiro editor mirror	none	85	cut	-	sec3; other-editor mirror
+core/.opencode	editor-mirror	A-sec3-mirrors	OpenCode editor mirror	none	78	cut	-	sec3; other-editor mirror
+core/.agents	editor-mirror	A-sec3-mirrors	OpenAI/Codex agents-format mirror	none	69	cut	-	sec3; other-editor mirror
+core/.codebuddy	editor-mirror	A-sec3-mirrors	CodeBuddy editor mirror	none	6	cut	-	sec3; other-editor mirror
+core/.codex	editor-mirror	A-sec3-mirrors	Codex mirror	none	5	cut	-	sec3; other-editor mirror
+core/.codex-plugin	editor-mirror	A-sec3-mirrors	Codex plugin mirror	none	2	cut	-	sec3; other-editor mirror
+core/.trae	editor-mirror	A-sec3-mirrors	Trae editor mirror	none	4	cut	-	sec3; other-editor mirror
+core/.zed	editor-mirror	A-sec3-mirrors	Zed editor mirror	none	1	cut	-	sec3; other-editor mirror
+core/.gemini	editor-mirror	A-sec3-mirrors	Gemini mirror	none	1	cut	-	sec3; other-editor mirror
+core/.qwen	editor-mirror	A-sec3-mirrors	Qwen mirror	none	1	cut	-	sec3; other-editor mirror
