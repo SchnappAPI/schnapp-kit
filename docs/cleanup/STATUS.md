@@ -87,10 +87,9 @@ Repo: ~2,977 → 464 tracked files. Flat single-layer plugin:
 `overlays/`, `vendored/`, `language-packs/`, `kit.config.yml`, or sync `scripts/`.
 All 4 validators pass. See `docs/decisions/ADR-20260530-1-flatten-and-own.md`.
 
-**Remaining (1 open decision):** `skills/audit-against-kit` +
-`skills/discover-kit-additions` assume the layered/vendor/sync model (now gone).
-Their internals reference `kit.config.yml`/`overlays/`/`vendored/`. → rewrite for
-flat model or cut. Awaiting user call.
+**CLOSED:** `audit-against-kit` + `discover-kit-additions` cut (user call) — their
+layered/vendor/sync premise was removed by the flatten. Dangling-ref grep now
+fully clean. Final: 270 keep / 187 cut, 465 tracked files. **Cleanup complete.**
 
 ## Bulk-cut groups (Phase 1)
 - **A** editor mirrors + ECC meta dot-dirs (`core/.agents .kiro .opencode .cursor
