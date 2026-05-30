@@ -1,14 +1,34 @@
 # CLAUDE.md — schnapp-kit
 
-A personal Claude Code distribution. The kit is layered: `core/` (ECC fork) → `vendored/*/` (community plugins) → `language-packs/*/` (per-language opt-ins) → `overlays/` (schnapp-bet promotions and net-new).
+A personal Claude Code distribution, shipped as a single flat plugin. Everything
+here is **owned** — there is no upstream fork to re-sync, no layers, no config to
+toggle. What you see in the tree is what ships.
+
+## Layout
+
+```
+skills/      — agent skills (one dir per skill, with SKILL.md + any references/scripts)
+agents/      — subagent definitions (one .md each)
+commands/    — slash commands (one .md each)
+rules/       — coding/convention rules (referenced by skills + CLAUDE.md, not auto-loaded)
+contexts/    — reusable context blocks
+hooks/       — hook scripts + the single merged hooks/hooks.json
+docs/        — architecture notes, ADRs, guides
+tests/       — repo validation scripts
+.claude-plugin/plugin.json — plugin manifest (standard flat discovery)
+```
 
 ## Working on the kit
 
-- **Layer respect** — never edit files inside `core/` or `vendored/<plugin>/` directly. Those are sync'd from upstream. To override, add a same-named file in `overlays/overrides/` (it shadows by filename).
-- **`kit.config.yml` is the steering wheel** — toggle artifacts via glob patterns under `enabled_artifacts` / `disabled_artifacts`. After any edit, run `scripts/conflict-check.sh`.
-- **Re-syncing upstreams** is one command: `scripts/sync-upstream.sh <name>` for one or `scripts/sync-upstream.sh --all`. Conflicts surface as test failures.
-- **Adding a new community plugin** — `scripts/add-upstream.sh <name> <github-url> <pin>`. See `docs/ADDING-A-PLUGIN.md`.
-- **Adding a new language pack** — see `docs/ADDING-A-LANGUAGE.md`.
+- **Own everything** — edit any artifact in place. There is no "don't touch core"
+  rule anymore; nothing is vendored or synced.
+- **Adding an artifact** — drop it in the matching top-level dir (`skills/<name>/SKILL.md`,
+  `agents/<name>.md`, `commands/<name>.md`). It's discovered automatically.
+- **Hooks** — all hooks live in `hooks/` and are wired through the single
+  `hooks/hooks.json`. Command paths use `${CLAUDE_PLUGIN_ROOT}/hooks/...`.
+- **Attribution** — third-party artifacts (mattpocock, plugin-dev, ralph-wiggum,
+  agent-sdk-dev, security-guidance, ECC) are recorded in `ATTRIBUTION.md`. Keep it
+  current when adding outside material.
 
 ## ADRs
 
@@ -20,7 +40,7 @@ A personal Claude Code distribution. The kit is layered: `core/` (ECC fork) → 
 <type>: [scope1][scope2] short description — ADR-YYYYMMDD-N
 ```
 
-Scopes for this repo: `[core]`, `[vendored]`, `[overlays]`, `[lang]`, `[scripts]`, `[docs]`, `[tests]`, `[meta]`, `[all]`.
+Scopes for this repo: `[skills]`, `[agents]`, `[commands]`, `[rules]`, `[contexts]`, `[hooks]`, `[docs]`, `[tests]`, `[meta]`, `[all]`.
 
 ## Branch workflow
 
@@ -34,11 +54,3 @@ Before editing any file, confirm it falls within the current task's scope:
 3. Files explicitly named in the user's request
 
 **Always re-read a file immediately before editing it** — never edit from memory of a prior read. If you need to edit a file outside the above scope, state why before proceeding. Do not make opportunistic edits to unrelated files.
-
-## Skills the kit ships for evolving itself
-
-- `/discover-kit-additions <repo-url> [--focus <path>]` — scan a repo for artifacts schnapp-kit doesn't have yet.
-- `/audit-against-kit <repo-url-or-path>` — scan a project repo for delta vs the kit (uncovered conventions, promotion candidates, duplicates, conflicts).
-- `/promote-from-project` — move a project-local artifact into `overlays/`.
-- `/vendor-plugin <url>` — wrapper around `scripts/add-upstream.sh`.
-- `/sync-upstreams` — bump pins and re-test.

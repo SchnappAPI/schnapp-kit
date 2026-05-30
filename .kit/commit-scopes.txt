@@ -1,8 +1,9 @@
-core
-vendored
-overlays
-lang
-scripts
+skills
+agents
+commands
+rules
+contexts
+hooks
 docs
 tests
 meta

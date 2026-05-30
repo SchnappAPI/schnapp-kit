@@ -23,7 +23,7 @@ check_rule() {
 echo "=== Validating rules ==="
 while IFS= read -r -d '' f; do
   check_rule "$f"
-done < <(find "${REPO_ROOT}/overlays/rules" -name "*.md" -print0 2>/dev/null)
+done < <(find "${REPO_ROOT}/rules" -name "*.md" -print0 2>/dev/null)
 
 while IFS= read -r -d '' f; do
   check_rule "$f"

@@ -4,7 +4,7 @@
 #
 # At schnapp-bet adoption, compare with mattpocock's git-guardrails-claude-code skill.
 # Recommendation: this hook wins for SQL guards (DROP TABLE, TRUNCATE);
-# Matt's likely wins for git breadth. Merge into one hook in overlays/ if needed.
+# Matt's likely wins for git breadth. Single merged hook in hooks/.
 
 INPUT=$(cat)
 CMD=$(echo "$INPUT" | jq -r '.tool_input.command // empty')
