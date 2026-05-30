@@ -421,17 +421,17 @@ vendored/plugin-dev/skills/skill-development/SKILL.md	vendored-skill	vendored	Th
 vendored/ralph-wiggum/commands/cancel-ralph.md	vendored-skill	vendored	Cancel active Ralph Wiggum loop		18	undecided		
 vendored/ralph-wiggum/commands/help.md	vendored-skill	vendored	Explain Ralph Wiggum technique and available commands		126	undecided		
 vendored/ralph-wiggum/commands/ralph-loop.md	vendored-skill	vendored	Start Ralph Wiggum loop in current session		18	undecided		
-overlays/agents/secrets-hygiene-reviewer.md	overlay	overlays	Reviews diffs for secrets hygiene violations. Flags hardcoded credentials, hostnames, IPs, connection strings, and direct GitHub secrets ref	<-> overlays/rules/secrets.md	83	undecided		
-overlays/commands/adr.md	overlay	overlays	Create today's ADR with the next counter. Pairs with overlays/skills/adr-writer/. Default path is docs/decisions/ — override by setting adr_	<-> overlays/skills/adr-writer	40	undecided		
-overlays/commands/clean-gone.md	overlay	overlays	Cleans up all git branches marked as [gone] (branches that have been deleted on the remote but still exist locally), including removing asso		53	undecided		
-overlays/commands/status.md	overlay	overlays	Show current health of this project's stack. Delegates to scripts/status.sh if present; otherwise reports basic git state and process list. 	scripts/status.sh (missing, degrades)	33	undecided		
-overlays/rules/docs.md	overlay	overlays	docs.md		12	undecided		
-overlays/rules/secrets.md	overlay	overlays	Universal secrets hygiene policy. Auto-load on any project using schnapp-kit.	<- secrets-hygiene-reviewer, workflow-env-validator.sh	13	undecided		
-overlays/skills/adr-writer/SKILL.md	overlay	overlays	Author an Architecture Decision Record. Use when the current change is "milestone" tier (non-obvious decision, new convention, architectural		91	undecided		
+overlays/agents/secrets-hygiene-reviewer.md	overlay	overlays	Reviews diffs for secrets hygiene violations. Flags hardcoded credentials, hostnames, IPs, connection strings, and direct GitHub secrets ref	<-> overlays/rules/secrets.md	83	keep		user keep (batch 1a)
+overlays/commands/adr.md	overlay	overlays	Create today's ADR with the next counter. Pairs with overlays/skills/adr-writer/. Default path is docs/decisions/ — override by setting adr_	<-> overlays/skills/adr-writer	40	keep		user keep (batch 1a)
+overlays/commands/clean-gone.md	overlay	overlays	Cleans up all git branches marked as [gone] (branches that have been deleted on the remote but still exist locally), including removing asso		53	keep		user keep (batch 1a)
+overlays/commands/status.md	overlay	overlays	Show current health of this project's stack. Delegates to scripts/status.sh if present; otherwise reports basic git state and process list. 	scripts/status.sh (missing, degrades)	33	cut		user cut (batch 1a)
+overlays/rules/docs.md	overlay	overlays	docs.md		12	keep		user keep (batch 1a)
+overlays/rules/secrets.md	overlay	overlays	Universal secrets hygiene policy. Auto-load on any project using schnapp-kit.	<- secrets-hygiene-reviewer, workflow-env-validator.sh	13	keep		user keep (batch 1a)
+overlays/skills/adr-writer/SKILL.md	overlay	overlays	Author an Architecture Decision Record. Use when the current change is "milestone" tier (non-obvious decision, new convention, architectural		91	keep		user keep (batch 1a)
 overlays/skills/audit-against-kit/SKILL.md	overlay	overlays	Scan one of the user's project repos and produce a delta report vs schnapp-kit. Use when the user says "audit <repo> against the kit", "what	fork-model: sync-upstream, promote-from-project	112	keep		cut-or-rewrite in Phase 3 (fork machinery gone); REWRITE in Phase 4 to drop fork-model deps
 overlays/skills/discover-kit-additions/SKILL.md	overlay	overlays	Scan an arbitrary GitHub repo (or local path) and surface artifacts schnapp-kit doesn't yet have. Use when the user says "review this repo f	fork-model: kit.config, vendored/, core/, promote-from-project	100	keep		cut-or-rewrite in Phase 3 (fork machinery gone); REWRITE in Phase 4 to drop fork-model deps
-overlays/skills/live-session-cache/SKILL.md	overlay	overlays	Capture each session turn to a chat/* branch so context survives compaction or accidental session loss. Default mode is `always` in Claude C		67	undecided		
-overlays/skills/workflow/SKILL.md	overlay	overlays	Workflow orchestration, planning, verification, and task management. Use when starting a non-trivial task, when asked how to approach a prob		45	undecided		
+overlays/skills/live-session-cache/SKILL.md	overlay	overlays	Capture each session turn to a chat/* branch so context survives compaction or accidental session loss. Default mode is `always` in Claude C		67	keep		user keep (batch 1a)
+overlays/skills/workflow/SKILL.md	overlay	overlays	Workflow orchestration, planning, verification, and task management. Use when starting a non-trivial task, when asked how to approach a prob		45	cut		user cut (batch 1a)
 language-packs/infra/rules/workflows.md	langpack	language-packs	Infrastructure / GitHub Actions conventions		29	keep		
 language-packs/python/hooks/ruff-lint.sh	langpack	language-packs	PostToolUse(Edit|Write): lint Python edits with ruff via uvx		19	keep		
 language-packs/sql/rules/database.md	langpack	language-packs	SQL / Database conventions — SQL Server 2022 (T-SQL)		17	keep		
