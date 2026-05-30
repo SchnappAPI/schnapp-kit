@@ -46,3 +46,9 @@ core/schemas	group	E-ecc-scaffold	JSON validation schemas	-	10	undecided	-	revie
 core/(root build/meta files ~42)	group	E-ecc-scaffold	package.json,yarn.lock,install.*,SPONSORS,CHANGELOG,the-*-guide,etc.	-	42	undecided	-	upstream repo meta
 vendored/explanatory-output-style	group	F-disabled-vendored	output-style (enabled:false)	-	4	undecided	-	already disabled
 vendored/learning-output-style	group	F-disabled-vendored	output-style (enabled:false)	-	4	undecided	-	already disabled
+core/docs/ANTIGRAVITY-GUIDE.md	doc	B-sec1-adapters	Antigravity setup guide	non-CC tool	156	cut	-	sec1; targets other tool
+core/docs/HERMES-SETUP.md	doc	B-sec1-adapters	Hermes x ECC setup	non-CC tool	125	cut	-	sec1; targets other tool
+core/docs/HERMES-OPENCLAW-MIGRATION.md	doc	B-sec1-adapters	Hermes/OpenClaw->ECC migration	non-CC tool	239	cut	-	sec1; targets other tool
+core/docs/JOYCODE-GUIDE.md	doc	B-sec1-adapters	JoyCode adapter guide	non-CC tool	55	cut	-	sec1; targets other tool
+core/docs/QWEN-GUIDE.md	doc	B-sec1-adapters	Qwen CLI adapter guide	non-CC tool	54	cut	-	sec1; targets other tool
+core/docs/MANUAL-ADAPTATION-GUIDE.md	doc	B-sec1-adapters	manual adaptation for non-native harnesses	non-CC tool	214	cut	-	sec1; targets other tool

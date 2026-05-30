@@ -1,0 +1,170 @@
+# ECC files staged for review — groups A / B / F
+
+_Generated Sat May 30 03:51:49 UTC 2026. NOTHING is deleted yet. Mark any you want to KEEP; everything else is proposed for cut._
+
+## B — core/docs: ENGLISH / project docs (the ones worth a look)
+
+- `ANTIGRAVITY-GUIDE.md` — Antigravity Setup and Usage Guide
+- `ARCHITECTURE-IMPROVEMENTS.md` — Architecture Improvement Recommendations
+- `COMMAND-AGENT-MAP.md` — Command → Agent / Skill Map
+- `COMMAND-REGISTRY.json` — (no H1 heading)
+- `ECC-2.0-GA-ROADMAP.md` — ECC 2.0 GA Roadmap
+- `ECC-2.0-REFERENCE-ARCHITECTURE.md` — ECC 2.0 Reference Architecture
+- `ECC-2.0-SESSION-ADAPTER-DISCOVERY.md` — ECC 2.0 Session Adapter Discovery
+- `HERMES-OPENCLAW-MIGRATION.md` — Hermes / OpenClaw -> ECC Migration
+- `HERMES-SETUP.md` — Hermes x ECC Setup
+- `JOYCODE-GUIDE.md` — JoyCode Adapter Guide
+- `MANUAL-ADAPTATION-GUIDE.md` — Manual Adaptation Guide for Non-Native Harnesses
+- `MEGA-PLAN-REPO-PROMPTS-2026-03-12.md` — Mega Plan Repo Prompt List — March 12, 2026
+- `PHASE1-ISSUE-BUNDLE-2026-03-12.md` — Phase 1 Issue Bundle — March 12, 2026
+- `PLAN-PRD-PATTERN.md` — Plan-PRD Pattern: Markdown-Staged Planning Flow
+- `PR-399-REVIEW-2026-03-12.md` — PR 399 Review — March 12, 2026
+- `PR-QUEUE-TRIAGE-2026-03-13.md` — PR Review And Queue Triage — March 13, 2026
+- `QWEN-GUIDE.md` — Qwen CLI Adapter Guide
+- `SELECTIVE-INSTALL-ARCHITECTURE.md` — ECC 2.0 Selective Install Discovery
+- `SELECTIVE-INSTALL-DESIGN.md` — ECC Selective Install Design
+- `SESSION-ADAPTER-CONTRACT.md` — Session Adapter Contract
+- `SKILL-DEVELOPMENT-GUIDE.md` — Skill Development Guide
+- `SKILL-PLACEMENT-POLICY.md` — Skill Placement and Provenance Policy
+- `TROUBLESHOOTING.md` — Troubleshooting
+- `architecture/agentshield-enterprise-research-roadmap.md` — AgentShield Enterprise Research Roadmap
+- `architecture/cross-harness.md` — Cross-Harness Architecture
+- `architecture/discussion-response-playbook.md` — Discussion Response Playbook
+- `architecture/evaluator-rag-prototype.md` — Evaluator RAG Prototype
+- `architecture/harness-adapter-compliance.md` — Harness Adapter Compliance Matrix
+- `architecture/hud-status-session-control.md` — HUD Status And Session Control Contract
+- `architecture/observability-readiness.md` — ECC 2.0 Observability Readiness
+- `architecture/progress-sync-contract.md` — Progress Sync Contract
+- `business/metrics-and-sponsorship.md` — Metrics and Sponsorship Playbook
+- `business/social-launch-copy.md` — Social Launch Copy (X + LinkedIn)
+- `capability-surface-selection.md` — Capability Surface Selection
+- `continuous-learning-v2-spec.md` — Continuous Learning v2 Spec
+- `drafts/release-1.10.1-announcement.md` — ECC 1.10.1 release announcement draft
+- `examples/product-capability-template.md` — Product Capability Template
+- `examples/project-guidelines-template.md` — Project Guidelines Template
+- `fixes/HOOK-FIX-20260421-ADDENDUM.md` — HOOK-FIX-20260421 Addendum — v2.1.116 argv 重複バグ
+- `fixes/HOOK-FIX-20260421.md` — ECC Hook Fix — 2026-04-21
+- `fixes/INSTALL-HOOK-WRAPPER-FIX-20260422.md` — install_hook_wrapper.ps1 argv-dup bug workaround (2026-04-22)
+- `fixes/PATCH-SETTINGS-SIMPLE-FIX-20260422.md` — patch_settings_cl_v2_simple.ps1 argv-dup bug workaround (2026-04-22)
+- `fixes/apply-hook-fix.sh` — Apply ECC hook fix to ~/.claude/settings.local.json.
+- `fixes/install_hook_wrapper.ps1` — Install observe-wrapper.sh + rewrite settings.local.json to use it
+- `fixes/patch_settings_cl_v2_simple.ps1` — Simple patcher for settings.local.json - CL v2 hooks (argv-dup safe)
+- `hook-bug-workarounds.md` — Hook Bug Workarounds
+- `legacy-artifact-inventory.md` — Legacy Artifact Inventory
+- `releases/1.10.0/discussion-announcement.md` — ECC v1.10.0 is live
+- `releases/1.10.0/release-notes.md` — ECC v1.10.0 Release Notes
+- `releases/1.10.0/x-thread.md` — X Thread Draft — ECC v1.10.0
+- `releases/1.8.0/linkedin-post.md` — LinkedIn Draft - ECC v1.8.0
+- `releases/1.8.0/reference-attribution.md` — Reference Attribution and Licensing Notes
+- `releases/1.8.0/release-notes.md` — ECC v1.8.0 Release Notes
+- `releases/1.8.0/x-quote-eval-skills.md` — X Quote Draft - Eval Skills Post
+- `releases/1.8.0/x-quote-plankton-deslop.md` — X Quote Draft - Plankton / De-slop Workflow
+- `releases/1.8.0/x-thread.md` — X Thread Draft - ECC v1.8.0
+- `releases/2.0.0-rc.1/article-outline.md` — Article Outline - ECC v2.0.0-rc.1
+- `releases/2.0.0-rc.1/demo-prompts.md` — Hermes x ECC Demo Prompts
+- `releases/2.0.0-rc.1/ito-prediction-market-skill-pack.md` — Itô Prediction-Market Skill Pack
+- `releases/2.0.0-rc.1/launch-checklist.md` — ECC v2.0.0-rc.1 Launch Checklist
+- `releases/2.0.0-rc.1/linkedin-post.md` — LinkedIn Draft - ECC v2.0.0-rc.1
+- `releases/2.0.0-rc.1/naming-and-publication-matrix.md` — ECC v2.0.0-rc.1 Naming And Publication Matrix
+- `releases/2.0.0-rc.1/operator-readiness-dashboard-2026-05-15.md` — ECC Operator Readiness Dashboard
+- `releases/2.0.0-rc.1/operator-readiness-dashboard-2026-05-17.md` — ECC Operator Readiness Dashboard
+- `releases/2.0.0-rc.1/operator-readiness-dashboard-2026-05-18.md` — ECC Operator Readiness Dashboard
+- `releases/2.0.0-rc.1/operator-readiness-dashboard-2026-05-19.md` — ECC Operator Readiness Dashboard
+- `releases/2.0.0-rc.1/operator-readiness-dashboard-2026-05-20.md` — ECC Operator Readiness Dashboard
+- `releases/2.0.0-rc.1/owner-approval-packet-2026-05-19.md` — ECC v2.0.0-rc.1 Owner Approval Packet
+- `releases/2.0.0-rc.1/owner-queue-cleanup-2026-05-18.md` — Owner-Wide Queue Cleanup - 2026-05-18
+- `releases/2.0.0-rc.1/partner-sponsor-talks-pack.md` — ECC v2.0.0-rc.1 Partner, Sponsor, and Talks Pack
+- `releases/2.0.0-rc.1/preview-pack-manifest.md` — ECC v2.0.0-rc.1 Preview Pack Manifest
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-12.md` — ECC v2.0.0-rc.1 Publication Evidence — 2026-05-12
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-13-post-hardening.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-13 Post-Hardening
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-13.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-13
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-15.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-15
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-16.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-16
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-17.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-17
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-18.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-18
+- `releases/2.0.0-rc.1/publication-evidence-2026-05-19.md` — ECC v2.0.0-rc.1 Publication Evidence - 2026-05-19
+- `releases/2.0.0-rc.1/publication-readiness.md` — ECC v2.0.0-rc.1 Publication Readiness
+- `releases/2.0.0-rc.1/quickstart.md` — ECC v2.0.0-rc.1 Quickstart
+- `releases/2.0.0-rc.1/release-name-plugin-publication-checklist-2026-05-18.md` — ECC v2.0.0-rc.1 Release Name And Plugin Publication Checklist
+- `releases/2.0.0-rc.1/release-notes.md` — ECC v2.0.0-rc.1 Release Notes
+- `releases/2.0.0-rc.1/release-url-ledger-2026-05-18.md` — ECC v2.0.0-rc.1 Release URL Ledger
+- `releases/2.0.0-rc.1/release-url-ledger-2026-05-19.md` — ECC v2.0.0-rc.1 Release URL Ledger
+- `releases/2.0.0-rc.1/telegram-handoff.md` — Telegram Handoff For Hermes
+- `releases/2.0.0-rc.1/video-suite-production.md` — ECC 2.0 Video Suite Production Manifest
+- `releases/2.0.0-rc.1/x-thread.md` — X Thread Draft - ECC v2.0.0-rc.1
+- `releases/2.0.0/ecc-2-hypergrowth-release-command-center.md` — ECC 2.0 Hypergrowth Release Command Center
+- `security/supply-chain-incident-response.md` — Supply-Chain Incident Response
+- `skill-adaptation-policy.md` — Skill Adaptation Policy
+- `stale-pr-salvage-ledger.md` — Stale PR Salvage Ledger
+- `token-optimization.md` — Token Optimization Guide
+
+## B — core/docs: LOCALIZED translations (bulk; counts only)
+- ja-JP: 472 files
+- zh-CN: 377 files
+- tr: 142 files
+- ko-KR: 64 files
+- zh-TW: 58 files
+- pt-BR: 47 files
+- de-DE: 2 files
+- vi-VN: 1 files
+- th: 1 files
+- ru: 1 files
+
+## A — other-editor mirrors + ECC repo internals
+- core/.cursor: 67 files
+- core/.kiro: 85 files
+- core/.opencode: 78 files
+- core/.agents: 69 files
+- core/.codebuddy: 6 files
+- core/.codex: 5 files
+- core/.codex-plugin: 2 files
+- core/.trae: 4 files
+- core/.zed: 1 files
+- core/.gemini: 1 files
+- core/.qwen: 1 files
+- core/.github (ECC CI workflows):
+    - core/.github/CODEOWNERS
+    - core/.github/FUNDING.yml
+    - core/.github/ISSUE_TEMPLATE/copilot-task.md
+    - core/.github/PULL_REQUEST_TEMPLATE.md
+    - core/.github/copilot-instructions.md
+    - core/.github/dependabot.yml
+    - core/.github/prompts/build-fix.prompt.md
+    - core/.github/prompts/code-review.prompt.md
+    - core/.github/prompts/plan.prompt.md
+    - core/.github/prompts/refactor.prompt.md
+    - core/.github/prompts/security-review.prompt.md
+    - core/.github/prompts/tdd.prompt.md
+    - core/.github/release.yml
+    - core/.github/workflows/ci.yml
+    - core/.github/workflows/maintenance.yml
+    - core/.github/workflows/monthly-metrics.yml
+    - core/.github/workflows/release.yml
+    - core/.github/workflows/reusable-release.yml
+    - core/.github/workflows/reusable-test.yml
+    - core/.github/workflows/reusable-validate.yml
+    - core/.github/workflows/supply-chain-watch.yml
+- core/.claude (ECC core config):
+    - core/.claude/commands/add-language-rules.md
+    - core/.claude/commands/database-migration.md
+    - core/.claude/commands/feature-development.md
+    - core/.claude/ecc-tools.json
+    - core/.claude/enterprise/controls.md
+    - core/.claude/homunculus/instincts/inherited/everything-claude-code-instincts.yaml
+    - core/.claude/identity.json
+    - core/.claude/package-manager.json
+    - core/.claude/research/everything-claude-code-research-playbook.md
+    - core/.claude/rules/everything-claude-code-guardrails.md
+    - core/.claude/rules/node.md
+    - core/.claude/skills/everything-claude-code/SKILL.md
+    - core/.claude/team/everything-claude-code-team-config.json
+
+## F — already-disabled vendored output-style plugins (enabled: false)
+- vendored/explanatory-output-style/.claude-plugin/plugin.json
+- vendored/explanatory-output-style/README.md
+- vendored/explanatory-output-style/hooks-handlers/session-start.sh
+- vendored/explanatory-output-style/hooks/hooks.json
+- vendored/learning-output-style/.claude-plugin/plugin.json
+- vendored/learning-output-style/README.md
+- vendored/learning-output-style/hooks-handlers/session-start.sh
+- vendored/learning-output-style/hooks/hooks.json
