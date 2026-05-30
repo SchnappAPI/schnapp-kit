@@ -14,8 +14,7 @@
       "Bash(gh pr merge *)",
       "Bash(gh repo *)",
       "Bash(chmod +x *)",
-      "Bash(mkdir -p *)",
-      "Bash(python3 scripts/*)"
+      "Bash(mkdir -p *)"
     ]
   }
 }
