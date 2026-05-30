@@ -1,0 +1,48 @@
+path	type	group	purpose	deps	size	decision	target_path	notes
+core/.agents	group	A-editor-mirrors	OpenAI agents-format mirror	-	69	undecided	-	CLI/web only; other-editor mirror
+core/.kiro	group	A-editor-mirrors	Kiro editor mirror	-	85	undecided	-	other-editor mirror
+core/.opencode	group	A-editor-mirrors	OpenCode editor mirror	-	78	undecided	-	other-editor mirror
+core/.cursor	group	A-editor-mirrors	Cursor editor mirror	-	67	undecided	-	other-editor mirror
+core/.codebuddy	group	A-editor-mirrors	CodeBuddy editor mirror	-	6	undecided	-	other-editor mirror
+core/.codex	group	A-editor-mirrors	Codex mirror	-	5	undecided	-	other-editor mirror
+core/.codex-plugin	group	A-editor-mirrors	Codex plugin mirror	-	2	undecided	-	other-editor mirror
+core/.trae	group	A-editor-mirrors	Trae editor mirror	-	4	undecided	-	other-editor mirror
+core/.zed	group	A-editor-mirrors	Zed editor mirror	-	1	undecided	-	other-editor mirror
+core/.gemini	group	A-editor-mirrors	Gemini mirror	-	1	undecided	-	other-editor mirror
+core/.qwen	group	A-editor-mirrors	Qwen mirror	-	1	undecided	-	other-editor mirror
+core/.github	group	A-editor-mirrors	ECC project CI workflows	-	21	undecided	-	ECC repo CI, not a CC artifact
+core/.claude	group	A-editor-mirrors	ECC core .claude config	-	13	undecided	-	superseded by our root .claude
+core/docs/ja-JP	group	B-localized-docs	Japanese docs	-	472	undecided	-	localized ECC docs
+core/docs/zh-CN	group	B-localized-docs	Chinese docs	-	377	undecided	-	localized ECC docs
+core/docs/tr	group	B-localized-docs	Turkish docs	-	142	undecided	-	localized ECC docs
+core/docs/ko-KR	group	B-localized-docs	Korean docs	-	64	undecided	-	localized ECC docs
+core/docs/zh-TW	group	B-localized-docs	Taiwan Chinese docs	-	58	undecided	-	localized ECC docs
+core/docs/pt-BR	group	B-localized-docs	Portuguese docs	-	47	undecided	-	localized ECC docs
+core/docs/de-DE,vi-VN,th,ru	group	B-localized-docs	other localized docs	-	5	undecided	-	localized ECC docs
+core/docs/(english:releases,architecture,fixes,business,etc.)	group	B-core-docs-en	ECC internal project docs (release notes, plans, PR triage)	-	93	undecided	-	ECC project docs, not CC artifacts
+core/rules/zh	group	C-pruned-lang	Chinese-localized rules	-	11	undecided	-	localization
+core/rules/golang	group	C-pruned-lang	Go rules (pruned lang)	-	5	undecided	-	pruned language
+core/skills/(21 pruned-lang dirs)	group	C-pruned-lang	java/ruby/go/rust/php/csharp/kotlin/swift/dart/perl/dotnet/fsharp skills	-	~40	undecided	-	pruned languages
+core/agents/(12 pruned-lang reviewers/resolvers)	group	C-pruned-lang	java/rust/kotlin/swift/csharp/dart/fsharp/flutter reviewers+resolvers	-	12	undecided	-	pruned languages
+scripts/fork-ecc.sh	group	D-fork-sync	clone+prune ECC fork	-	1	undecided	-	flatten=> drop sync
+scripts/prune-languages.sh	group	D-fork-sync	remove pruned-lang files from core	-	1	undecided	-	flatten=> drop sync
+scripts/add-upstream.sh	group	D-fork-sync	vendor a new plugin	vendor-plugin skill	1	undecided	-	flatten=> drop sync
+scripts/sync-upstream.sh	group	D-fork-sync	re-pin vendored upstreams	sync-upstreams skill	1	undecided	-	flatten=> drop sync
+scripts/detect-languages.sh	group	D-fork-sync	recommend language packs	-	1	undecided	-	flatten=> drop sync
+scripts/enable-artifact.sh	group	D-fork-sync	toggle artifact globs in kit.config	kit.config.yml	1	undecided	-	flatten=> drop
+scripts/install-as-plugin.sh	group	D-fork-sync	install kit as local plugin	-	1	undecided	-	review
+vendored/.upstreams.yml	group	D-fork-sync	upstream registry+pins	sync scripts	1	undecided	-	flatten=> drop (save attribution first)
+kit.config.yml	group	D-fork-sync	layer steering wheel	discover/audit/sync skills	1	undecided	-	flatten=> drop
+scripts/render-merged-tree.sh	group	D2-web-install	materialize merged tree for web/Cowork	-	1	undecided	-	WEB USER: keep simplified path
+scripts/install-user-global.sh	group	D2-web-install	symlink merged tree into ~/.claude	-	1	undecided	-	WEB USER: likely keep
+core/ecc2	group	E-ecc-scaffold	ECC v2 source	-	19	undecided	-	upstream build code
+core/src	group	E-ecc-scaffold	ECC source (llm)	-	19	undecided	-	upstream build code
+core/tests	group	E-ecc-scaffold	ECC test suite	-	149	undecided	-	upstream tests
+core/scripts	group	E-ecc-scaffold	ECC build/CI scripts	-	167	undecided	-	upstream scripts
+core/examples	group	E-ecc-scaffold	ECC example projects	-	46	undecided	-	upstream examples
+core/assets	group	E-ecc-scaffold	images/resources	-	36	undecided	-	upstream assets
+core/legacy-command-shims	group	E-ecc-scaffold	legacy command compat	-	13	undecided	-	upstream legacy
+core/schemas	group	E-ecc-scaffold	JSON validation schemas	-	10	undecided	-	review (maybe keep hooks/plugin schema)
+core/(root build/meta files ~42)	group	E-ecc-scaffold	package.json,yarn.lock,install.*,SPONSORS,CHANGELOG,the-*-guide,etc.	-	42	undecided	-	upstream repo meta
+vendored/explanatory-output-style	group	F-disabled-vendored	output-style (enabled:false)	-	4	undecided	-	already disabled
+vendored/learning-output-style	group	F-disabled-vendored	output-style (enabled:false)	-	4	undecided	-	already disabled
