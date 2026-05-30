@@ -30,14 +30,23 @@ python, typescript, web, cpp, angular.
 (explanatory-output-style, learning-output-style; enabled:false). vendored/ now
 holds 5 active plugins: agent-sdk-dev, mattpocock-skills, plugin-dev,
 ralph-wiggum, security-guidance.
-**Next action:** Section 8 — ECC root scaffolding. Loose core/ build/meta files
-(package.json, yarn.lock, pyproject.toml, install.*, eslint/prettier/commitlint
-configs, SPONSORS/CHANGELOG/SOUL/etc., the-*-guide.md, ecc_dashboard.py) + decide
-the big non-artifact core/ trees: ecc2(19), src(19), tests(149), scripts(167),
-examples(46), assets(36), schemas(10), integrations(7), legacy-command-shims(13),
-manifests(3), contexts(3), mcp-configs(1), hooks(4), config(1), plugins(1),
-research(1). Then Phase 2/3 = file-by-file over core/skills (~225), agents (~46),
-commands (~64), kept rules, vendored, overlays, language-packs. Tracked: 1,303.
+**Section 8a done:** cut 37 ECC root build/meta/doc files. KEPT core/LICENSE +
+core/ATTRIBUTION.md (relocate to repo root in flatten). HELD core/.mcp.json +
+core/.env.example for Phase 3.
+**Section 8b — HELD for Phase 3 (per user):** the big non-artifact core/ trees
+(tests 149, scripts 167, examples 46, assets 36, ecc2 19, src 19,
+legacy-command-shims 13, schemas 10, integrations 7, manifests 3, contexts 3,
+hooks 4, mcp-configs 1, config 1, plugins 1, research 1) — review file-by-file.
+
+**Phase 1 (bulk cuts) COMPLETE.** Removed 2,089 files across 8 sections;
+2,977 -> 1,266 tracked (mistake-free, all committed+pushed).
+
+**Next action: Phase 2 — inventory the survivors.** Scripted frontmatter sweep
+(name + description + size + deps) over remaining core/skills (~225), core/agents
+(~46), core/commands (~64), kept core/rules, the 4 held core/.claude files, the
+held core/ trees + config, vendored/* (5 plugins), overlays/ (26),
+language-packs/ (4) -> append ledger rows. Then Phase 3 = file-by-file grilling
+of undecided rows; Phase 4 = flatten/reorganize; Phase 5 = verify. Tracked: 1,266.
 
 **PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
 bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5–#8

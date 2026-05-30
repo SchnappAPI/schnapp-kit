@@ -114,3 +114,8 @@ core/agents/cpp-build-resolver.md	agent	sec6-keep	C++ build resolver	-	1	keep	ag
 core/rules/angular	rule-tree	sec6-keep	Angular rules	-	5	keep	rules/angular	sec6; TS-adjacent, kept
 vendored/explanatory-output-style	vendored-plugin	sec7-cut	explanatory output-style (SessionStart hook)	enabled:false in kit.config	4	cut	-	sec7; disabled plugin
 vendored/learning-output-style	vendored-plugin	sec7-cut	learning output-style (SessionStart hook)	enabled:false in kit.config	4	cut	-	sec7; disabled plugin
+core/(37 root build/meta/doc files)	root-files	sec8a-cut	ECC build chain (package.json/lockfiles/eslint/prettier/etc), install.*, ecc_dashboard.py, agent.yaml, 19 ECC project docs (README/guides/CONTRIBUTING/etc), VERSION	none	37	cut	-	sec8a; ECC repo scaffolding
+core/LICENSE	legal	sec8a-keep	MIT license (ECC-derived content)	-	21	keep	LICENSE	sec8a; relocate to root in flatten
+core/ATTRIBUTION.md	legal	sec8a-keep	attribution for core/ layer	-	14	keep	ATTRIBUTION.md	sec8a; merge w/ vendored attribution in flatten
+core/.mcp.json	config	sec8a-hold	MCP server config	-	28	undecided	-	sec8a; review Phase 3 w/ core/mcp-configs
+core/.env.example	config	sec8a-hold	env var example	-	48	undecided	-	sec8a; review Phase 3
