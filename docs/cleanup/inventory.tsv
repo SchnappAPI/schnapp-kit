@@ -224,203 +224,203 @@ core/skills/vite-patterns/SKILL.md	skill	core-skills	Vite build tool patterns in
 core/skills/windows-desktop-e2e/SKILL.md	skill	core-skills	E2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation.		887	cut		user approved proposed-cuts (cut)
 core/skills/workspace-surface-audit/SKILL.md	skill	core-skills	Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills		125	cut		user approved proposed-cuts (cut)
 core/skills/x-api/SKILL.md	skill	core-skills	X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, an		234	cut		user approved proposed-cuts (cut)
-core/agents/a11y-architect.md	agent	core-agents	Accessibility Architect specializing in WCAG 2.2 compliance for Web and Native platforms. Use PROACTIVELY when designing UI components, esta		149	undecided		
-core/agents/architect.md	agent	core-agents	Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, 		220	undecided		
-core/agents/build-error-resolver.md	agent	core-agents	Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with m		123	undecided		
-core/agents/chief-of-staff.md	agent	core-agents	Personal communication chief of staff that triages email, Slack, LINE, and Messenger. Classifies messages into 4 tiers (skip/info_only/meeti		160	undecided		
-core/agents/code-architect.md	agent	core-agents	Designs feature architectures by analyzing existing codebase patterns and conventions, then providing implementation blueprints with concret		80	undecided		
-core/agents/code-explorer.md	agent	core-agents	Deeply analyzes existing codebase features by tracing execution paths, mapping architecture layers, and documenting dependencies to inform n		78	undecided		
-core/agents/code-reviewer.md	agent	core-agents	Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifyi		323	undecided		
-core/agents/code-simplifier.md	agent	core-agents	Simplifies and refines code for clarity, consistency, and maintainability while preserving behavior. Focus on recently modified code unless 		56	undecided		
-core/agents/comment-analyzer.md	agent	core-agents	Analyze code comments for accuracy, completeness, maintainability, and comment rot risk.		54	undecided		
-core/agents/conversation-analyzer.md	agent	core-agents	Use this agent when analyzing conversation transcripts to find behaviors worth preventing with hooks. Triggered by /hookify without argument		61	undecided		
-core/agents/cpp-build-resolver.md	agent	core-agents	C++ build, CMake, and compilation error resolution specialist. Fixes build errors, linker issues, and template errors with minimal changes. 		99	undecided		
-core/agents/cpp-reviewer.md	agent	core-agents	Expert C++ code reviewer specializing in memory safety, modern C++ idioms, concurrency, and performance. Use for all C++ code changes. MUST 		81	undecided		
-core/agents/database-reviewer.md	agent	core-agents	PostgreSQL database specialist for query optimization, schema design, security, and performance. Use PROACTIVELY when writing SQL, creating 		100	undecided		
-core/agents/django-build-resolver.md	agent	core-agents	Django/Python build, migration, and dependency error resolution specialist. Fixes pip/Poetry errors, migration conflicts, import errors, Dja		252	undecided		
-core/agents/django-reviewer.md	agent	core-agents	Expert Django code reviewer specializing in ORM correctness, DRF patterns, migration safety, security misconfigurations, and production-grad		169	undecided		
-core/agents/doc-updater.md	agent	core-agents	Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, gener		116	undecided		
-core/agents/docs-lookup.md	agent	core-agents	When the user asks how to use a library, framework, or API or needs up-to-date code examples, use Context7 MCP to fetch current documentatio		77	undecided		
-core/agents/e2e-runner.md	agent	core-agents	End-to-end testing specialist using Vercel Agent Browser (preferred) with Playwright fallback. Use PROACTIVELY for generating, maintaining, 		116	undecided		
-core/agents/fastapi-reviewer.md	agent	core-agents	Reviews FastAPI applications for async correctness, dependency injection, Pydantic schemas, security, OpenAPI quality, testing, and producti		79	undecided		
-core/agents/gan-evaluator.md	agent	core-agents	GAN Harness — Evaluator agent. Tests the live running application via Playwright, scores against rubric, and provides actionable feedback to		218	undecided		
-core/agents/gan-generator.md	agent	core-agents	GAN Harness — Generator agent. Implements features according to the spec, reads evaluator feedback, and iterates until quality threshold is 		140	undecided		
-core/agents/gan-planner.md	agent	core-agents	GAN Harness — Planner agent. Expands a one-line prompt into a full product specification with features, sprints, evaluation criteria, and de		108	undecided		
-core/agents/harness-optimizer.md	agent	core-agents	Analyze and improve the local agent harness configuration for reliability, cost, and throughput.		44	undecided		
-core/agents/healthcare-reviewer.md	agent	core-agents	Reviews healthcare application code for clinical safety, CDSS accuracy, PHI compliance, and medical data integrity. Specialized for EMR/EHR,		92	undecided		
-core/agents/homelab-architect.md	agent	core-agents	Designs home and small-lab network plans from hardware inventory, goals, and operator experience level, with safe staged changes and rollbac		107	undecided		
-core/agents/loop-operator.md	agent	core-agents	Operate autonomous agent loops, monitor progress, and intervene safely when loops stall.		45	undecided		
-core/agents/marketing-agent.md	agent	core-agents	Marketing strategist and copywriter for campaign planning, audience research, positioning, copy creation, and content review. Covers landing		159	undecided		
-core/agents/mle-reviewer.md	agent	core-agents	Production machine-learning engineering reviewer for data contracts, feature pipelines, training reproducibility, offline/online evaluation,		162	undecided		
-core/agents/network-architect.md	agent	core-agents	Designs enterprise or multi-site network architecture from requirements, using existing network skills for focused routing, validation, auto		106	undecided		
-core/agents/network-config-reviewer.md	agent	core-agents	Reviews router and switch configurations for security, correctness, stale references, risky change-window commands, and missing operational 		106	undecided		
-core/agents/network-troubleshooter.md	agent	core-agents	Diagnoses network connectivity, routing, DNS, interface, and policy symptoms with a read-only OSI-layer workflow and evidence-backed root ca		128	undecided		
-core/agents/opensource-forker.md	agent	core-agents	Fork any project for open-sourcing. Copies files, strips secrets and credentials (20+ patterns), replaces internal references with placehold		207	undecided		
-core/agents/opensource-packager.md	agent	core-agents	Generate complete open-source packaging for a sanitized project. Produces CLAUDE.md, setup.sh, README.md, LICENSE, CONTRIBUTING.md, and GitH		258	undecided		
-core/agents/opensource-sanitizer.md	agent	core-agents	Verify an open-source fork is fully sanitized before release. Scans for leaked secrets, PII, internal references, and dangerous files using 		197	undecided		
-core/agents/performance-optimizer.md	agent	core-agents	Performance analysis and optimization specialist. Use PROACTIVELY for identifying bottlenecks, optimizing slow code, reducing bundle sizes, 		455	undecided		
-core/agents/planner.md	agent	core-agents	Expert planning specialist for complex features and refactoring. Use PROACTIVELY when users request feature implementation, architectural ch		221	undecided		
-core/agents/pr-test-analyzer.md	agent	core-agents	Review pull request test coverage quality and completeness, with emphasis on behavioral coverage and real bug prevention.		54	undecided		
-core/agents/python-reviewer.md	agent	core-agents	Expert Python code reviewer specializing in PEP 8 compliance, Pythonic idioms, type hints, security, and performance. Use for all Python cod		107	undecided		
-core/agents/pytorch-build-resolver.md	agent	core-agents	PyTorch runtime, CUDA, and training error resolution specialist. Fixes tensor shape mismatches, device errors, gradient issues, DataLoader p		129	undecided		
-core/agents/refactor-cleaner.md	agent	core-agents	Dead code cleanup and consolidation specialist. Use PROACTIVELY for removing unused code, duplicates, and refactoring. Runs analysis tools (		94	undecided		
-core/agents/security-reviewer.md	agent	core-agents	Security vulnerability detection and remediation specialist. Use PROACTIVELY after writing code that handles user input, authentication, API		117	undecided		
-core/agents/seo-specialist.md	agent	core-agents	SEO specialist for technical SEO audits, on-page optimization, structured data, Core Web Vitals, and content/keyword mapping. Use for site a		71	undecided		
-core/agents/silent-failure-hunter.md	agent	core-agents	Review code for silent failures, swallowed errors, bad fallbacks, and missing error propagation.		59	undecided		
-core/agents/tdd-guide.md	agent	core-agents	Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refac		100	undecided		
-core/agents/type-design-analyzer.md	agent	core-agents	Analyze type design for encapsulation, invariant expression, usefulness, and enforcement.		50	undecided		
-core/agents/typescript-reviewer.md	agent	core-agents	Expert TypeScript/JavaScript code reviewer specializing in type safety, async correctness, Node/web security, and idiomatic patterns. Use fo		121	undecided		
-core/commands/aside.md	command	core-commands	Answer a quick side question without interrupting or losing context from the current task. Resume work automatically after answering.		164	undecided		
-core/commands/auto-update.md	command	core-commands	Pull the latest ECC repo changes and reinstall the current managed targets.		28	undecided		
-core/commands/build-fix.md	command	core-commands	Detect the project build system and incrementally fix build/type errors with minimal safe changes.		66	undecided		
-core/commands/checkpoint.md	command	core-commands	Create, verify, or list workflow checkpoints after running verification checks.		78	undecided		
-core/commands/code-review.md	command	core-commands	Code review — local uncommitted changes or GitHub PR (pass PR number/URL for PR mode)		289	undecided		
-core/commands/cost-report.md	command	core-commands	Generate a local Claude Code cost report from a cost-tracker SQLite database.		107	undecided		
-core/commands/cpp-build.md	command	core-commands	Fix C++ build errors, CMake issues, and linker problems incrementally. Invokes the cpp-build-resolver agent for minimal, surgical fixes.		173	undecided		
-core/commands/cpp-review.md	command	core-commands	Comprehensive C++ code review for memory safety, modern C++ idioms, concurrency, and security. Invokes the cpp-reviewer agent.		132	undecided		
-core/commands/cpp-test.md	command	core-commands	Enforce TDD workflow for C++. Write GoogleTest tests first, then implement. Verify coverage with gcov/lcov.		251	undecided		
-core/commands/ecc-guide.md	command	core-commands	Navigate ECC's current agents, skills, commands, hooks, install profiles, and docs from the live repository surface.		93	undecided		
-core/commands/evolve.md	command	core-commands	Analyze instincts and suggest or generate evolved structures		178	undecided		
-core/commands/fastapi-review.md	command	core-commands	Review a FastAPI application for architecture, async correctness, dependency injection, Pydantic schemas, security, performance, and testabi		39	undecided		
-core/commands/feature-dev.md	command	core-commands	Guided feature development with codebase understanding and architecture focus		49	undecided		
-core/commands/gan-build.md	command	core-commands	Run a generator/evaluator build loop for implementation tasks with bounded iterations and scoring.		103	undecided		
-core/commands/gan-design.md	command	core-commands	Run a generator/evaluator design loop for frontend or visual work with bounded iterations and scoring.		39	undecided		
-core/commands/gradle-build.md	command	core-commands	Fix Gradle build errors for Android and KMP projects		70	undecided		
-core/commands/harness-audit.md	command	core-commands	Run a deterministic repository harness audit and return a prioritized scorecard.		84	undecided		
-core/commands/hookify-configure.md	command	core-commands	Enable or disable hookify rules interactively		14	undecided		
-core/commands/hookify-help.md	command	core-commands	Get help with the hookify system		46	undecided		
-core/commands/hookify-list.md	command	core-commands	List all configured hookify rules		21	undecided		
-core/commands/hookify.md	command	core-commands	Create hooks to prevent unwanted behaviors from conversation analysis or explicit instructions		50	undecided		
-core/commands/instinct-export.md	command	core-commands	Export instincts from project/global scope to a file		66	undecided		
-core/commands/instinct-import.md	command	core-commands	Import instincts from file or URL into project/global scope		114	undecided		
-core/commands/instinct-status.md	command	core-commands	Show learned instincts (project + global) with confidence		59	undecided		
-core/commands/jira.md	command	core-commands	Retrieve a Jira ticket, analyze requirements, update status, or add comments. Uses the jira-integration skill and MCP or REST API.		106	undecided		
-core/commands/learn-eval.md	command	core-commands	Extract reusable patterns from the session, self-evaluate quality before saving, and determine the right save location (Global vs Project).		116	undecided		
-core/commands/learn.md	command	core-commands	Extract reusable patterns from the current session and save them as candidate skills or guidance.		74	undecided		
-core/commands/loop-start.md	command	core-commands	Start a managed autonomous loop pattern with safety defaults and explicit stop conditions.		36	undecided		
-core/commands/loop-status.md	command	core-commands	Inspect active loop state, progress, failure signals, and recommended intervention.		77	undecided		
-core/commands/marketing-campaign.md	command	core-commands	Plan and execute a full marketing campaign. Accepts a product brief and returns positioning, landing page copy, email sequence, social posts		129	undecided		
-core/commands/model-route.md	command	core-commands	Recommend the best model tier for the current task based on complexity, risk, and budget.		30	undecided		
-core/commands/multi-backend.md	command	core-commands	Run a backend-focused multi-model workflow for APIs, algorithms, data, and business logic.		162	undecided		
-core/commands/multi-execute.md	command	core-commands	Execute a multi-model implementation plan while preserving Claude as the only filesystem writer.		319	undecided		
-core/commands/multi-frontend.md	command	core-commands	Run a frontend-focused multi-model workflow for components, layouts, animation, and UI polish.		162	undecided		
-core/commands/multi-plan.md	command	core-commands	Create a multi-model implementation plan without modifying production code.		272	undecided		
-core/commands/multi-workflow.md	command	core-commands	Run a full multi-model development workflow with research, planning, execution, optimization, and review.		195	undecided		
-core/commands/plan-prd.md	command	core-commands	Generate a lean, problem-first PRD and hand off to /plan for implementation planning.		160	undecided		
-core/commands/plan.md	command	core-commands	Restate requirements, assess risks, and create step-by-step implementation plan. WAIT for user CONFIRM before touching any code.		200	undecided		
-core/commands/pm2.md	command	core-commands	Analyze a project and generate PM2 service commands for detected frontend, backend, or database services.		276	undecided		
-core/commands/pr.md	command	core-commands	Create a GitHub PR from current branch with unpushed commits — discovers templates, analyzes changes, pushes		184	undecided		
-core/commands/project-init.md	command	core-commands	Detect a project's stack and produce a dry-run ECC onboarding plan using the repository's install manifests and stack mappings.		86	undecided		
-core/commands/projects.md	command	core-commands	List known projects and their instinct statistics		39	undecided		
-core/commands/promote.md	command	core-commands	Promote project-scoped instincts to global scope		41	undecided		
-core/commands/prp-commit.md	command	core-commands	Quick commit with natural language file targeting — describe what to commit in plain English		112	undecided		
-core/commands/prp-implement.md	command	core-commands	Execute an implementation plan with rigorous validation loops		385	undecided		
-core/commands/prp-plan.md	command	core-commands	Create comprehensive feature implementation plan with codebase analysis and pattern extraction		502	undecided		
-core/commands/prp-pr.md	command	core-commands	Create a GitHub PR from current branch with unpushed commits — discovers templates, analyzes changes, pushes		184	undecided		
-core/commands/prp-prd.md	command	core-commands	Interactive PRD generator - problem-first, hypothesis-driven product spec with back-and-forth questioning		447	undecided		
-core/commands/prune.md	command	core-commands	Delete pending instincts older than 30 days that were never promoted		31	undecided		
-core/commands/python-review.md	command	core-commands	Comprehensive Python code review for PEP 8 compliance, type hints, security, and Pythonic idioms. Invokes the python-reviewer agent.		297	undecided		
-core/commands/quality-gate.md	command	core-commands	Run the ECC quality pipeline for a file or project scope and report remediation steps.		33	undecided		
-core/commands/refactor-clean.md	command	core-commands	Safely identify and remove dead code with verification after each change.		84	undecided		
-core/commands/resume-session.md	command	core-commands	Load the most recent session file from ~/.claude/session-data/ and resume work with full context from where the last session ended.		156	undecided		
-core/commands/review-pr.md	command	core-commands	Comprehensive PR review using specialized agents		37	undecided		
-core/commands/santa-loop.md	command	core-commands	Adversarial dual-review convergence loop — two independent model reviewers must both approve before code ships.		175	undecided		
-core/commands/save-session.md	command	core-commands	Save current session state to a dated file in ~/.claude/session-data/ so work can be resumed in a future session with full context.		275	undecided		
-core/commands/security-scan.md	command	core-commands	Run AgentShield against agent, hook, MCP, permission, and secret surfaces.		92	undecided		
-core/commands/sessions.md	command	core-commands	Manage Claude Code session history, aliases, and session metadata.		339	undecided		
-core/commands/setup-pm.md	command	core-commands	Configure your preferred package manager (npm/pnpm/yarn/bun)		80	undecided		
-core/commands/skill-create.md	command	core-commands	Analyze local git history to extract coding patterns and generate SKILL.md files. Local version of the Skill Creator GitHub App.		174	undecided		
-core/commands/skill-health.md	command	core-commands	Show skill portfolio health dashboard with charts and analytics		54	undecided		
-core/commands/test-coverage.md	command	core-commands	Analyze coverage, identify gaps, and generate missing tests toward the target threshold.		73	undecided		
-core/commands/update-codemaps.md	command	core-commands	Scan project structure and generate token-lean architecture codemaps.		76	undecided		
-core/commands/update-docs.md	command	core-commands	Sync documentation from source-of-truth files such as scripts, schemas, routes, and exports.		88	undecided		
-core/rules/README.md	rule	core-rules	Rules		135	undecided		
-core/rules/angular/coding-style.md	rule	core-rules	Angular Coding Style		182	undecided		
-core/rules/angular/hooks.md	rule	core-rules	Angular Hooks		25	undecided		
-core/rules/angular/patterns.md	rule	core-rules	Angular Patterns		249	undecided		
-core/rules/angular/security.md	rule	core-rules	Angular Security		87	undecided		
-core/rules/angular/testing.md	rule	core-rules	Angular Testing		164	undecided		
-core/rules/common/agents.md	rule	core-rules	Agent Orchestration		51	undecided		
-core/rules/common/code-review.md	rule	core-rules	Code Review Standards		124	undecided		
-core/rules/common/coding-style.md	rule	core-rules	Coding Style		90	undecided		
-core/rules/common/development-workflow.md	rule	core-rules	Development Workflow		44	undecided		
-core/rules/common/git-workflow.md	rule	core-rules	Git Workflow		24	undecided		
-core/rules/common/hooks.md	rule	core-rules	Hooks System		30	undecided		
-core/rules/common/patterns.md	rule	core-rules	Common Patterns		31	undecided		
-core/rules/common/performance.md	rule	core-rules	Performance Optimization		55	undecided		
-core/rules/common/security.md	rule	core-rules	Security Guidelines		29	undecided		
-core/rules/common/testing.md	rule	core-rules	Testing Requirements		57	undecided		
-core/rules/cpp/coding-style.md	rule	core-rules	C++ Coding Style		44	undecided		
-core/rules/cpp/hooks.md	rule	core-rules	C++ Hooks		39	undecided		
-core/rules/cpp/patterns.md	rule	core-rules	C++ Patterns		51	undecided		
-core/rules/cpp/security.md	rule	core-rules	C++ Security		51	undecided		
-core/rules/cpp/testing.md	rule	core-rules	C++ Testing		44	undecided		
-core/rules/python/coding-style.md	rule	core-rules	Python Coding Style		42	undecided		
-core/rules/python/fastapi.md	rule	core-rules	FastAPI Rules		58	undecided		
-core/rules/python/hooks.md	rule	core-rules	Python Hooks		19	undecided		
-core/rules/python/patterns.md	rule	core-rules	Python Patterns		39	undecided		
-core/rules/python/security.md	rule	core-rules	Python Security		30	undecided		
-core/rules/python/testing.md	rule	core-rules	Python Testing		38	undecided		
-core/rules/typescript/coding-style.md	rule	core-rules	TypeScript/JavaScript Coding Style		199	undecided		
-core/rules/typescript/hooks.md	rule	core-rules	TypeScript/JavaScript Hooks		22	undecided		
-core/rules/typescript/patterns.md	rule	core-rules	TypeScript/JavaScript Patterns		52	undecided		
-core/rules/typescript/security.md	rule	core-rules	TypeScript/JavaScript Security		28	undecided		
-core/rules/typescript/testing.md	rule	core-rules	TypeScript/JavaScript Testing		18	undecided		
-core/rules/web/coding-style.md	rule	core-rules	Web Coding Style		96	undecided		
-core/rules/web/design-quality.md	rule	core-rules	Web Design Quality Standards		63	undecided		
-core/rules/web/hooks.md	rule	core-rules	Web Hooks		129	undecided		
-core/rules/web/patterns.md	rule	core-rules	Web Patterns		79	undecided		
-core/rules/web/performance.md	rule	core-rules	Web Performance Rules		64	undecided		
-core/rules/web/security.md	rule	core-rules	Web Security Rules		57	undecided		
-core/rules/web/testing.md	rule	core-rules	Web Testing Rules		55	undecided		
+core/agents/a11y-architect.md	agent	core-agents	Accessibility Architect specializing in WCAG 2.2 compliance for Web and Native platforms. Use PROACTIVELY when designing UI components, esta		149	keep		user approved batch2 (keep)
+core/agents/architect.md	agent	core-agents	Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, 		220	keep		user approved batch2 (keep)
+core/agents/build-error-resolver.md	agent	core-agents	Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with m		123	keep		user approved batch2 (keep)
+core/agents/chief-of-staff.md	agent	core-agents	Personal communication chief of staff that triages email, Slack, LINE, and Messenger. Classifies messages into 4 tiers (skip/info_only/meeti		160	cut		user approved batch2 (cut)
+core/agents/code-architect.md	agent	core-agents	Designs feature architectures by analyzing existing codebase patterns and conventions, then providing implementation blueprints with concret		80	keep		user approved batch2 (keep)
+core/agents/code-explorer.md	agent	core-agents	Deeply analyzes existing codebase features by tracing execution paths, mapping architecture layers, and documenting dependencies to inform n		78	keep		user approved batch2 (keep)
+core/agents/code-reviewer.md	agent	core-agents	Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifyi		323	keep		user approved batch2 (keep)
+core/agents/code-simplifier.md	agent	core-agents	Simplifies and refines code for clarity, consistency, and maintainability while preserving behavior. Focus on recently modified code unless 		56	keep		user approved batch2 (keep)
+core/agents/comment-analyzer.md	agent	core-agents	Analyze code comments for accuracy, completeness, maintainability, and comment rot risk.		54	keep		user approved batch2 (keep)
+core/agents/conversation-analyzer.md	agent	core-agents	Use this agent when analyzing conversation transcripts to find behaviors worth preventing with hooks. Triggered by /hookify without argument		61	keep		user approved batch2 (keep)
+core/agents/cpp-build-resolver.md	agent	core-agents	C++ build, CMake, and compilation error resolution specialist. Fixes build errors, linker issues, and template errors with minimal changes. 		99	cut		user approved batch2 (cut)
+core/agents/cpp-reviewer.md	agent	core-agents	Expert C++ code reviewer specializing in memory safety, modern C++ idioms, concurrency, and performance. Use for all C++ code changes. MUST 		81	cut		user approved batch2 (cut)
+core/agents/database-reviewer.md	agent	core-agents	PostgreSQL database specialist for query optimization, schema design, security, and performance. Use PROACTIVELY when writing SQL, creating 		100	keep		user approved batch2 (keep)
+core/agents/django-build-resolver.md	agent	core-agents	Django/Python build, migration, and dependency error resolution specialist. Fixes pip/Poetry errors, migration conflicts, import errors, Dja		252	keep		user approved batch2 (keep)
+core/agents/django-reviewer.md	agent	core-agents	Expert Django code reviewer specializing in ORM correctness, DRF patterns, migration safety, security misconfigurations, and production-grad		169	keep		user approved batch2 (keep)
+core/agents/doc-updater.md	agent	core-agents	Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, gener		116	keep		user approved batch2 (keep)
+core/agents/docs-lookup.md	agent	core-agents	When the user asks how to use a library, framework, or API or needs up-to-date code examples, use Context7 MCP to fetch current documentatio		77	keep		user approved batch2 (keep)
+core/agents/e2e-runner.md	agent	core-agents	End-to-end testing specialist using Vercel Agent Browser (preferred) with Playwright fallback. Use PROACTIVELY for generating, maintaining, 		116	keep		user approved batch2 (keep)
+core/agents/fastapi-reviewer.md	agent	core-agents	Reviews FastAPI applications for async correctness, dependency injection, Pydantic schemas, security, OpenAPI quality, testing, and producti		79	keep		user approved batch2 (keep)
+core/agents/gan-evaluator.md	agent	core-agents	GAN Harness — Evaluator agent. Tests the live running application via Playwright, scores against rubric, and provides actionable feedback to		218	cut		user approved batch2 (cut)
+core/agents/gan-generator.md	agent	core-agents	GAN Harness — Generator agent. Implements features according to the spec, reads evaluator feedback, and iterates until quality threshold is 		140	cut		user approved batch2 (cut)
+core/agents/gan-planner.md	agent	core-agents	GAN Harness — Planner agent. Expands a one-line prompt into a full product specification with features, sprints, evaluation criteria, and de		108	cut		user approved batch2 (cut)
+core/agents/harness-optimizer.md	agent	core-agents	Analyze and improve the local agent harness configuration for reliability, cost, and throughput.		44	keep		user approved batch2 (keep)
+core/agents/healthcare-reviewer.md	agent	core-agents	Reviews healthcare application code for clinical safety, CDSS accuracy, PHI compliance, and medical data integrity. Specialized for EMR/EHR,		92	cut		user approved batch2 (cut)
+core/agents/homelab-architect.md	agent	core-agents	Designs home and small-lab network plans from hardware inventory, goals, and operator experience level, with safe staged changes and rollbac		107	cut		user approved batch2 (cut)
+core/agents/loop-operator.md	agent	core-agents	Operate autonomous agent loops, monitor progress, and intervene safely when loops stall.		45	keep		user approved batch2 (keep)
+core/agents/marketing-agent.md	agent	core-agents	Marketing strategist and copywriter for campaign planning, audience research, positioning, copy creation, and content review. Covers landing		159	cut		user approved batch2 (cut)
+core/agents/mle-reviewer.md	agent	core-agents	Production machine-learning engineering reviewer for data contracts, feature pipelines, training reproducibility, offline/online evaluation,		162	keep		user approved batch2 (keep)
+core/agents/network-architect.md	agent	core-agents	Designs enterprise or multi-site network architecture from requirements, using existing network skills for focused routing, validation, auto		106	cut		user approved batch2 (cut)
+core/agents/network-config-reviewer.md	agent	core-agents	Reviews router and switch configurations for security, correctness, stale references, risky change-window commands, and missing operational 		106	cut		user approved batch2 (cut)
+core/agents/network-troubleshooter.md	agent	core-agents	Diagnoses network connectivity, routing, DNS, interface, and policy symptoms with a read-only OSI-layer workflow and evidence-backed root ca		128	cut		user approved batch2 (cut)
+core/agents/opensource-forker.md	agent	core-agents	Fork any project for open-sourcing. Copies files, strips secrets and credentials (20+ patterns), replaces internal references with placehold		207	keep		user approved batch2 (keep)
+core/agents/opensource-packager.md	agent	core-agents	Generate complete open-source packaging for a sanitized project. Produces CLAUDE.md, setup.sh, README.md, LICENSE, CONTRIBUTING.md, and GitH		258	keep		user approved batch2 (keep)
+core/agents/opensource-sanitizer.md	agent	core-agents	Verify an open-source fork is fully sanitized before release. Scans for leaked secrets, PII, internal references, and dangerous files using 		197	keep		user approved batch2 (keep)
+core/agents/performance-optimizer.md	agent	core-agents	Performance analysis and optimization specialist. Use PROACTIVELY for identifying bottlenecks, optimizing slow code, reducing bundle sizes, 		455	keep		user approved batch2 (keep)
+core/agents/planner.md	agent	core-agents	Expert planning specialist for complex features and refactoring. Use PROACTIVELY when users request feature implementation, architectural ch		221	keep		user approved batch2 (keep)
+core/agents/pr-test-analyzer.md	agent	core-agents	Review pull request test coverage quality and completeness, with emphasis on behavioral coverage and real bug prevention.		54	keep		user approved batch2 (keep)
+core/agents/python-reviewer.md	agent	core-agents	Expert Python code reviewer specializing in PEP 8 compliance, Pythonic idioms, type hints, security, and performance. Use for all Python cod		107	keep		user approved batch2 (keep)
+core/agents/pytorch-build-resolver.md	agent	core-agents	PyTorch runtime, CUDA, and training error resolution specialist. Fixes tensor shape mismatches, device errors, gradient issues, DataLoader p		129	keep		user approved batch2 (keep)
+core/agents/refactor-cleaner.md	agent	core-agents	Dead code cleanup and consolidation specialist. Use PROACTIVELY for removing unused code, duplicates, and refactoring. Runs analysis tools (		94	keep		user approved batch2 (keep)
+core/agents/security-reviewer.md	agent	core-agents	Security vulnerability detection and remediation specialist. Use PROACTIVELY after writing code that handles user input, authentication, API		117	keep		user approved batch2 (keep)
+core/agents/seo-specialist.md	agent	core-agents	SEO specialist for technical SEO audits, on-page optimization, structured data, Core Web Vitals, and content/keyword mapping. Use for site a		71	cut		user approved batch2 (cut)
+core/agents/silent-failure-hunter.md	agent	core-agents	Review code for silent failures, swallowed errors, bad fallbacks, and missing error propagation.		59	keep		user approved batch2 (keep)
+core/agents/tdd-guide.md	agent	core-agents	Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refac		100	keep		user approved batch2 (keep)
+core/agents/type-design-analyzer.md	agent	core-agents	Analyze type design for encapsulation, invariant expression, usefulness, and enforcement.		50	keep		user approved batch2 (keep)
+core/agents/typescript-reviewer.md	agent	core-agents	Expert TypeScript/JavaScript code reviewer specializing in type safety, async correctness, Node/web security, and idiomatic patterns. Use fo		121	keep		user approved batch2 (keep)
+core/commands/aside.md	command	core-commands	Answer a quick side question without interrupting or losing context from the current task. Resume work automatically after answering.		164	keep		user approved batch2 (keep)
+core/commands/auto-update.md	command	core-commands	Pull the latest ECC repo changes and reinstall the current managed targets.		28	cut		user approved batch2 (cut)
+core/commands/build-fix.md	command	core-commands	Detect the project build system and incrementally fix build/type errors with minimal safe changes.		66	keep		user approved batch2 (keep)
+core/commands/checkpoint.md	command	core-commands	Create, verify, or list workflow checkpoints after running verification checks.		78	keep		user approved batch2 (keep)
+core/commands/code-review.md	command	core-commands	Code review — local uncommitted changes or GitHub PR (pass PR number/URL for PR mode)		289	keep		user approved batch2 (keep)
+core/commands/cost-report.md	command	core-commands	Generate a local Claude Code cost report from a cost-tracker SQLite database.		107	cut		user approved batch2 (cut)
+core/commands/cpp-build.md	command	core-commands	Fix C++ build errors, CMake issues, and linker problems incrementally. Invokes the cpp-build-resolver agent for minimal, surgical fixes.		173	cut		user approved batch2 (cut)
+core/commands/cpp-review.md	command	core-commands	Comprehensive C++ code review for memory safety, modern C++ idioms, concurrency, and security. Invokes the cpp-reviewer agent.		132	cut		user approved batch2 (cut)
+core/commands/cpp-test.md	command	core-commands	Enforce TDD workflow for C++. Write GoogleTest tests first, then implement. Verify coverage with gcov/lcov.		251	cut		user approved batch2 (cut)
+core/commands/ecc-guide.md	command	core-commands	Navigate ECC's current agents, skills, commands, hooks, install profiles, and docs from the live repository surface.		93	cut		user approved batch2 (cut)
+core/commands/evolve.md	command	core-commands	Analyze instincts and suggest or generate evolved structures		178	keep		user approved batch2 (keep)
+core/commands/fastapi-review.md	command	core-commands	Review a FastAPI application for architecture, async correctness, dependency injection, Pydantic schemas, security, performance, and testabi		39	keep		user approved batch2 (keep)
+core/commands/feature-dev.md	command	core-commands	Guided feature development with codebase understanding and architecture focus		49	keep		user approved batch2 (keep)
+core/commands/gan-build.md	command	core-commands	Run a generator/evaluator build loop for implementation tasks with bounded iterations and scoring.		103	cut		user approved batch2 (cut)
+core/commands/gan-design.md	command	core-commands	Run a generator/evaluator design loop for frontend or visual work with bounded iterations and scoring.		39	cut		user approved batch2 (cut)
+core/commands/gradle-build.md	command	core-commands	Fix Gradle build errors for Android and KMP projects		70	cut		user approved batch2 (cut)
+core/commands/harness-audit.md	command	core-commands	Run a deterministic repository harness audit and return a prioritized scorecard.		84	keep		user approved batch2 (keep)
+core/commands/hookify-configure.md	command	core-commands	Enable or disable hookify rules interactively		14	keep		user approved batch2 (keep)
+core/commands/hookify-help.md	command	core-commands	Get help with the hookify system		46	keep		user approved batch2 (keep)
+core/commands/hookify-list.md	command	core-commands	List all configured hookify rules		21	keep		user approved batch2 (keep)
+core/commands/hookify.md	command	core-commands	Create hooks to prevent unwanted behaviors from conversation analysis or explicit instructions		50	keep		user approved batch2 (keep)
+core/commands/instinct-export.md	command	core-commands	Export instincts from project/global scope to a file		66	keep		user approved batch2 (keep)
+core/commands/instinct-import.md	command	core-commands	Import instincts from file or URL into project/global scope		114	keep		user approved batch2 (keep)
+core/commands/instinct-status.md	command	core-commands	Show learned instincts (project + global) with confidence		59	keep		user approved batch2 (keep)
+core/commands/jira.md	command	core-commands	Retrieve a Jira ticket, analyze requirements, update status, or add comments. Uses the jira-integration skill and MCP or REST API.		106	cut		user approved batch2 (cut)
+core/commands/learn-eval.md	command	core-commands	Extract reusable patterns from the session, self-evaluate quality before saving, and determine the right save location (Global vs Project).		116	keep		user approved batch2 (keep)
+core/commands/learn.md	command	core-commands	Extract reusable patterns from the current session and save them as candidate skills or guidance.		74	keep		user approved batch2 (keep)
+core/commands/loop-start.md	command	core-commands	Start a managed autonomous loop pattern with safety defaults and explicit stop conditions.		36	keep		user approved batch2 (keep)
+core/commands/loop-status.md	command	core-commands	Inspect active loop state, progress, failure signals, and recommended intervention.		77	keep		user approved batch2 (keep)
+core/commands/marketing-campaign.md	command	core-commands	Plan and execute a full marketing campaign. Accepts a product brief and returns positioning, landing page copy, email sequence, social posts		129	cut		user approved batch2 (cut)
+core/commands/model-route.md	command	core-commands	Recommend the best model tier for the current task based on complexity, risk, and budget.		30	keep		user approved batch2 (keep)
+core/commands/multi-backend.md	command	core-commands	Run a backend-focused multi-model workflow for APIs, algorithms, data, and business logic.		162	keep		user approved batch2 (keep)
+core/commands/multi-execute.md	command	core-commands	Execute a multi-model implementation plan while preserving Claude as the only filesystem writer.		319	keep		user approved batch2 (keep)
+core/commands/multi-frontend.md	command	core-commands	Run a frontend-focused multi-model workflow for components, layouts, animation, and UI polish.		162	keep		user approved batch2 (keep)
+core/commands/multi-plan.md	command	core-commands	Create a multi-model implementation plan without modifying production code.		272	keep		user approved batch2 (keep)
+core/commands/multi-workflow.md	command	core-commands	Run a full multi-model development workflow with research, planning, execution, optimization, and review.		195	keep		user approved batch2 (keep)
+core/commands/plan-prd.md	command	core-commands	Generate a lean, problem-first PRD and hand off to /plan for implementation planning.		160	keep		user approved batch2 (keep)
+core/commands/plan.md	command	core-commands	Restate requirements, assess risks, and create step-by-step implementation plan. WAIT for user CONFIRM before touching any code.		200	keep		user approved batch2 (keep)
+core/commands/pm2.md	command	core-commands	Analyze a project and generate PM2 service commands for detected frontend, backend, or database services.		276	keep		user approved batch2 (keep)
+core/commands/pr.md	command	core-commands	Create a GitHub PR from current branch with unpushed commits — discovers templates, analyzes changes, pushes		184	keep		user approved batch2 (keep)
+core/commands/project-init.md	command	core-commands	Detect a project's stack and produce a dry-run ECC onboarding plan using the repository's install manifests and stack mappings.		86	cut		user approved batch2 (cut)
+core/commands/projects.md	command	core-commands	List known projects and their instinct statistics		39	keep		user approved batch2 (keep)
+core/commands/promote.md	command	core-commands	Promote project-scoped instincts to global scope		41	keep		user approved batch2 (keep)
+core/commands/prp-commit.md	command	core-commands	Quick commit with natural language file targeting — describe what to commit in plain English		112	keep		user approved batch2 (keep)
+core/commands/prp-implement.md	command	core-commands	Execute an implementation plan with rigorous validation loops		385	keep		user approved batch2 (keep)
+core/commands/prp-plan.md	command	core-commands	Create comprehensive feature implementation plan with codebase analysis and pattern extraction		502	keep		user approved batch2 (keep)
+core/commands/prp-pr.md	command	core-commands	Create a GitHub PR from current branch with unpushed commits — discovers templates, analyzes changes, pushes		184	keep		user approved batch2 (keep)
+core/commands/prp-prd.md	command	core-commands	Interactive PRD generator - problem-first, hypothesis-driven product spec with back-and-forth questioning		447	keep		user approved batch2 (keep)
+core/commands/prune.md	command	core-commands	Delete pending instincts older than 30 days that were never promoted		31	keep		user approved batch2 (keep)
+core/commands/python-review.md	command	core-commands	Comprehensive Python code review for PEP 8 compliance, type hints, security, and Pythonic idioms. Invokes the python-reviewer agent.		297	keep		user approved batch2 (keep)
+core/commands/quality-gate.md	command	core-commands	Run the ECC quality pipeline for a file or project scope and report remediation steps.		33	keep		user approved batch2 (keep)
+core/commands/refactor-clean.md	command	core-commands	Safely identify and remove dead code with verification after each change.		84	keep		user approved batch2 (keep)
+core/commands/resume-session.md	command	core-commands	Load the most recent session file from ~/.claude/session-data/ and resume work with full context from where the last session ended.		156	keep		user approved batch2 (keep)
+core/commands/review-pr.md	command	core-commands	Comprehensive PR review using specialized agents		37	keep		user approved batch2 (keep)
+core/commands/santa-loop.md	command	core-commands	Adversarial dual-review convergence loop — two independent model reviewers must both approve before code ships.		175	keep		user approved batch2 (keep)
+core/commands/save-session.md	command	core-commands	Save current session state to a dated file in ~/.claude/session-data/ so work can be resumed in a future session with full context.		275	keep		user approved batch2 (keep)
+core/commands/security-scan.md	command	core-commands	Run AgentShield against agent, hook, MCP, permission, and secret surfaces.		92	keep		user approved batch2 (keep)
+core/commands/sessions.md	command	core-commands	Manage Claude Code session history, aliases, and session metadata.		339	keep		user approved batch2 (keep)
+core/commands/setup-pm.md	command	core-commands	Configure your preferred package manager (npm/pnpm/yarn/bun)		80	keep		user approved batch2 (keep)
+core/commands/skill-create.md	command	core-commands	Analyze local git history to extract coding patterns and generate SKILL.md files. Local version of the Skill Creator GitHub App.		174	keep		user approved batch2 (keep)
+core/commands/skill-health.md	command	core-commands	Show skill portfolio health dashboard with charts and analytics		54	keep		user approved batch2 (keep)
+core/commands/test-coverage.md	command	core-commands	Analyze coverage, identify gaps, and generate missing tests toward the target threshold.		73	keep		user approved batch2 (keep)
+core/commands/update-codemaps.md	command	core-commands	Scan project structure and generate token-lean architecture codemaps.		76	keep		user approved batch2 (keep)
+core/commands/update-docs.md	command	core-commands	Sync documentation from source-of-truth files such as scripts, schemas, routes, and exports.		88	keep		user approved batch2 (keep)
+core/rules/README.md	rule	core-rules	Rules		135	keep		user approved batch2 (keep)
+core/rules/angular/coding-style.md	rule	core-rules	Angular Coding Style		182	cut		user approved batch2 (cut)
+core/rules/angular/hooks.md	rule	core-rules	Angular Hooks		25	cut		user approved batch2 (cut)
+core/rules/angular/patterns.md	rule	core-rules	Angular Patterns		249	cut		user approved batch2 (cut)
+core/rules/angular/security.md	rule	core-rules	Angular Security		87	cut		user approved batch2 (cut)
+core/rules/angular/testing.md	rule	core-rules	Angular Testing		164	cut		user approved batch2 (cut)
+core/rules/common/agents.md	rule	core-rules	Agent Orchestration		51	keep		user approved batch2 (keep)
+core/rules/common/code-review.md	rule	core-rules	Code Review Standards		124	keep		user approved batch2 (keep)
+core/rules/common/coding-style.md	rule	core-rules	Coding Style		90	keep		user approved batch2 (keep)
+core/rules/common/development-workflow.md	rule	core-rules	Development Workflow		44	keep		user approved batch2 (keep)
+core/rules/common/git-workflow.md	rule	core-rules	Git Workflow		24	keep		user approved batch2 (keep)
+core/rules/common/hooks.md	rule	core-rules	Hooks System		30	keep		user approved batch2 (keep)
+core/rules/common/patterns.md	rule	core-rules	Common Patterns		31	keep		user approved batch2 (keep)
+core/rules/common/performance.md	rule	core-rules	Performance Optimization		55	keep		user approved batch2 (keep)
+core/rules/common/security.md	rule	core-rules	Security Guidelines		29	keep		user approved batch2 (keep)
+core/rules/common/testing.md	rule	core-rules	Testing Requirements		57	keep		user approved batch2 (keep)
+core/rules/cpp/coding-style.md	rule	core-rules	C++ Coding Style		44	cut		user approved batch2 (cut)
+core/rules/cpp/hooks.md	rule	core-rules	C++ Hooks		39	cut		user approved batch2 (cut)
+core/rules/cpp/patterns.md	rule	core-rules	C++ Patterns		51	cut		user approved batch2 (cut)
+core/rules/cpp/security.md	rule	core-rules	C++ Security		51	cut		user approved batch2 (cut)
+core/rules/cpp/testing.md	rule	core-rules	C++ Testing		44	cut		user approved batch2 (cut)
+core/rules/python/coding-style.md	rule	core-rules	Python Coding Style		42	keep		user approved batch2 (keep)
+core/rules/python/fastapi.md	rule	core-rules	FastAPI Rules		58	keep		user approved batch2 (keep)
+core/rules/python/hooks.md	rule	core-rules	Python Hooks		19	keep		user approved batch2 (keep)
+core/rules/python/patterns.md	rule	core-rules	Python Patterns		39	keep		user approved batch2 (keep)
+core/rules/python/security.md	rule	core-rules	Python Security		30	keep		user approved batch2 (keep)
+core/rules/python/testing.md	rule	core-rules	Python Testing		38	keep		user approved batch2 (keep)
+core/rules/typescript/coding-style.md	rule	core-rules	TypeScript/JavaScript Coding Style		199	keep		user approved batch2 (keep)
+core/rules/typescript/hooks.md	rule	core-rules	TypeScript/JavaScript Hooks		22	keep		user approved batch2 (keep)
+core/rules/typescript/patterns.md	rule	core-rules	TypeScript/JavaScript Patterns		52	keep		user approved batch2 (keep)
+core/rules/typescript/security.md	rule	core-rules	TypeScript/JavaScript Security		28	keep		user approved batch2 (keep)
+core/rules/typescript/testing.md	rule	core-rules	TypeScript/JavaScript Testing		18	keep		user approved batch2 (keep)
+core/rules/web/coding-style.md	rule	core-rules	Web Coding Style		96	keep		user approved batch2 (keep)
+core/rules/web/design-quality.md	rule	core-rules	Web Design Quality Standards		63	keep		user approved batch2 (keep)
+core/rules/web/hooks.md	rule	core-rules	Web Hooks		129	keep		user approved batch2 (keep)
+core/rules/web/patterns.md	rule	core-rules	Web Patterns		79	keep		user approved batch2 (keep)
+core/rules/web/performance.md	rule	core-rules	Web Performance Rules		64	keep		user approved batch2 (keep)
+core/rules/web/security.md	rule	core-rules	Web Security Rules		57	keep		user approved batch2 (keep)
+core/rules/web/testing.md	rule	core-rules	Web Testing Rules		55	keep		user approved batch2 (keep)
 core/contexts/dev.md	context	core-contexts	Development Context		20	keep		
 core/contexts/research.md	context	core-contexts	Research Context		26	keep		
 core/contexts/review.md	context	core-contexts	Code Review Context		22	keep		
-vendored/agent-sdk-dev/agents/agent-sdk-verifier-py.md	vendored-skill	vendored	Use this agent to verify that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommenda		140	undecided		
-vendored/agent-sdk-dev/agents/agent-sdk-verifier-ts.md	vendored-skill	vendored	Use this agent to verify that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recomm		145	undecided		
-vendored/agent-sdk-dev/commands/new-sdk-app.md	vendored-skill	vendored	Create and setup a new Claude Agent SDK application		176	undecided		
+vendored/agent-sdk-dev/agents/agent-sdk-verifier-py.md	vendored-skill	vendored	Use this agent to verify that a Python Agent SDK application is properly configured, follows SDK best practices and documentation recommenda		140	keep		user approved batch2 (keep)
+vendored/agent-sdk-dev/agents/agent-sdk-verifier-ts.md	vendored-skill	vendored	Use this agent to verify that a TypeScript Agent SDK application is properly configured, follows SDK best practices and documentation recomm		145	keep		user approved batch2 (keep)
+vendored/agent-sdk-dev/commands/new-sdk-app.md	vendored-skill	vendored	Create and setup a new Claude Agent SDK application		176	keep		user approved batch2 (keep)
 vendored/mattpocock-skills/skills/deprecated/design-an-interface/SKILL.md	vendored-skill	vendored	Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explor	DISABLED in kit.config	94	cut		kit.config disabled_artifacts; not active
 vendored/mattpocock-skills/skills/deprecated/qa/SKILL.md	vendored-skill	vendored	Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the b	DISABLED in kit.config	130	cut		kit.config disabled_artifacts; not active
 vendored/mattpocock-skills/skills/deprecated/request-refactor-plan/SKILL.md	vendored-skill	vendored	Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor	DISABLED in kit.config	68	cut		kit.config disabled_artifacts; not active
 vendored/mattpocock-skills/skills/deprecated/ubiquitous-language/SKILL.md	vendored-skill	vendored	Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to	DISABLED in kit.config	93	cut		kit.config disabled_artifacts; not active
-vendored/mattpocock-skills/skills/engineering/diagnose/SKILL.md	vendored-skill	vendored	Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-tes		117	undecided		
-vendored/mattpocock-skills/skills/engineering/grill-with-docs/SKILL.md	vendored-skill	vendored	Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, A		88	undecided		
-vendored/mattpocock-skills/skills/engineering/improve-codebase-architecture/SKILL.md	vendored-skill	vendored	Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user 		81	undecided		
-vendored/mattpocock-skills/skills/engineering/prototype/SKILL.md	vendored-skill	vendored	Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/b		30	undecided		
-vendored/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/SKILL.md	vendored-skill	vendored	Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHu		121	undecided		
-vendored/mattpocock-skills/skills/engineering/tdd/SKILL.md	vendored-skill	vendored	Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions "red-green-refac		109	undecided		
-vendored/mattpocock-skills/skills/engineering/to-issues/SKILL.md	vendored-skill	vendored	Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when us		83	undecided		
-vendored/mattpocock-skills/skills/engineering/to-prd/SKILL.md	vendored-skill	vendored	Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the c		76	undecided		
-vendored/mattpocock-skills/skills/engineering/triage/SKILL.md	vendored-skill	vendored	Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or		103	undecided		
-vendored/mattpocock-skills/skills/engineering/zoom-out/SKILL.md	vendored-skill	vendored	Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need		7	undecided		
+vendored/mattpocock-skills/skills/engineering/diagnose/SKILL.md	vendored-skill	vendored	Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-tes		117	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/grill-with-docs/SKILL.md	vendored-skill	vendored	Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, A		88	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/improve-codebase-architecture/SKILL.md	vendored-skill	vendored	Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user 		81	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/prototype/SKILL.md	vendored-skill	vendored	Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/b		30	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/SKILL.md	vendored-skill	vendored	Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHu		121	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/tdd/SKILL.md	vendored-skill	vendored	Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions "red-green-refac		109	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/to-issues/SKILL.md	vendored-skill	vendored	Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when us		83	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/to-prd/SKILL.md	vendored-skill	vendored	Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the c		76	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/triage/SKILL.md	vendored-skill	vendored	Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or		103	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/engineering/zoom-out/SKILL.md	vendored-skill	vendored	Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need		7	keep		user approved batch2 (keep)
 vendored/mattpocock-skills/skills/in-progress/review/SKILL.md	vendored-skill	vendored	Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's doc	DISABLED in kit.config	78	cut		kit.config disabled_artifacts; not active
 vendored/mattpocock-skills/skills/in-progress/writing-beats/SKILL.md	vendored-skill	vendored	Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write onl	DISABLED in kit.config	52	cut		kit.config disabled_artifacts; not active
 vendored/mattpocock-skills/skills/in-progress/writing-fragments/SKILL.md	vendored-skill	vendored	Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — 	DISABLED in kit.config	75	cut		kit.config disabled_artifacts; not active
 vendored/mattpocock-skills/skills/in-progress/writing-shape/SKILL.md	vendored-skill	vendored	Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing th	DISABLED in kit.config	64	cut		kit.config disabled_artifacts; not active
-vendored/mattpocock-skills/skills/misc/git-guardrails-claude-code/SKILL.md	vendored-skill	vendored	Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wan		95	undecided		
+vendored/mattpocock-skills/skills/misc/git-guardrails-claude-code/SKILL.md	vendored-skill	vendored	Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wan		95	keep		user approved batch2 (keep)
 vendored/mattpocock-skills/skills/misc/migrate-to-shoehorn/SKILL.md	vendored-skill	vendored	Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests,	DISABLED in kit.config	118	cut		kit.config disabled_artifacts; not active
-vendored/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md	vendored-skill	vendored	Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold e		106	undecided		
-vendored/mattpocock-skills/skills/misc/setup-pre-commit/SKILL.md	vendored-skill	vendored	Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-comm		91	undecided		
-vendored/mattpocock-skills/skills/personal/edit-article/SKILL.md	vendored-skill	vendored	Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improv		14	undecided		
+vendored/mattpocock-skills/skills/misc/scaffold-exercises/SKILL.md	vendored-skill	vendored	Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold e		106	cut		user approved batch2 (cut)
+vendored/mattpocock-skills/skills/misc/setup-pre-commit/SKILL.md	vendored-skill	vendored	Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-comm		91	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/personal/edit-article/SKILL.md	vendored-skill	vendored	Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improv		14	cut		user approved batch2 (cut)
 vendored/mattpocock-skills/skills/personal/obsidian-vault/SKILL.md	vendored-skill	vendored	Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize note	DISABLED in kit.config	59	cut		kit.config disabled_artifacts; not active
-vendored/mattpocock-skills/skills/productivity/caveman/SKILL.md	vendored-skill	vendored	>		49	undecided		
-vendored/mattpocock-skills/skills/productivity/grill-me/SKILL.md	vendored-skill	vendored	Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use 		10	undecided		
-vendored/mattpocock-skills/skills/productivity/handoff/SKILL.md	vendored-skill	vendored	Compact the current conversation into a handoff document for another agent to pick up.		15	undecided		
-vendored/mattpocock-skills/skills/productivity/write-a-skill/SKILL.md	vendored-skill	vendored	Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build		117	undecided		
-vendored/plugin-dev/agents/agent-creator.md	vendored-skill	vendored	Use this agent when the user asks to "create an agent", "generate an agent", "build a new agent", "make me an agent that...", or describes a		176	undecided		
-vendored/plugin-dev/agents/plugin-validator.md	vendored-skill	vendored	Use this agent when the user asks to "validate my plugin", "check plugin structure", "verify plugin is correct", "validate plugin.json", "ch		184	undecided		
-vendored/plugin-dev/agents/skill-reviewer.md	vendored-skill	vendored	Use this agent when the user has created or modified a skill and needs quality review, asks to "review my skill", "check skill quality", "im		184	undecided		
-vendored/plugin-dev/commands/create-plugin.md	vendored-skill	vendored	Guided end-to-end plugin creation workflow with component design, implementation, and validation		415	undecided		
-vendored/plugin-dev/skills/agent-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use des		415	undecided		
-vendored/plugin-dev/skills/command-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create a slash command", "add a command", "write a custom command", "define command argumen		834	undecided		
-vendored/plugin-dev/skills/hook-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement p		712	undecided		
-vendored/plugin-dev/skills/mcp-integration/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model		554	undecided		
-vendored/plugin-dev/skills/plugin-settings/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md f		544	undecided		
-vendored/plugin-dev/skills/plugin-structure/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin comp		476	undecided		
-vendored/plugin-dev/skills/skill-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description"		637	undecided		
-vendored/ralph-wiggum/commands/cancel-ralph.md	vendored-skill	vendored	Cancel active Ralph Wiggum loop		18	undecided		
-vendored/ralph-wiggum/commands/help.md	vendored-skill	vendored	Explain Ralph Wiggum technique and available commands		126	undecided		
-vendored/ralph-wiggum/commands/ralph-loop.md	vendored-skill	vendored	Start Ralph Wiggum loop in current session		18	undecided		
+vendored/mattpocock-skills/skills/productivity/caveman/SKILL.md	vendored-skill	vendored	>		49	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/productivity/grill-me/SKILL.md	vendored-skill	vendored	Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use 		10	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/productivity/handoff/SKILL.md	vendored-skill	vendored	Compact the current conversation into a handoff document for another agent to pick up.		15	keep		user approved batch2 (keep)
+vendored/mattpocock-skills/skills/productivity/write-a-skill/SKILL.md	vendored-skill	vendored	Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build		117	keep		user approved batch2 (keep)
+vendored/plugin-dev/agents/agent-creator.md	vendored-skill	vendored	Use this agent when the user asks to "create an agent", "generate an agent", "build a new agent", "make me an agent that...", or describes a		176	keep		user approved batch2 (keep)
+vendored/plugin-dev/agents/plugin-validator.md	vendored-skill	vendored	Use this agent when the user asks to "validate my plugin", "check plugin structure", "verify plugin is correct", "validate plugin.json", "ch		184	keep		user approved batch2 (keep)
+vendored/plugin-dev/agents/skill-reviewer.md	vendored-skill	vendored	Use this agent when the user has created or modified a skill and needs quality review, asks to "review my skill", "check skill quality", "im		184	keep		user approved batch2 (keep)
+vendored/plugin-dev/commands/create-plugin.md	vendored-skill	vendored	Guided end-to-end plugin creation workflow with component design, implementation, and validation		415	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/agent-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use des		415	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/command-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create a slash command", "add a command", "write a custom command", "define command argumen		834	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/hook-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement p		712	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/mcp-integration/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model		554	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/plugin-settings/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md f		544	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/plugin-structure/SKILL.md	vendored-skill	vendored	This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin comp		476	keep		user approved batch2 (keep)
+vendored/plugin-dev/skills/skill-development/SKILL.md	vendored-skill	vendored	This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description"		637	keep		user approved batch2 (keep)
+vendored/ralph-wiggum/commands/cancel-ralph.md	vendored-skill	vendored	Cancel active Ralph Wiggum loop		18	keep		user approved batch2 (keep)
+vendored/ralph-wiggum/commands/help.md	vendored-skill	vendored	Explain Ralph Wiggum technique and available commands		126	keep		user approved batch2 (keep)
+vendored/ralph-wiggum/commands/ralph-loop.md	vendored-skill	vendored	Start Ralph Wiggum loop in current session		18	keep		user approved batch2 (keep)
 overlays/agents/secrets-hygiene-reviewer.md	overlay	overlays	Reviews diffs for secrets hygiene violations. Flags hardcoded credentials, hostnames, IPs, connection strings, and direct GitHub secrets ref	<-> overlays/rules/secrets.md	83	keep		user keep (batch 1a)
 overlays/commands/adr.md	overlay	overlays	Create today's ADR with the next counter. Pairs with overlays/skills/adr-writer/. Default path is docs/decisions/ — override by setting adr_	<-> overlays/skills/adr-writer	40	keep		user keep (batch 1a)
 overlays/commands/clean-gone.md	overlay	overlays	Cleans up all git branches marked as [gone] (branches that have been deleted on the remote but still exist locally), including removing asso		53	keep		user keep (batch 1a)
