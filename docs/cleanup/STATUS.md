@@ -30,9 +30,10 @@ python, typescript, web, cpp, angular.
 (explanatory-output-style, learning-output-style; enabled:false). vendored/ now
 holds 5 active plugins: agent-sdk-dev, mattpocock-skills, plugin-dev,
 ralph-wiggum, security-guidance.
-**Section 8a done:** cut 37 ECC root build/meta/doc files. KEPT core/LICENSE +
-core/ATTRIBUTION.md (relocate to repo root in flatten). HELD core/.mcp.json +
-core/.env.example for Phase 3.
+**Section 8a done:** cut 38 ECC root build/meta/doc files (incl. .env.example).
+KEPT core/LICENSE + core/ATTRIBUTION.md (relocate to repo root in flatten). HELD
+core/.mcp.json for Phase 3. Loose-root survivors: .mcp.json, ATTRIBUTION.md,
+LICENSE.
 **Section 8b — HELD for Phase 3 (per user):** the big non-artifact core/ trees
 (tests 149, scripts 167, examples 46, assets 36, ecc2 19, src 19,
 legacy-command-shims 13, schemas 10, integrations 7, manifests 3, contexts 3,
