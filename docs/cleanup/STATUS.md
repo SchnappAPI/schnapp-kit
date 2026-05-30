@@ -26,12 +26,18 @@ feature-development}.md + rules/node.md — review vs core/commands & core/rules
 12 commands + golang/zh/arkts rules + harmonyos agent). KEPT cpp (rules + 2
 agents) and angular rules (ambiguous, kept). core/rules now: README, common,
 python, typescript, web, cpp, angular.
-**Next action:** Section 7 — group F disabled vendored output-style plugins
-(explanatory-output-style, learning-output-style; both enabled:false; 8 files).
-Then Section 8 (ECC root scaffolding: loose core/ build/meta files + decide on
-core/{ecc2,src,tests,scripts,examples,assets,schemas,integrations,etc.}).
-Big artifact buckets (core/skills ~225, agents ~46, commands ~64) → Phase 2/3.
-Tracked: 1,311.
+**Section 7 done:** cut 8 files — both disabled vendored output-style plugins
+(explanatory-output-style, learning-output-style; enabled:false). vendored/ now
+holds 5 active plugins: agent-sdk-dev, mattpocock-skills, plugin-dev,
+ralph-wiggum, security-guidance.
+**Next action:** Section 8 — ECC root scaffolding. Loose core/ build/meta files
+(package.json, yarn.lock, pyproject.toml, install.*, eslint/prettier/commitlint
+configs, SPONSORS/CHANGELOG/SOUL/etc., the-*-guide.md, ecc_dashboard.py) + decide
+the big non-artifact core/ trees: ecc2(19), src(19), tests(149), scripts(167),
+examples(46), assets(36), schemas(10), integrations(7), legacy-command-shims(13),
+manifests(3), contexts(3), mcp-configs(1), hooks(4), config(1), plugins(1),
+research(1). Then Phase 2/3 = file-by-file over core/skills (~225), agents (~46),
+commands (~64), kept rules, vendored, overlays, language-packs. Tracked: 1,303.
 
 **PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
 bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5–#8

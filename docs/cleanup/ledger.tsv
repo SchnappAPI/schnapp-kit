@@ -112,3 +112,5 @@ core/rules/cpp	rule-tree	sec6-keep	C++ language rules	-	5	keep	rules/cpp	sec6; a
 core/agents/cpp-reviewer.md	agent	sec6-keep	C++ code reviewer	-	1	keep	agents/cpp-reviewer.md	sec6; kept with cpp
 core/agents/cpp-build-resolver.md	agent	sec6-keep	C++ build resolver	-	1	keep	agents/cpp-build-resolver.md	sec6; kept with cpp
 core/rules/angular	rule-tree	sec6-keep	Angular rules	-	5	keep	rules/angular	sec6; TS-adjacent, kept
+vendored/explanatory-output-style	vendored-plugin	sec7-cut	explanatory output-style (SessionStart hook)	enabled:false in kit.config	4	cut	-	sec7; disabled plugin
+vendored/learning-output-style	vendored-plugin	sec7-cut	learning output-style (SessionStart hook)	enabled:false in kit.config	4	cut	-	sec7; disabled plugin
