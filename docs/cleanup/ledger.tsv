@@ -101,3 +101,14 @@ core/.claude/commands/add-language-rules.md	command	sec5-hold	add-language-rules
 core/.claude/commands/database-migration.md	command	sec5-hold	database-migration slash command	maybe dup of core/commands	1	undecided	-	sec5; review in Phase 3 with core/commands
 core/.claude/commands/feature-development.md	command	sec5-hold	feature-development slash command	maybe dup of core/commands	1	undecided	-	sec5; review in Phase 3 with core/commands
 core/.claude/rules/node.md	rule	sec5-hold	generic Node.js rules	maybe dup of core/rules	1	undecided	-	sec5; review in Phase 3 with core/rules
+core/skills/(21 pruned-lang dirs)	skill-group	sec6-cut	csharp/dart/dotnet/fsharp/golang/java/kotlin/perl/rust/swift skills	none	21	cut	-	sec6; kit.config pruned_languages
+core/agents/(14 pruned-lang)	agent-group	sec6-cut	{csharp,dart,flutter,fsharp,go,java,kotlin,rust,swift}-reviewer/build-resolver	none	14	cut	-	sec6; pruned languages
+core/commands/(12 pruned-lang)	command-group	sec6-cut	flutter/go/kotlin/rust x build/review/test slash commands	none	12	cut	-	sec6; siblings of cut agents/skills
+core/rules/golang	rule-tree	sec6-cut	Go language rules	none	5	cut	-	sec6; pruned language
+core/rules/zh	rule-tree	sec6-cut	Chinese-localized rules	none	11	cut	-	sec6; localized (like cut docs)
+core/rules/arkts	rule-tree	sec6-cut	ArkTS/HarmonyOS rules	none	5	cut	-	sec6; ambiguous-niche, cut
+core/agents/harmonyos-app-resolver.md	agent	sec6-cut	HarmonyOS app build resolver	none	1	cut	-	sec6; arkts sibling
+core/rules/cpp	rule-tree	sec6-keep	C++ language rules	-	5	keep	rules/cpp	sec6; ambiguous-kept (common lang)
+core/agents/cpp-reviewer.md	agent	sec6-keep	C++ code reviewer	-	1	keep	agents/cpp-reviewer.md	sec6; kept with cpp
+core/agents/cpp-build-resolver.md	agent	sec6-keep	C++ build resolver	-	1	keep	agents/cpp-build-resolver.md	sec6; kept with cpp
+core/rules/angular	rule-tree	sec6-keep	Angular rules	-	5	keep	rules/angular	sec6; TS-adjacent, kept

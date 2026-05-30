@@ -22,11 +22,16 @@ editor mirrors / group A), 4 (79 ECC-internal core/docs cut; 8 guides KEPT),
 5 (30 ECC repo internals cut — all core/.github + ECC-specific core/.claude;
 4 HELD for Phase 3: core/.claude/commands/{add-language-rules,database-migration,
 feature-development}.md + rules/node.md — review vs core/commands & core/rules).
-**Next action:** Section 6 — pruned-language artifacts (group C, ~68 across
-core/skills, core/agents, core/rules). Then Section 7 (group F disabled vendored
-plugins, 8) and Section 8 (ECC root scaffolding). Big buckets (core/skills 401,
-agents 61, commands 76, ecc2/src/tests/scripts/examples/assets) → Phase 2/3.
-Tracked: 1,380.
+**Section 6 done:** cut 69 pruned-language artifacts (21 skills + 14 agents +
+12 commands + golang/zh/arkts rules + harmonyos agent). KEPT cpp (rules + 2
+agents) and angular rules (ambiguous, kept). core/rules now: README, common,
+python, typescript, web, cpp, angular.
+**Next action:** Section 7 — group F disabled vendored output-style plugins
+(explanatory-output-style, learning-output-style; both enabled:false; 8 files).
+Then Section 8 (ECC root scaffolding: loose core/ build/meta files + decide on
+core/{ecc2,src,tests,scripts,examples,assets,schemas,integrations,etc.}).
+Big artifact buckets (core/skills ~225, agents ~46, commands ~64) → Phase 2/3.
+Tracked: 1,311.
 
 **PR:** #4 (cleanup, open, merge at the very end). ecc-tools[bot] auto-opens a
 bundle PR on every push — AUTO-CLOSE silently without merging (per user; #5–#8
